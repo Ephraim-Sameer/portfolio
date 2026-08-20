@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Muhammad Ephraim Sameer — Cloud Engineer, Microsoft Certified Azure Administrator, GDGoC Cloud Lead and technical community leader."
+    content="Muhammad Ephraim Sameer — Cloud Engineer, Microsoft Certified Azure Administrator, GDGoC Cloud Lead and technology community leader."
   />
 
   <meta
@@ -22,12 +22,318 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
-  >
+  />
 
   <link rel="stylesheet" href="style.css" />
+
+  <!-- =====================================================
+       COLLECTION / GALLERY OVERRIDES
+
+       These styles are intentionally kept inside index.html
+       so you do not need to modify style.css for the grouped
+       event gallery.
+  ====================================================== -->
+
+  <style>
+
+    /* =====================================================
+       GROUPED GALLERY
+    ====================================================== */
+
+    .collection-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .collection-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(193, 133, 228, 0.15);
+      border-radius: 22px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(42, 19, 55, 0.74),
+          rgba(18, 10, 24, 0.78)
+        );
+      box-shadow: 0 25px 65px rgba(0, 0, 0, 0.28);
+      transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+    }
+
+    .collection-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(193, 133, 228, 0.36);
+      box-shadow: 0 35px 80px rgba(0, 0, 0, 0.4);
+    }
+
+    .collection-card.featured {
+      grid-column: span 2;
+    }
+
+    .collection-header {
+      padding: 24px 24px 18px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .collection-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .collection-kicker {
+      color: #b978d5;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .collection-title {
+      font-size: 24px;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+    }
+
+    .collection-description {
+      margin-top: 8px;
+      max-width: 620px;
+      color: #9f8da7;
+      font-size: 11px;
+    }
+
+    .collection-count {
+      flex-shrink: 0;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(193, 133, 228, 0.18);
+      background: rgba(255,255,255,0.025);
+      color: #c9abd4;
+      font-size: 9px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .collection-media {
+      display: grid;
+      grid-template-columns: 1.45fr 1fr 1fr;
+      gap: 6px;
+      padding: 0 8px 8px;
+    }
+
+    .collection-media.two-col {
+      grid-template-columns: 1.35fr 1fr;
+    }
+
+    .collection-media img {
+      width: 100%;
+      height: 185px;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 13px;
+      transition: transform 0.45s ease, filter 0.35s ease;
+    }
+
+    .collection-media img:hover {
+      transform: scale(1.025);
+      filter: brightness(1.06);
+    }
+
+    .collection-media .tall {
+      height: 376px;
+      grid-row: span 2;
+    }
+
+    .collection-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 14px 24px 21px;
+    }
+
+    .collection-note {
+      color: #8d7b95;
+      font-size: 10px;
+    }
+
+    .collection-link {
+      color: #c78cde;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    /* =====================================================
+       GITHUB PROOF CARD
+    ===================================================== */
+
+    .proof-card {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 22px;
+      padding: 22px;
+      border: 1px solid rgba(193, 133, 228, 0.15);
+      border-radius: 22px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(38, 18, 51, 0.7),
+          rgba(17, 9, 23, 0.82)
+        );
+      box-shadow: 0 22px 60px rgba(0,0,0,0.25);
+    }
+
+    .proof-image-wrap {
+      position: relative;
+      overflow: hidden;
+      min-height: 220px;
+      border-radius: 15px;
+      border: 1px solid rgba(255,255,255,0.07);
+      background: #0b0710;
+    }
+
+    .proof-image-wrap img {
+      width: 100%;
+      height: 100%;
+      min-height: 220px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.4s ease;
+    }
+
+    .proof-image-wrap img:hover {
+      transform: scale(1.025);
+    }
+
+    .proof-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8px;
+    }
+
+    .proof-kicker {
+      color: #b978d5;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .proof-content h3 {
+      margin-top: 10px;
+      font-size: 27px;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+    }
+
+    .proof-content p {
+      margin-top: 14px;
+      color: #9f8da7;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .proof-content .btn {
+      width: fit-content;
+      margin-top: 22px;
+    }
+
+    /* =====================================================
+       EXPERIENCE IMPROVEMENTS
+    ===================================================== */
+
+    .timeline-role-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 8px;
+      color: #bca3c4;
+      font-size: 10px;
+    }
+
+    .timeline-role-badge::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #a95fd4;
+      box-shadow: 0 0 12px rgba(169,95,212,0.7);
+    }
+
+    .transition-note {
+      margin-top: 14px;
+      padding: 12px 14px;
+      border-left: 2px solid #8f4daf;
+      border-radius: 0 10px 10px 0;
+      background: rgba(143, 77, 175, 0.06);
+      color: #b8a5be;
+      font-size: 11px;
+    }
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+      .collection-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .collection-card.featured {
+        grid-column: span 1;
+      }
+
+      .proof-card {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+    @media (max-width: 650px) {
+
+      .collection-header {
+        flex-direction: column;
+      }
+
+      .collection-media,
+      .collection-media.two-col {
+        grid-template-columns: 1fr;
+      }
+
+      .collection-media img,
+      .collection-media .tall {
+        height: 220px;
+        grid-row: auto;
+      }
+
+      .collection-footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .proof-content h3 {
+        font-size: 23px;
+      }
+
+    }
+
+  </style>
+
 </head>
 
+
 <body>
+
 
   <!-- =====================================================
        BACKGROUND
@@ -39,8 +345,9 @@
   <div class="bg-grid"></div>
 
 
+
   <!-- =====================================================
-       NAVIGATION
+       HEADER
   ====================================================== -->
 
   <header class="site-header">
@@ -51,6 +358,7 @@
         Ephraim<span>Sameer</span>
       </a>
 
+
       <button
         class="menu-toggle"
         id="menuToggle"
@@ -59,16 +367,40 @@
         ☰
       </button>
 
+
       <ul class="nav-links" id="navLinks">
 
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#work">Gallery</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#experience">Experience</a>
+        </li>
+
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+
+        <li>
+          <a href="#work">Work</a>
+        </li>
+
+        <li>
+          <a href="#certifications">Certifications</a>
+        </li>
+
+        <li>
+          <a href="#resume">Resume</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
 
       </ul>
 
@@ -77,7 +409,9 @@
   </header>
 
 
+
   <main>
+
 
 
     <!-- =====================================================
@@ -86,41 +420,64 @@
 
     <section class="hero" id="home">
 
+
       <div class="hero-copy">
 
+
         <div class="status-pill">
+
           <span class="status-dot"></span>
-          AVAILABLE FOR OPPORTUNITIES
+
+          OPEN TO OPPORTUNITIES
+
         </div>
 
+
         <p class="eyebrow">
-          CLOUD ENGINEER · AZURE · COMMUNITY LEADERSHIP
+
+          CLOUD ENGINEER · AZURE · TECHNOLOGY
+
         </p>
+
 
         <h1>
+
           Muhammad Ephraim
+
           <span>Sameer.</span>
+
         </h1>
 
+
         <p class="hero-role">
+
           Cloud Engineer @ Zee Outsourcing Solutions
+
         </p>
 
+
         <p class="hero-text">
-          Microsoft Certified Azure Administrator with practical exposure
-          to cloud infrastructure, Azure administration, technical mentoring,
-          community leadership, and cloud-focused events and competitions.
+
+          Microsoft Certified Azure Administrator with practical
+          experience in cloud infrastructure, technical mentoring,
+          community leadership, and cloud-focused events and initiatives.
+
         </p>
 
 
         <div class="hero-actions">
 
           <a href="#experience" class="btn btn-primary">
+
             Explore My Experience
+
           </a>
 
+
           <a href="#resume" class="btn btn-secondary">
+
             Download Resume
+
           </a>
 
         </div>
@@ -136,6 +493,7 @@
             LinkedIn
           </a>
 
+
           <a
             href="https://github.com/Ephraim-Sameer"
             target="_blank"
@@ -143,6 +501,7 @@
           >
             GitHub
           </a>
+
 
           <a
             href="https://www.credly.com/users/muhammad-ephraim/edit/badges/credly"
@@ -157,9 +516,11 @@
       </div>
 
 
+
       <div class="hero-visual">
 
         <div class="hero-glow"></div>
+
 
         <div class="hero-image-wrap">
 
@@ -170,13 +531,23 @@
 
         </div>
 
+
         <div class="floating-card card-top">
 
-          <span class="floating-icon">☁</span>
+          <span class="floating-icon">
+            ☁
+          </span>
 
           <div>
-            <strong>AZ-104</strong>
-            <small>Certified Azure Administrator</small>
+
+            <strong>
+              AZ-104
+            </strong>
+
+            <small>
+              Certified Azure Administrator
+            </small>
+
           </div>
 
         </div>
@@ -184,11 +555,20 @@
 
         <div class="floating-card card-bottom">
 
-          <span class="floating-icon">◈</span>
+          <span class="floating-icon">
+            ◈
+          </span>
 
           <div>
-            <strong>Cloud Lead</strong>
-            <small>GDGoC BULC</small>
+
+            <strong>
+              GDGoC Cloud Lead
+            </strong>
+
+            <small>
+              Bahria University
+            </small>
+
           </div>
 
         </div>
@@ -205,19 +585,26 @@
 
     <section class="section" id="about">
 
+
       <div class="section-heading">
 
-        <p>ABOUT ME</p>
+        <p>
+          ABOUT ME
+        </p>
 
         <h2>
-          Building with cloud.<br />
-          Growing through community.
+
+          Cloud. Technology.<br />
+          Community.
+
         </h2>
 
       </div>
 
 
+
       <div class="about-layout">
+
 
         <div class="glass-card about-card">
 
@@ -225,35 +612,51 @@
             01
           </span>
 
+
           <h3>
             Who I Am
           </h3>
 
-          <p>
-            I am Muhammad Ephraim Sameer, a Cloud Engineer with a strong
-            focus on Microsoft Azure, cloud infrastructure, technical
-            learning, mentoring, and technology communities.
-          </p>
 
           <p>
-            Alongside my professional work, I actively contribute to
-            technology communities through Google Developer Groups on
-            Campus and IEEE, while participating in cloud sessions,
-            competitions, workshops, and technical initiatives.
+
+            I am Muhammad Ephraim Sameer, a Cloud Engineer with a
+            strong focus on Microsoft Azure, cloud infrastructure,
+            technical learning, mentoring, and technology communities.
+
+          </p>
+
+
+          <p>
+
+            Alongside my professional work, I contribute to technology
+            communities through Google Developer Groups on Campus and
+            IEEE, while participating in cloud sessions, competitions,
+            workshops, and technical initiatives.
+
           </p>
 
         </div>
 
 
+
         <div class="about-highlights">
+
 
           <div class="mini-card">
 
             <span>☁</span>
 
             <div>
-              <strong>Cloud Engineering</strong>
-              <small>Azure · AWS · GCP</small>
+
+              <strong>
+                Cloud Engineering
+              </strong>
+
+              <small>
+                Azure · AWS · GCP
+              </small>
+
             </div>
 
           </div>
@@ -264,8 +667,15 @@
             <span>◉</span>
 
             <div>
-              <strong>Technical Leadership</strong>
-              <small>GDGoC · IEEE</small>
+
+              <strong>
+                Community Leadership
+              </strong>
+
+              <small>
+                GDGoC · IEEE
+              </small>
+
             </div>
 
           </div>
@@ -276,8 +686,15 @@
             <span>✦</span>
 
             <div>
-              <strong>Technical Training</strong>
-              <small>Sessions · Workshops · Mentoring</small>
+
+              <strong>
+                Technical Training
+              </strong>
+
+              <small>
+                Sessions · Workshops · Mentoring
+              </small>
+
             </div>
 
           </div>
@@ -288,11 +705,19 @@
             <span>◆</span>
 
             <div>
-              <strong>Certifications</strong>
-              <small>Microsoft · AWS · Google · Cisco</small>
+
+              <strong>
+                Certifications
+              </strong>
+
+              <small>
+                Microsoft · AWS · Google · Cisco
+              </small>
+
             </div>
 
           </div>
+
 
         </div>
 
@@ -304,332 +729,204 @@
 
     <!-- =====================================================
          EXPERIENCE
+         Ordered by timeline
     ====================================================== -->
 
     <section class="section" id="experience">
 
+
       <div class="section-heading">
 
-        <p>EXPERIENCE</p>
+        <p>
+          EXPERIENCE
+        </p>
 
         <h2>
-          Where I've been
+          My journey, in order.
         </h2>
 
+        <span class="section-subtitle">
+
+          Roles are arranged by when they started, while overlapping
+          positions are kept visible rather than forcing them into a
+          single linear path.
+
+        </span>
+
       </div>
+
 
 
       <div class="timeline">
 
 
-        <!-- GDGoC -->
+        <!-- =================================================
+             FEB 2025 — GDGoC EARLIER ROLE
+        ================================================== -->
 
         <article class="timeline-item">
 
           <div class="timeline-dot"></div>
 
+
           <div class="timeline-card">
 
+
             <div class="timeline-top">
+
 
               <div>
 
                 <span class="timeline-date">
-                  Oct 2025 – Present
+                  FEB 2025 – OCT 2025
                 </span>
 
+
                 <h3>
-                  GDGoC Cloud Lead
+                  GDGoC Co-Lead · Event Management & Cyber Security
                 </h3>
+
 
                 <h4>
                   Google Developer Groups on Campus · Bahria University
                 </h4>
 
-              </div>
 
-              <span class="timeline-tag">
-                LEADERSHIP
-              </span>
-
-            </div>
-
-
-            <p>
-              Leading the Cloud Computing track for the IEEE Codex 2.0 ×
-              GDGoC competition and driving cloud-focused learning,
-              practical deployment scenarios, and student engagement.
-            </p>
-
-            <ul>
-
-              <li>
-                Spearheaded the cloud computing track for IEEE Codex 2.0 × GDGoC.
-              </li>
-
-              <li>
-                Architected a comprehensive 120-minute sandbox-style
-                cloud simulation.
-              </li>
-
-              <li>
-                Developed and automated assessment and evaluation workflows.
-              </li>
-
-              <li>
-                Authored practical guidelines and collaboration protocols.
-              </li>
-
-              <li>
-                Contributed to competition integrity and environment
-                standardization.
-              </li>
-
-            </ul>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- Event Management -->
-
-        <article class="timeline-item">
-
-          <div class="timeline-dot"></div>
-
-          <div class="timeline-card">
-
-            <div class="timeline-top">
-
-              <div>
-
-                <span class="timeline-date">
-                  Feb 2025 – Oct 2025
-                </span>
-
-                <h3>
-                  Event Management & Cyber Security
-                </h3>
-
-                <h4>
-                  Google Developer Groups on Campus
-                </h4>
+                <div class="timeline-role-badge">
+                  EARLIER GDGoC ROLE
+                </div>
 
               </div>
+
 
               <span class="timeline-tag">
                 COMMUNITY
               </span>
 
-            </div>
-
-            <p>
-              Supported technical events, cybersecurity activities,
-              logistics, and participant engagement across the GDGoC
-              community.
-            </p>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- Zee Outsourcing -->
-
-        <article class="timeline-item">
-
-          <div class="timeline-dot"></div>
-
-          <div class="timeline-card">
-
-            <div class="timeline-top">
-
-              <div>
-
-                <span class="timeline-date">
-                  Jun 2026 – Present
-                </span>
-
-                <h3>
-                  Cloud Engineer Mentor × Content Manager
-                </h3>
-
-                <h4>
-                  Zee Outsourcing Solutions Pvt Ltd
-                </h4>
-
-              </div>
-
-              <span class="timeline-tag">
-                PROFESSIONAL
-              </span>
 
             </div>
 
 
             <p>
-              Dual-impact role combining technical cloud mentoring with
-              digital brand and content strategy.
+
+              Started my GDGoC journey through event management and
+              cybersecurity activities before moving into the Cloud
+              Computing leadership track.
+
             </p>
 
 
             <ul>
 
               <li>
-                Mentored learners in cloud administration and infrastructure.
+                Supported organization and execution of technical events.
               </li>
 
               <li>
-                Created and developed cloud learning content.
+                Contributed to cybersecurity-focused activities.
               </li>
 
               <li>
-                Directed digital communication and branding activities.
+                Coordinated logistics and participant engagement.
               </li>
 
               <li>
-                Supported recruitment, professional learning, and
-                technology-focused initiatives.
+                Built experience in technical community operations
+                before transitioning into cloud leadership.
               </li>
 
             </ul>
 
-          </div>
 
-        </article>
+            <div class="transition-note">
 
-
-
-        <!-- IEEE Member -->
-
-        <article class="timeline-item">
-
-          <div class="timeline-dot"></div>
-
-          <div class="timeline-card">
-
-            <div class="timeline-top">
-
-              <div>
-
-                <span class="timeline-date">
-                  May 2026 – Present
-                </span>
-
-                <h3>
-                  IEEE Computer Society Member
-                </h3>
-
-                <h4>
-                  IEEE Computer Society
-                </h4>
-
-              </div>
-
-              <span class="timeline-tag">
-                PROFESSIONAL
-              </span>
-
-            </div>
-
-            <p>
-              Active professional member of the IEEE Computer Society,
-              contributing to professional development and technical
-              community activities.
-            </p>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- IEEE Vice Head -->
-
-        <article class="timeline-item">
-
-          <div class="timeline-dot"></div>
-
-          <div class="timeline-card">
-
-            <div class="timeline-top">
-
-              <div>
-
-                <span class="timeline-date">
-                  Feb 2026 – Present
-                </span>
-
-                <h3>
-                  Documentation Vice Head
-                </h3>
-
-                <h4>
-                  IEEE BULC Student Chapter
-                </h4>
-
-              </div>
-
-              <span class="timeline-tag">
-                LEADERSHIP
-              </span>
+              Transitioned into the <strong>GDGoC Cloud Lead</strong>
+              role in October 2025.
 
             </div>
 
 
-            <p>
-              Responsible for administrative documentation,
-              communications, and strategic record-keeping for the
-              student branch.
-            </p>
-
           </div>
 
         </article>
 
 
 
-        <!-- Teaching Assistant -->
+        <!-- =================================================
+             SEP 2025 — TEACHING ASSISTANT
+        ================================================== -->
 
         <article class="timeline-item">
 
           <div class="timeline-dot"></div>
 
+
           <div class="timeline-card">
 
+
             <div class="timeline-top">
+
 
               <div>
 
                 <span class="timeline-date">
-                  Sep 2025 – Jun 2026
+                  SEP 2025 – JUN 2026
                 </span>
+
 
                 <h3>
                   Teaching Assistant
                 </h3>
 
+
                 <h4>
                   Bahria University
                 </h4>
 
+
+                <div class="timeline-role-badge">
+                  EDUCATION
+                </div>
+
               </div>
+
 
               <span class="timeline-tag">
                 EDUCATION
               </span>
 
+
             </div>
 
 
             <p>
+
               Assisted students with networking laboratories and
               supported academic coursework in routing, switching,
               addressing, and network design.
+
             </p>
+
+
+            <ul>
+
+              <li>
+                Assisted students during practical networking labs.
+              </li>
+
+              <li>
+                Supported coursework involving OSPF, RIP and EIGRP.
+              </li>
+
+              <li>
+                Worked with VLANs, subnetting, routing and addressing.
+              </li>
+
+              <li>
+                Helped students understand practical networking concepts.
+              </li>
+
+            </ul>
 
 
             <div class="skill-inline">
@@ -642,6 +939,315 @@
               <span>Routing</span>
 
             </div>
+
+
+          </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             OCT 2025 — GDGoC CLOUD LEAD
+        ================================================== -->
+
+        <article class="timeline-item">
+
+          <div class="timeline-dot"></div>
+
+
+          <div class="timeline-card">
+
+
+            <div class="timeline-top">
+
+
+              <div>
+
+                <span class="timeline-date">
+                  OCT 2025 – AUG 2026
+                </span>
+
+
+                <h3>
+                  GDGoC Cloud Lead
+                </h3>
+
+
+                <h4>
+                  Google Developer Groups on Campus · Bahria University
+                </h4>
+
+
+                <div class="timeline-role-badge">
+                  CLOUD LEAD
+                </div>
+
+              </div>
+
+
+              <span class="timeline-tag">
+                LEADERSHIP
+              </span>
+
+
+            </div>
+
+
+            <p>
+
+              Progressed from the earlier GDGoC role into leading the
+              Cloud Computing track and taking ownership of cloud-focused
+              technical activities.
+
+            </p>
+
+
+            <ul>
+
+              <li>
+                Spearheaded the Cloud Computing track for
+                IEEE Codex 2.0 × GDGoC.
+              </li>
+
+              <li>
+                Architected a comprehensive cloud sandbox simulation.
+              </li>
+
+              <li>
+                Created practical cloud deployment scenarios.
+              </li>
+
+              <li>
+                Designed evaluation and assessment workflows.
+              </li>
+
+              <li>
+                Authored operational and collaboration guidelines.
+              </li>
+
+            </ul>
+
+
+          </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             FEB 2026 — IEEE DOCUMENTATION VICE HEAD
+        ================================================== -->
+
+        <article class="timeline-item">
+
+          <div class="timeline-dot"></div>
+
+
+          <div class="timeline-card">
+
+
+            <div class="timeline-top">
+
+
+              <div>
+
+                <span class="timeline-date">
+                  FEB 2026 – PRESENT
+                </span>
+
+
+                <h3>
+                  Documentation Vice Head
+                </h3>
+
+
+                <h4>
+                  IEEE BULC Student Chapter
+                </h4>
+
+
+                <div class="timeline-role-badge">
+                  DOCUMENTATION & LEADERSHIP
+                </div>
+
+              </div>
+
+
+              <span class="timeline-tag">
+                LEADERSHIP
+              </span>
+
+            </div>
+
+
+            <p>
+
+              Responsible for administrative documentation,
+              communications, and strategic records for the student branch.
+
+            </p>
+
+
+            <ul>
+
+              <li>
+                Served as the Vice Head of Documentation.
+              </li>
+
+              <li>
+                Maintained official records and event documentation.
+              </li>
+
+              <li>
+                Supported branch communications and reporting.
+              </li>
+
+            </ul>
+
+
+          </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             MAY 2026 — IEEE MEMBER
+        ================================================== -->
+
+        <article class="timeline-item">
+
+          <div class="timeline-dot"></div>
+
+
+          <div class="timeline-card">
+
+
+            <div class="timeline-top">
+
+
+              <div>
+
+                <span class="timeline-date">
+                  MAY 2026 – PRESENT
+                </span>
+
+
+                <h3>
+                  IEEE Computer Society Member
+                </h3>
+
+
+                <h4>
+                  IEEE Computer Society
+                </h4>
+
+
+                <div class="timeline-role-badge">
+                  PROFESSIONAL MEMBERSHIP
+                </div>
+
+              </div>
+
+
+              <span class="timeline-tag">
+                PROFESSIONAL
+              </span>
+
+            </div>
+
+
+            <p>
+
+              Active member of the IEEE Computer Society with a focus
+              on professional development and participation in technical
+              communities.
+
+            </p>
+
+
+          </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             JUN 2026 — CLOUD ENGINEER
+        ================================================== -->
+
+        <article class="timeline-item">
+
+          <div class="timeline-dot"></div>
+
+
+          <div class="timeline-card">
+
+
+            <div class="timeline-top">
+
+
+              <div>
+
+                <span class="timeline-date">
+                  JUN 2026 – PRESENT
+                </span>
+
+
+                <h3>
+                  Cloud Engineer Mentor × Content Manager
+                </h3>
+
+
+                <h4>
+                  Zee Outsourcing Solutions Pvt. Ltd.
+                </h4>
+
+
+                <div class="timeline-role-badge">
+                  PROFESSIONAL EXPERIENCE
+                </div>
+
+              </div>
+
+
+              <span class="timeline-tag">
+                PROFESSIONAL
+              </span>
+
+            </div>
+
+
+            <p>
+
+              A dual-impact role combining cloud mentoring,
+              technical learning content, digital communication,
+              and professional technology initiatives.
+
+            </p>
+
+
+            <ul>
+
+              <li>
+                Mentored learners in cloud administration and infrastructure.
+              </li>
+
+              <li>
+                Created practical cloud learning content.
+              </li>
+
+              <li>
+                Supported Microsoft Azure-focused technical initiatives.
+              </li>
+
+              <li>
+                Worked across technical and communication-focused activities.
+              </li>
+
+            </ul>
+
 
           </div>
 
@@ -660,15 +1266,19 @@
 
     <section class="section" id="skills">
 
+
       <div class="section-heading">
 
-        <p>SKILLS</p>
+        <p>
+          SKILLS
+        </p>
 
         <h2>
-          Technologies I work with
+          Technologies I work with.
         </h2>
 
       </div>
+
 
 
       <div class="skills-grid">
@@ -676,82 +1286,146 @@
 
         <div class="skill-card">
 
-          <span class="skill-icon">☁</span>
+          <span class="skill-icon">
+            ☁
+          </span>
+
 
           <h3>
             Cloud
           </h3>
 
+
           <div class="skill-tags">
 
-            <span>Microsoft Azure</span>
-            <span>AWS</span>
-            <span>Google Cloud</span>
+            <span>
+              Microsoft Azure
+            </span>
+
+            <span>
+              AWS
+            </span>
+
+            <span>
+              Google Cloud
+            </span>
 
           </div>
 
         </div>
 
 
+
         <div class="skill-card">
 
-          <span class="skill-icon">⌘</span>
+          <span class="skill-icon">
+            ⌘
+          </span>
+
 
           <h3>
             Infrastructure
           </h3>
 
+
           <div class="skill-tags">
 
-            <span>Virtual Machines</span>
-            <span>Networking</span>
-            <span>Storage</span>
-            <span>Identity</span>
+            <span>
+              Virtual Machines
+            </span>
+
+            <span>
+              Networking
+            </span>
+
+            <span>
+              Storage
+            </span>
+
+            <span>
+              Identity
+            </span>
 
           </div>
 
         </div>
 
 
+
         <div class="skill-card">
 
-          <span class="skill-icon">◇</span>
+          <span class="skill-icon">
+            ◇
+          </span>
+
 
           <h3>
             Networking
           </h3>
 
+
           <div class="skill-tags">
 
-            <span>TCP/IP</span>
-            <span>DNS</span>
-            <span>DHCP</span>
-            <span>OSPF</span>
-            <span>VLAN</span>
+            <span>
+              TCP/IP
+            </span>
+
+            <span>
+              DNS
+            </span>
+
+            <span>
+              DHCP
+            </span>
+
+            <span>
+              OSPF
+            </span>
+
+            <span>
+              VLAN
+            </span>
 
           </div>
 
         </div>
 
 
+
         <div class="skill-card">
 
-          <span class="skill-icon">✦</span>
+          <span class="skill-icon">
+            ✦
+          </span>
+
 
           <h3>
             Tools & Platforms
           </h3>
 
+
           <div class="skill-tags">
 
-            <span>GitHub</span>
-            <span>Linux</span>
-            <span>PowerShell</span>
-            <span>Windows Server</span>
+            <span>
+              GitHub
+            </span>
+
+            <span>
+              Linux
+            </span>
+
+            <span>
+              PowerShell
+            </span>
+
+            <span>
+              Windows Server
+            </span>
 
           </div>
 
         </div>
+
 
       </div>
 
@@ -760,54 +1434,142 @@
 
 
     <!-- =====================================================
-         GALLERY
+         FEATURED WORK
+         GROUPED COLLECTIONS
     ====================================================== -->
 
     <section class="section" id="work">
 
+
       <div class="section-heading">
 
-        <p>FEATURED WORK</p>
+        <p>
+          FEATURED WORK
+        </p>
+
 
         <h2>
-          Portfolio Gallery
+          Experiences, not just images.
         </h2>
 
+
         <span class="section-subtitle">
-          A visual look at my certifications, competitions,
-          workshops, and cloud sessions.
+
+          Instead of treating every photo as a separate project,
+          each event is presented as one complete experience.
+
         </span>
 
       </div>
 
 
-      <div class="gallery-grid">
+
+      <div class="collection-grid">
 
 
-        <!-- ================================================
-             01 — AZ-104
-        ================================================= -->
 
-        <article class="gallery-item">
+        <!-- =================================================
+             AZ-104
+        ================================================== -->
 
-          <img
-            src="Screenshot 2026-07-02 124058.png"
-            alt="Microsoft Certified Azure Administrator Associate certificate"
-          />
+        <article class="collection-card">
 
-          <div class="gallery-info">
 
-            <span class="gallery-category">
-              CERTIFICATION
+          <div class="collection-header">
+
+            <div class="collection-meta">
+
+              <span class="collection-kicker">
+                CERTIFICATION
+              </span>
+
+
+              <h3 class="collection-title">
+                Microsoft Azure Administrator
+              </h3>
+
+
+              <p class="collection-description">
+
+                Microsoft Certified: Azure Administrator Associate
+                (AZ-104), representing my core Azure administration
+                and cloud infrastructure foundation.
+
+              </p>
+
+            </div>
+
+
+            <span class="collection-count">
+              01 FEATURE
             </span>
 
-            <h3>
-              AZ-104 Certificate
-            </h3>
+          </div>
 
-            <p>
-              Microsoft Certified: Azure Administrator Associate.
-            </p>
+
+          <div class="collection-media two-col">
+
+
+            <img
+              class="tall"
+              src="Screenshot 2026-07-02 124058.png"
+              alt="Microsoft Certified Azure Administrator Associate certificate"
+            />
+
+
+            <div style="
+              display:flex;
+              flex-direction:column;
+              justify-content:center;
+              padding:20px;
+            ">
+
+              <span class="collection-kicker">
+                MICROSOFT
+              </span>
+
+              <h4 style="
+                margin-top:9px;
+                font-size:18px;
+              ">
+                AZ-104
+              </h4>
+
+
+              <p style="
+                margin-top:8px;
+                color:#98879f;
+                font-size:11px;
+                line-height:1.7;
+              ">
+
+                Microsoft Certified Azure Administrator Associate.
+                The credential supporting my cloud administration
+                profile.
+
+              </p>
+
+
+              <a
+                href="https://www.credly.com/users/muhammad-ephraim/edit/badges/credly"
+                target="_blank"
+                rel="noopener"
+                class="collection-link"
+                style="margin-top:16px;"
+              >
+                Verify credential →
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="collection-footer">
+
+            <span class="collection-note">
+              Core professional credential
+            </span>
 
           </div>
 
@@ -815,30 +1577,87 @@
 
 
 
-        <!-- ================================================
-             02 — IEEE CODEX 2.0
-        ================================================= -->
+        <!-- =================================================
+             IEEE CODEX 2.0
+        ================================================== -->
 
-        <article class="gallery-item">
+        <article class="collection-card featured">
 
-          <img
-            src="WhatsApp Image 2026-06-02 at 3.11.45 PM.jpeg"
-            alt="IEEE Codex 2.0 Cloud Competition"
-          />
 
-          <div class="gallery-info">
+          <div class="collection-header">
 
-            <span class="gallery-category">
-              IEEE · GDGoC
+            <div class="collection-meta">
+
+              <span class="collection-kicker">
+                IEEE · GDGOC
+              </span>
+
+
+              <h3 class="collection-title">
+                IEEE Codex 2.0 × GDGoC
+              </h3>
+
+
+              <p class="collection-description">
+
+                Cloud Competition — a key community initiative where
+                I worked on the Cloud Computing track, practical
+                sandbox environments, scenarios, assessment workflows,
+                and competition operations.
+
+              </p>
+
+            </div>
+
+
+            <span class="collection-count">
+              05 PHOTOS
             </span>
 
-            <h3>
-              IEEE Codex 2.0
-            </h3>
+          </div>
 
-            <p>
-              Cloud Competition
-            </p>
+
+          <div class="collection-media">
+
+
+            <img
+              class="tall"
+              src="WhatsApp Image 2026-06-02 at 3.11.45 PM.jpeg"
+              alt="IEEE Codex 2.0 Cloud Competition"
+            />
+
+
+            <img
+              src="WhatsApp Image 2026-06-02 at 3.11.45 PM (1).jpeg"
+              alt="IEEE Codex 2.0 Cloud Competition"
+            />
+
+
+            <img
+              src="WhatsApp Image 2026-06-02 at 3.11.45 PM (2).jpeg"
+              alt="IEEE Codex 2.0 Cloud Competition"
+            />
+
+
+            <img
+              src="WhatsApp Image 2026-06-02 at 3.11.47 PM.jpeg"
+              alt="IEEE Codex 2.0 Cloud Competition"
+            />
+
+
+            <img
+              src="WhatsApp Image 2026-06-02 at 3.11.47 PM (1).jpeg"
+              alt="IEEE Codex 2.0 Cloud Competition"
+            />
+
+          </div>
+
+
+          <div class="collection-footer">
+
+            <span class="collection-note">
+              Cloud track · Competition · Community leadership
+            </span>
 
           </div>
 
@@ -846,252 +1665,157 @@
 
 
 
-        <article class="gallery-item">
+        <!-- =================================================
+             UMT CLOUD
+        ================================================== -->
 
-          <img
-            src="WhatsApp Image 2026-06-02 at 3.11.45 PM (1).jpeg"
-            alt="IEEE Codex 2.0 Cloud Competition"
-          />
+        <article class="collection-card featured">
 
-          <div class="gallery-info">
 
-            <span class="gallery-category">
-              IEEE · GDGoC
+          <div class="collection-header">
+
+            <div class="collection-meta">
+
+              <span class="collection-kicker">
+                UMT · CLOUD
+              </span>
+
+
+              <h3 class="collection-title">
+                UMT Cloud Session
+              </h3>
+
+
+              <p class="collection-description">
+
+                A collection from the UMT cloud-focused technical
+                session, capturing the presentation, audience,
+                and hands-on learning environment.
+
+              </p>
+
+            </div>
+
+
+            <span class="collection-count">
+              05 PHOTOS
             </span>
 
-            <h3>
-              IEEE Codex 2.0
-            </h3>
+          </div>
 
-            <p>
-              Cloud Competition
-            </p>
+
+          <div class="collection-media">
+
+
+            <img
+              class="tall"
+              src="WhatsApp Image 2026-06-22 at 1.33.45 PM.jpeg"
+              alt="UMT Cloud Session"
+            />
+
+
+            <img
+              src="WhatsApp Image 2026-06-22 at 1.33.47 PM.jpeg"
+              alt="UMT Cloud Session"
+            />
+
+
+            <img
+              src="WhatsApp Image 2026-06-22 at 1.33.54 PM.jpeg"
+              alt="UMT Cloud Session"
+            />
+
+
+            <img
+              src="WhatsApp Image 2026-06-22 at 6.56.51 PM.jpeg"
+              alt="UMT Cloud Session"
+            />
+
+
+            <img
+              src="WhatsApp Image 2026-06-22 at 8.16.19 PM.jpeg"
+              alt="UMT Cloud Session"
+            />
+
+          </div>
+
+
+          <div class="collection-footer">
+
+            <span class="collection-note">
+              Cloud session · Presentation · Technical engagement
+            </span>
 
           </div>
 
         </article>
 
-
-
-        <article class="gallery-item">
-
-          <img
-            src="WhatsApp Image 2026-06-02 at 3.11.45 PM (2).jpeg"
-            alt="IEEE Codex 2.0 Cloud Competition"
-          />
-
-          <div class="gallery-info">
-
-            <span class="gallery-category">
-              IEEE · GDGoC
-            </span>
-
-            <h3>
-              IEEE Codex 2.0
-            </h3>
-
-            <p>
-              Cloud Competition
-            </p>
-
-          </div>
-
-        </article>
-
-
-
-        <article class="gallery-item">
-
-          <img
-            src="WhatsApp Image 2026-06-02 at 3.11.47 PM.jpeg"
-            alt="IEEE Codex 2.0 Cloud Competition"
-          />
-
-          <div class="gallery-info">
-
-            <span class="gallery-category">
-              IEEE · GDGoC
-            </span>
-
-            <h3>
-              IEEE Codex 2.0
-            </h3>
-
-            <p>
-              Cloud Competition
-            </p>
-
-          </div>
-
-        </article>
-
-
-
-        <article class="gallery-item">
-
-          <img
-            src="WhatsApp Image 2026-06-02 at 3.11.47 PM (1).jpeg"
-            alt="IEEE Codex 2.0 Cloud Competition"
-          />
-
-          <div class="gallery-info">
-
-            <span class="gallery-category">
-              IEEE · GDGoC
-            </span>
-
-            <h3>
-              IEEE Codex 2.0
-            </h3>
-
-            <p>
-              Cloud Competition
-            </p>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- ================================================
-             07 — UMT CLOUD
-        ================================================= -->
-
-        <article class="gallery-item">
-
-          <img
-            src="WhatsApp Image 2026-06-22 at 1.33.45 PM.jpeg"
-            alt="UMT Cloud Session"
-          />
-
-          <div class="gallery-info">
-
-            <span class="gallery-category">
-              UMT · CLOUD
-            </span>
-
-            <h3>
-              UMT Cloud Session
-            </h3>
-
-            <p>
-              Cloud learning and technical engagement session.
-            </p>
-
-          </div>
-
-        </article>
-
-
-
-        <article class="gallery-item">
-
-          <img
-            src="WhatsApp Image 2026-06-22 at 1.33.47 PM.jpeg"
-            alt="UMT Cloud Session"
-          />
-
-          <div class="gallery-info">
-
-            <span class="gallery-category">
-              UMT · CLOUD
-            </span>
-
-            <h3>
-              UMT Cloud Session
-            </h3>
-
-            <p>
-              Cloud learning and technical engagement session.
-            </p>
-
-          </div>
-
-        </article>
-
-
-
-        <article class="gallery-item">
-
-          <img
-            src="WhatsApp Image 2026-06-22 at 1.33.54 PM.jpeg"
-            alt="UMT Cloud Session"
-          />
-
-          <div class="gallery-info">
-
-            <span class="gallery-category">
-              UMT · CLOUD
-            </span>
-
-            <h3>
-              UMT Cloud Session
-            </h3>
-
-            <p>
-              Cloud learning and technical engagement session.
-            </p>
-
-          </div>
-
-        </article>
-
-
-
-        <article class="gallery-item">
-
-          <img
-            src="WhatsApp Image 2026-06-22 at 6.56.51 PM.jpeg"
-            alt="UMT Cloud Session"
-          />
-
-          <div class="gallery-info">
-
-            <span class="gallery-category">
-              UMT · CLOUD
-            </span>
-
-            <h3>
-              UMT Cloud Session
-            </h3>
-
-            <p>
-              Cloud learning and technical engagement session.
-            </p>
-
-          </div>
-
-        </article>
-
-
-
-        <article class="gallery-item">
-
-          <img
-            src="WhatsApp Image 2026-06-22 at 8.16.19 PM.jpeg"
-            alt="UMT Cloud Session"
-          />
-
-          <div class="gallery-info">
-
-            <span class="gallery-category">
-              UMT · CLOUD
-            </span>
-
-            <h3>
-              UMT Cloud Session
-            </h3>
-
-            <p>
-              Cloud learning and technical engagement session.
-            </p>
-
-          </div>
-
-        </article>
 
       </div>
+
+
+
+      <!-- =================================================
+           GITHUB / WORK PROOF
+      ================================================== -->
+
+      <div class="proof-card">
+
+
+        <div class="proof-image-wrap">
+
+          <!--
+            This image is in the repository root.
+
+            File:
+            1787061152991.jpg
+          -->
+
+          <img
+            src="1787061152991.jpg"
+            alt="GitHub repository work proof"
+            id="githubProofImage"
+          />
+
+        </div>
+
+
+        <div class="proof-content">
+
+          <span class="proof-kicker">
+            GITHUB · WORK PROOF
+          </span>
+
+
+          <h3>
+            Building in public,
+            one project at a time.
+          </h3>
+
+
+          <p>
+
+            This visual is linked directly to the portfolio repository
+            workflow. It gives visitors a quick look at the project
+            structure and the work being maintained behind the site.
+
+          </p>
+
+
+          <a
+            href="https://github.com/Ephraim-Sameer/portfolio"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-secondary"
+          >
+            View GitHub Repository →
+          </a>
+
+        </div>
+
+
+      </div>
+
 
     </section>
 
@@ -1103,15 +1827,20 @@
 
     <section class="section" id="certifications">
 
+
       <div class="section-heading">
 
-        <p>CERTIFICATIONS</p>
+        <p>
+          CERTIFICATIONS
+        </p>
+
 
         <h2>
-          Credentials & Learning
+          Credentials & Learning.
         </h2>
 
       </div>
+
 
 
       <div class="cert-grid">
@@ -1119,13 +1848,16 @@
 
         <article class="cert-card featured-cert">
 
+
           <span class="cert-status">
             VERIFIED
           </span>
 
+
           <div class="cert-logo microsoft-logo">
             M
           </div>
+
 
           <div class="cert-content">
 
@@ -1133,15 +1865,20 @@
               Microsoft
             </span>
 
+
             <h3>
               Microsoft Certified:
               Azure Administrator Associate
             </h3>
 
+
             <p>
+
               Microsoft Azure administration, identity,
               storage, compute, networking, and resource management.
+
             </p>
+
 
             <a
               href="https://www.credly.com/users/muhammad-ephraim/edit/badges/credly"
@@ -1164,15 +1901,18 @@
             MS
           </div>
 
+
           <div class="cert-content">
 
             <span>
               Microsoft
             </span>
 
+
             <h3>
               AI Skills Fest 2026
             </h3>
+
 
             <p>
               Issued June 2026.
@@ -1190,15 +1930,18 @@
             AWS
           </div>
 
+
           <div class="cert-content">
 
             <span>
               Amazon Web Services
             </span>
 
+
             <h3>
               AWS Educate Introduction to Generative AI
             </h3>
+
 
             <p>
               Issued February 2025.
@@ -1216,16 +1959,19 @@
             G
           </div>
 
+
           <div class="cert-content">
 
             <span>
               Google
             </span>
 
+
             <h3>
               Google Cloud Fundamentals:
               Core Infrastructure
             </h3>
+
 
             <p>
               Issued February 2025.
@@ -1243,15 +1989,18 @@
             CS
           </div>
 
+
           <div class="cert-content">
 
             <span>
               Cisco Networking Academy
             </span>
 
+
             <h3>
               Network Addressing and Basic Troubleshooting
             </h3>
+
 
             <p>
               Networking fundamentals and troubleshooting.
@@ -1269,15 +2018,18 @@
             AI
           </div>
 
+
           <div class="cert-content">
 
             <span>
               IBM
             </span>
 
+
             <h3>
               Artificial Intelligence Fundamentals
             </h3>
+
 
             <p>
               AI fundamentals and introductory concepts.
@@ -1291,7 +2043,9 @@
       </div>
 
 
+
       <div class="cert-footer">
+
 
         <a
           href="https://www.credly.com/users/muhammad-ephraim/edit/badges/credly"
@@ -1301,6 +2055,7 @@
         >
           View All Credentials
         </a>
+
 
       </div>
 
@@ -1314,15 +2069,20 @@
 
     <section class="section" id="education">
 
+
       <div class="section-heading">
 
-        <p>EDUCATION</p>
+        <p>
+          EDUCATION
+        </p>
+
 
         <h2>
-          Academic Journey
+          Academic Journey.
         </h2>
 
       </div>
+
 
 
       <div class="education-grid">
@@ -1331,12 +2091,14 @@
         <div class="education-card">
 
           <span class="education-year">
-            Sep 2024 – Jun 2028
+            SEP 2024 – JUN 2028
           </span>
+
 
           <h3>
             Bahria University
           </h3>
+
 
           <p>
             BCS · Computer Science
@@ -1345,15 +2107,18 @@
         </div>
 
 
+
         <div class="education-card">
 
           <span class="education-year">
             2025
           </span>
 
+
           <h3>
             Corvit Networks
           </h3>
+
 
           <p>
             Cisco Certified Network Associate (CCNA)
@@ -1362,15 +2127,18 @@
         </div>
 
 
+
         <div class="education-card">
 
           <span class="education-year">
             2025
           </span>
 
+
           <h3>
             Corvit Networks
           </h3>
+
 
           <p>
             Azure Administrator Training
@@ -1379,21 +2147,25 @@
         </div>
 
 
+
         <div class="education-card">
 
           <span class="education-year">
             2023 – 2024
           </span>
 
+
           <h3>
             International School of Pakistan, Kuwait
           </h3>
+
 
           <p>
             High School Diploma · Computer Science
           </p>
 
         </div>
+
 
       </div>
 
@@ -1407,7 +2179,9 @@
 
     <section class="section" id="resume">
 
+
       <div class="resume-card">
+
 
         <div class="resume-content">
 
@@ -1415,14 +2189,20 @@
             MY RESUME
           </span>
 
+
           <h2>
+
             Let's build something
             <span>meaningful.</span>
+
           </h2>
 
+
           <p>
+
             Explore my professional experience, cloud skills,
             certifications, education, projects, and leadership experience.
+
           </p>
 
         </div>
@@ -1434,9 +2214,15 @@
           rel="noopener"
           class="resume-button"
         >
+
           Download Resume
-          <span>↓</span>
+
+          <span>
+            ↓
+          </span>
+
         </a>
+
 
       </div>
 
@@ -1450,9 +2236,13 @@
 
     <section class="section" id="contact">
 
+
       <div class="section-heading">
 
-        <p>CONTACT</p>
+        <p>
+          CONTACT
+        </p>
+
 
         <h2>
           Let's connect.
@@ -1461,25 +2251,34 @@
       </div>
 
 
+
       <div class="contact-panel">
+
 
         <div>
 
           <h3>
+
             Open to opportunities,
             collaborations & conversations.
+
           </h3>
 
+
           <p>
+
             Whether it's cloud engineering, technical mentoring,
             a community initiative, or an interesting technology project,
             feel free to reach out.
+
           </p>
 
         </div>
 
 
+
         <div class="contact-actions">
+
 
           <a
             href="https://www.linkedin.com/in/mephraimsameer"
@@ -1510,11 +2309,13 @@
             Credly
           </a>
 
+
         </div>
 
       </div>
 
     </section>
+
 
   </main>
 
@@ -1533,9 +2334,11 @@
     <span
       class="close-modal"
       id="closeModal"
+      aria-label="Close image preview"
     >
       &times;
     </span>
+
 
     <img
       id="modalImage"
@@ -1553,13 +2356,16 @@
 
   <footer class="footer">
 
+
     <div class="footer-inner">
+
 
       <div>
 
         <a href="#home" class="logo">
           Ephraim<span>Sameer</span>
         </a>
+
 
         <p>
           Cloud Engineer · Azure · Technology
@@ -1570,6 +2376,7 @@
 
       <div class="footer-links">
 
+
         <a
           href="https://www.linkedin.com/in/mephraimsameer"
           target="_blank"
@@ -1577,6 +2384,7 @@
         >
           LinkedIn
         </a>
+
 
         <a
           href="https://github.com/Ephraim-Sameer"
@@ -1586,6 +2394,7 @@
           GitHub
         </a>
 
+
         <a
           href="https://www.credly.com/users/muhammad-ephraim/edit/badges/credly"
           target="_blank"
@@ -1594,20 +2403,150 @@
           Credly
         </a>
 
+
       </div>
+
 
     </div>
 
 
     <p class="copyright">
+
       © 2026 Muhammad Ephraim Sameer. All rights reserved.
+
     </p>
+
 
   </footer>
 
 
 
-  <script src="script.js"></script>
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script>
+
+    /* =====================================================
+       MOBILE NAVIGATION
+    ====================================================== */
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+
+    if (menuToggle && navLinks) {
+
+      menuToggle.addEventListener("click", () => {
+
+        navLinks.classList.toggle("active");
+
+      });
+
+
+      document
+        .querySelectorAll(".nav-links a")
+        .forEach((link) => {
+
+          link.addEventListener("click", () => {
+
+            navLinks.classList.remove("active");
+
+          });
+
+        });
+
+    }
+
+
+
+    /* =====================================================
+       GALLERY / COLLECTION IMAGE MODAL
+    ====================================================== */
+
+    const imageModal =
+      document.getElementById("imageModal");
+
+    const modalImage =
+      document.getElementById("modalImage");
+
+    const closeModal =
+      document.getElementById("closeModal");
+
+
+    document
+      .querySelectorAll(
+        ".collection-media img, .proof-image-wrap img"
+      )
+      .forEach((image) => {
+
+        image.addEventListener("click", () => {
+
+          modalImage.src = image.src;
+
+          modalImage.alt = image.alt;
+
+          imageModal.classList.add("active");
+
+          imageModal.setAttribute(
+            "aria-hidden",
+            "false"
+          );
+
+        });
+
+      });
+
+
+    if (closeModal) {
+
+      closeModal.addEventListener("click", () => {
+
+        imageModal.classList.remove("active");
+
+        imageModal.setAttribute(
+          "aria-hidden",
+          "true"
+        );
+
+      });
+
+    }
+
+
+    imageModal.addEventListener("click", (event) => {
+
+      if (event.target === imageModal) {
+
+        imageModal.classList.remove("active");
+
+        imageModal.setAttribute(
+          "aria-hidden",
+          "true"
+        );
+
+      }
+
+    });
+
+
+    document.addEventListener("keydown", (event) => {
+
+      if (event.key === "Escape") {
+
+        imageModal.classList.remove("active");
+
+        imageModal.setAttribute(
+          "aria-hidden",
+          "true"
+        );
+
+      }
+
+    });
+
+  </script>
+
 
 </body>
 </html>
