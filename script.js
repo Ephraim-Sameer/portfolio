@@ -14,80 +14,226 @@ if (menuToggle && navLinks) {
   });
 
 
-  document.querySelectorAll(".nav-links a").forEach((link) => {
+  document
+    .querySelectorAll(".nav-links a")
+    .forEach((link) => {
 
-    link.addEventListener("click", () => {
+      link.addEventListener("click", () => {
 
-      navLinks.classList.remove("active");
+        navLinks.classList.remove("active");
+
+      });
 
     });
-
-  });
 
 }
 
 
 
 /* =========================================================
-   GALLERY IMAGE MODAL
+   IMAGE MODAL
 ========================================================= */
 
-const imageModal = document.getElementById("imageModal");
-const modalImage = document.getElementById("modalImage");
-const closeModal = document.getElementById("closeModal");
+const imageModal =
+  document.getElementById("imageModal");
+
+const modalImage =
+  document.getElementById("modalImage");
+
+const modalClose =
+  document.getElementById("modalClose");
 
 
-document.querySelectorAll(".gallery-item img").forEach((image) => {
+const modalTriggers =
+  document.querySelectorAll(".modal-trigger");
+
+
+modalTriggers.forEach((image) => {
 
   image.addEventListener("click", () => {
 
+    if (!imageModal || !modalImage) {
+      return;
+    }
+
     modalImage.src = image.src;
 
-    modalImage.alt = image.alt;
+    modalImage.alt =
+      image.alt || "Portfolio image";
 
     imageModal.classList.add("active");
 
-    imageModal.setAttribute("aria-hidden", "false");
+    imageModal.setAttribute(
+      "aria-hidden",
+      "false"
+    );
 
   });
 
 });
 
 
-if (closeModal) {
 
-  closeModal.addEventListener("click", () => {
+/* =========================================================
+   CLOSE MODAL
+========================================================= */
 
-    imageModal.classList.remove("active");
+function closeImageModal() {
 
-    imageModal.setAttribute("aria-hidden", "true");
+  if (!imageModal) {
+    return;
+  }
 
-  });
+  imageModal.classList.remove("active");
+
+  imageModal.setAttribute(
+    "aria-hidden",
+    "true"
+  );
 
 }
 
 
-imageModal.addEventListener("click", (event) => {
+if (modalClose) {
 
-  if (event.target === imageModal) {
+  modalClose.addEventListener(
+    "click",
+    closeImageModal
+  );
 
-    imageModal.classList.remove("active");
+}
 
-    imageModal.setAttribute("aria-hidden", "true");
+
+if (imageModal) {
+
+  imageModal.addEventListener(
+    "click",
+    (event) => {
+
+      if (event.target === imageModal) {
+
+        closeImageModal();
+
+      }
+
+    }
+  );
+
+}
+
+
+document.addEventListener(
+  "keydown",
+  (event) => {
+
+    if (event.key === "Escape") {
+
+      closeImageModal();
+
+    }
 
   }
+);
+
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
+
+const sections =
+  document.querySelectorAll("main section[id]");
+
+const navigationLinks =
+  document.querySelectorAll(".nav-links a");
+
+
+const observer =
+  new IntersectionObserver(
+    (entries) => {
+
+      entries.forEach((entry) => {
+
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        navigationLinks.forEach((link) => {
+
+          link.classList.remove("active");
+
+          const target =
+            link.getAttribute("href");
+
+          if (
+            target === `#${entry.target.id}`
+          ) {
+
+            link.classList.add("active");
+
+          }
+
+        });
+
+      });
+
+    },
+    {
+      threshold: 0.25
+    }
+  );
+
+
+sections.forEach((section) => {
+
+  observer.observe(section);
 
 });
 
 
-document.addEventListener("keydown", (event) => {
 
-  if (event.key === "Escape") {
+/* =========================================================
+   SIMPLE REVEAL ANIMATION
+========================================================= */
 
-    imageModal.classList.remove("active");
+const revealTargets = document.querySelectorAll(
+  ".experience-item, .work-story, .badge-card, .education-row, .skill-category"
+);
 
-    imageModal.setAttribute("aria-hidden", "true");
 
-  }
+const revealObserver =
+  new IntersectionObserver(
+    (entries) => {
+
+      entries.forEach((entry) => {
+
+        if (
+          !entry.isIntersecting
+        ) {
+          return;
+        }
+
+        entry.target.classList.add(
+          "is-visible"
+        );
+
+        revealObserver.unobserve(
+          entry.target
+        );
+
+      });
+
+    },
+    {
+      threshold: 0.08
+    }
+  );
+
+
+revealTargets.forEach((element) => {
+
+  element.classList.add("reveal");
+
+  revealObserver.observe(element);
 
 });
