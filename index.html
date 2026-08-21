@@ -61,10 +61,63 @@
 
 
   <!-- ======================================================
-       PAGE-SPECIFIC STYLES
+       PAGE-SPECIFIC UI IMPROVEMENTS
   ======================================================= -->
 
   <style>
+
+
+    /* =====================================================
+       HERO TYPOGRAPHY
+    ====================================================== */
+
+    .hero-description {
+
+      font-size:
+        16px;
+
+      line-height:
+        1.75;
+
+      max-width:
+        700px;
+
+    }
+
+
+    .hero-buttons .button {
+
+      min-height:
+        54px;
+
+      padding:
+        0 23px;
+
+      font-size:
+        13px;
+
+    }
+
+
+    .hero-links {
+
+      gap:
+        24px;
+
+      margin-top:
+        28px;
+
+    }
+
+
+    .hero-links a {
+
+      font-size:
+        12px;
+
+    }
+
+
 
     /* =====================================================
        WORK EXPERIENCE
@@ -86,24 +139,25 @@
 
     .work-experience {
 
+      overflow:
+        hidden;
+
       border:
-        1px solid rgba(208, 143, 229, 0.15);
+        1px solid
+        rgba(208,143,229,.15);
 
       border-radius:
         28px;
 
-      overflow:
-        hidden;
-
       background:
         linear-gradient(
           145deg,
-          rgba(35, 15, 47, 0.78),
-          rgba(12, 6, 17, 0.84)
+          rgba(35,15,47,.78),
+          rgba(12,6,17,.84)
         );
 
       box-shadow:
-        0 30px 90px rgba(0, 0, 0, 0.32);
+        0 30px 90px rgba(0,0,0,.32);
 
     }
 
@@ -166,7 +220,7 @@
         sans-serif;
 
       font-size:
-        clamp(30px, 4vw, 52px);
+        clamp(30px,4vw,52px);
 
       line-height:
         .97;
@@ -183,7 +237,7 @@
         15px;
 
       max-width:
-        760px;
+        800px;
 
       color:
         #9f8da7;
@@ -212,7 +266,8 @@
         center;
 
       border:
-        1px solid rgba(208,143,229,.15);
+        1px solid
+        rgba(208,143,229,.15);
 
       border-radius:
         999px;
@@ -234,7 +289,7 @@
 
 
     /* =====================================================
-       EVENT MEDIA
+       STANDARD EVENT MEDIA
     ====================================================== */
 
     .event-media {
@@ -257,13 +312,13 @@
     .event-poster {
 
       min-height:
-        530px;
-
-      border-radius:
-        19px;
+        560px;
 
       overflow:
         hidden;
+
+      border-radius:
+        19px;
 
       background:
         #09070d;
@@ -323,7 +378,7 @@
         0;
 
       min-height:
-        258px;
+        270px;
 
       overflow:
         hidden;
@@ -364,6 +419,353 @@
 
     }
 
+
+
+    /* =====================================================
+       CODEX — LARGE POSTER TREATMENT
+       
+       This specifically fixes the squeezed poster shown
+       in your screenshot.
+    ====================================================== */
+
+    .codex-media {
+
+      padding:
+        0 18px 18px;
+
+      display:
+        flex;
+
+      flex-direction:
+        column;
+
+      gap:
+        12px;
+
+    }
+
+
+    .codex-poster {
+
+      width:
+        100%;
+
+      min-height:
+        700px;
+
+      max-height:
+        820px;
+
+      overflow:
+        hidden;
+
+      border-radius:
+        22px;
+
+      background:
+        #130916;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      cursor:
+        zoom-in;
+
+      border:
+        1px solid
+        rgba(208,143,229,.10);
+
+    }
+
+
+    .codex-poster img {
+
+      width:
+        100%;
+
+      height:
+        100%;
+
+      object-fit:
+        contain;
+
+      transition:
+        transform .4s ease;
+
+    }
+
+
+    .codex-poster:hover img {
+
+      transform:
+        scale(1.01);
+
+    }
+
+
+    .codex-supporting {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(4,1fr);
+
+      gap:
+        8px;
+
+    }
+
+
+    .codex-supporting figure {
+
+      height:
+        255px;
+
+      margin:
+        0;
+
+      overflow:
+        hidden;
+
+      border-radius:
+        15px;
+
+      background:
+        #09070d;
+
+      cursor:
+        zoom-in;
+
+    }
+
+
+    .codex-supporting img {
+
+      width:
+        100%;
+
+      height:
+        100%;
+
+      object-fit:
+        cover;
+
+      transition:
+        transform .4s ease;
+
+    }
+
+
+    .codex-supporting figure:hover img {
+
+      transform:
+        scale(1.025);
+
+    }
+
+
+
+    /* =====================================================
+       UMT — POSTER + AWARD + SESSION PHOTOS
+    ====================================================== */
+
+    .umt-media {
+
+      padding:
+        0 18px 18px;
+
+      display:
+        flex;
+
+      flex-direction:
+        column;
+
+      gap:
+        12px;
+
+    }
+
+
+    .umt-feature-row {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        1.2fr .8fr;
+
+      gap:
+        10px;
+
+    }
+
+
+    .umt-poster {
+
+      min-height:
+        580px;
+
+      overflow:
+        hidden;
+
+      border-radius:
+        20px;
+
+      background:
+        #10070a;
+
+      cursor:
+        zoom-in;
+
+    }
+
+
+    .umt-poster img {
+
+      width:
+        100%;
+
+      height:
+        100%;
+
+      object-fit:
+        contain;
+
+      background:
+        #5c0e18;
+
+      transition:
+        transform .4s ease;
+
+    }
+
+
+    .umt-poster:hover img {
+
+      transform:
+        scale(1.01);
+
+    }
+
+
+    .umt-award {
+
+      min-height:
+        580px;
+
+      overflow:
+        hidden;
+
+      border-radius:
+        20px;
+
+      background:
+        #10070a;
+
+      cursor:
+        zoom-in;
+
+    }
+
+
+    .umt-award img {
+
+      width:
+        100%;
+
+      height:
+        100%;
+
+      object-fit:
+        cover;
+
+      transition:
+        transform .4s ease;
+
+    }
+
+
+    .umt-award:hover img {
+
+      transform:
+        scale(1.02);
+
+    }
+
+
+    .umt-session-grid {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(5,1fr);
+
+      gap:
+        8px;
+
+    }
+
+
+    .umt-session-grid figure {
+
+      height:
+        245px;
+
+      margin:
+        0;
+
+      overflow:
+        hidden;
+
+      border-radius:
+        14px;
+
+      background:
+        #09070d;
+
+      cursor:
+        zoom-in;
+
+    }
+
+
+    .umt-session-grid img {
+
+      width:
+        100%;
+
+      height:
+        100%;
+
+      object-fit:
+        cover;
+
+      transition:
+        transform .4s ease;
+
+    }
+
+
+    .umt-session-grid figure:hover img {
+
+      transform:
+        scale(1.025);
+
+    }
+
+
+
+    /* =====================================================
+       WORK META
+    ====================================================== */
 
     .work-meta {
 
@@ -408,7 +810,7 @@
 
 
     /* =====================================================
-       AZ-104
+       AZ-104 — MORE SPACE
     ====================================================== */
 
     .az104-work {
@@ -417,10 +819,13 @@
         grid;
 
       grid-template-columns:
-        .7fr 1.3fr;
+        .85fr 1.15fr;
 
       gap:
         0;
+
+      min-height:
+        650px;
 
     }
 
@@ -428,10 +833,10 @@
     .az104-image {
 
       min-height:
-        540px;
+        650px;
 
       padding:
-        30px;
+        45px;
 
       display:
         flex;
@@ -454,23 +859,27 @@
 
     .az104-image img {
 
-      max-width:
+      width:
         100%;
 
+      max-width:
+        560px;
+
       max-height:
-        480px;
+        560px;
 
       object-fit:
         contain;
 
       border-radius:
-        16px;
+        18px;
 
       cursor:
         zoom-in;
 
       box-shadow:
-        0 30px 80px rgba(0,0,0,.35);
+        0 30px 80px
+        rgba(0,0,0,.35);
 
     }
 
@@ -478,7 +887,7 @@
     .az104-copy {
 
       padding:
-        55px;
+        70px;
 
       display:
         flex;
@@ -499,13 +908,13 @@
         sans-serif;
 
       font-size:
-        clamp(32px, 4vw, 55px);
+        clamp(42px,5vw,76px);
 
       line-height:
-        .98;
+        .94;
 
       letter-spacing:
-        -.06em;
+        -.065em;
 
     }
 
@@ -513,16 +922,19 @@
     .az104-copy p {
 
       max-width:
-        600px;
+        680px;
 
       margin-top:
-        17px;
+        22px;
 
       color:
         #9f8da7;
 
       font-size:
-        13px;
+        15px;
+
+      line-height:
+        1.8;
 
     }
 
@@ -533,13 +945,13 @@
         fit-content;
 
       margin-top:
-        23px;
+        28px;
 
       color:
         #ca8dde;
 
       font-size:
-        10px;
+        12px;
 
       font-weight:
         700;
@@ -549,262 +961,131 @@
 
 
     /* =====================================================
-       BADGE SYSTEM
+       CREDENTIAL TEXT SIZE
     ====================================================== */
 
-    .badge-grid {
+    .certification-info h3 {
 
-      display:
-        grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap:
-        16px;
+      font-size:
+        clamp(38px,5vw,68px) !important;
 
     }
 
+
+    .certification-info p {
+
+      font-size:
+        15px;
+
+      line-height:
+        1.75;
+
+    }
+
+
+
+    /* =====================================================
+       EXPERIENCE ORDER / SPACING
+    ====================================================== */
+
+    .experience-content {
+
+      padding:
+        34px;
+
+    }
+
+
+    .experience-heading h3 {
+
+      font-size:
+        27px;
+
+    }
+
+
+    .experience-company {
+
+      font-size:
+        12px;
+
+    }
+
+
+    .experience-content > p {
+
+      font-size:
+        14px;
+
+      line-height:
+        1.75;
+
+    }
+
+
+
+    /* =====================================================
+       BADGES
+    ====================================================== */
 
     .badge-card {
 
       min-height:
-        142px;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      gap:
-        16px;
-
-      padding:
-        18px;
-
-      border:
-        1px solid
-        rgba(208,143,229,.14);
-
-      border-radius:
-        18px;
-
-      background:
-        linear-gradient(
-          145deg,
-          rgba(33,15,43,.65),
-          rgba(12,6,17,.65)
-        );
-
-      transition:
-        transform .25s ease,
-        border .25s ease,
-        background .25s ease;
-
-    }
-
-
-    .badge-card:hover {
-
-      transform:
-        translateY(-4px);
-
-      border-color:
-        rgba(208,143,229,.33);
-
-      background:
-        linear-gradient(
-          145deg,
-          rgba(44,19,57,.72),
-          rgba(15,7,20,.72)
-        );
-
-    }
-
-
-    .badge-emblem {
-
-      width:
-        74px;
-
-      height:
-        74px;
-
-      flex:
-        0 0 74px;
-
-      border-radius:
-        17px;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        center;
-
-      text-align:
-        center;
-
-      overflow:
-        hidden;
-
-      border:
-        1px solid
-        rgba(255,255,255,.08);
-
-      background:
-        radial-gradient(
-          circle at 30% 20%,
-          rgba(255,255,255,.13),
-          transparent 40%
-        ),
-        linear-gradient(
-          145deg,
-          #43204f,
-          #1b0c22
-        );
-
-      color:
-        #e5cdeb;
-
-      box-shadow:
-        inset 0 1px 0
-        rgba(255,255,255,.04);
-
-    }
-
-
-    .badge-emblem-image {
-
-      width:
-        100%;
-
-      height:
-        100%;
-
-      object-fit:
-        contain;
-
-      padding:
-        7px;
-
-    }
-
-
-    .badge-monogram {
-
-      font-family:
-        "Space Grotesk",
-        sans-serif;
-
-      font-size:
-        17px;
-
-      font-weight:
-        700;
-
-      letter-spacing:
-        -.04em;
-
-    }
-
-
-    .badge-card-content {
-
-      min-width:
-        0;
-
-    }
-
-
-    .badge-provider {
-
-      color:
-        #a85bc2;
-
-      font-size:
-        8px;
-
-      font-weight:
-        800;
-
-      letter-spacing:
-        .11em;
+        148px;
 
     }
 
 
     .badge-card h3 {
 
-      margin-top:
-        5px;
-
-      font-family:
-        "Space Grotesk",
-        sans-serif;
-
       font-size:
-        13px;
-
-      line-height:
-        1.25;
-
-      letter-spacing:
-        -.02em;
-
-      color:
-        #e7dce8;
+        15px;
 
     }
 
 
     .badge-card p {
 
-      margin-top:
-        6px;
-
-      color:
-        #807181;
-
       font-size:
-        9px;
-
-    }
-
-
-    .badge-featured {
-
-      border-color:
-        rgba(191,113,219,.28);
-
-      background:
-        linear-gradient(
-          145deg,
-          rgba(91,37,112,.22),
-          rgba(255,255,255,.015)
-        );
-
-    }
-
-
-    .badge-footer {
-
-      margin-top:
-        25px;
+        10px;
 
     }
 
 
 
     /* =====================================================
-       RESPONSIVE WORK
+       RESPONSIVE
     ====================================================== */
 
-    @media (max-width: 1050px) {
+    @media (max-width: 1100px) {
+
+      .codex-supporting {
+
+        grid-template-columns:
+          repeat(2,1fr);
+
+      }
+
+
+      .umt-session-grid {
+
+        grid-template-columns:
+          repeat(3,1fr);
+
+      }
+
+
+      .umt-feature-row {
+
+        grid-template-columns:
+          1fr 1fr;
+
+      }
+
+    }
+
+
+    @media (max-width: 900px) {
 
       .event-media,
       .az104-work {
@@ -815,10 +1096,35 @@
       }
 
 
-      .event-poster {
+      .codex-poster {
 
         min-height:
-          500px;
+          620px;
+
+      }
+
+
+      .umt-feature-row {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .umt-poster,
+      .umt-award {
+
+        min-height:
+          550px;
+
+      }
+
+
+      .umt-session-grid {
+
+        grid-template-columns:
+          repeat(2,1fr);
 
       }
 
@@ -826,19 +1132,15 @@
       .az104-image {
 
         min-height:
-          auto;
+          520px;
 
       }
 
-    }
 
+      .az104-copy {
 
-    @media (max-width: 1000px) {
-
-      .badge-grid {
-
-        grid-template-columns:
-          repeat(2, 1fr);
+        padding:
+          55px;
 
       }
 
@@ -846,6 +1148,33 @@
 
 
     @media (max-width: 650px) {
+
+      .hero-buttons .button {
+
+        min-height:
+          50px;
+
+        font-size:
+          12px;
+
+      }
+
+
+      .hero-links {
+
+        gap:
+          15px;
+
+      }
+
+
+      .hero-links a {
+
+        font-size:
+          11px;
+
+      }
+
 
       .work-heading {
 
@@ -866,7 +1195,9 @@
       }
 
 
-      .event-media {
+      .event-media,
+      .codex-media,
+      .umt-media {
 
         padding:
           0 8px 8px;
@@ -874,15 +1205,15 @@
       }
 
 
-      .event-poster {
+      .codex-poster {
 
         min-height:
-          430px;
+          520px;
 
       }
 
 
-      .event-screens {
+      .codex-supporting {
 
         grid-template-columns:
           1fr 1fr;
@@ -890,10 +1221,46 @@
       }
 
 
-      .event-screens figure {
+      .codex-supporting figure {
+
+        height:
+          200px;
+
+      }
+
+
+      .umt-poster,
+      .umt-award {
 
         min-height:
-          170px;
+          430px;
+
+      }
+
+
+      .umt-session-grid {
+
+        grid-template-columns:
+          1fr 1fr;
+
+      }
+
+
+      .umt-session-grid figure {
+
+        height:
+          205px;
+
+      }
+
+
+      .az104-image {
+
+        min-height:
+          430px;
+
+        padding:
+          24px;
 
       }
 
@@ -901,23 +1268,15 @@
       .az104-copy {
 
         padding:
-          35px 27px;
+          40px 27px;
 
       }
 
 
-      .badge-grid {
+      .experience-content {
 
-        grid-template-columns:
-          1fr;
-
-      }
-
-
-      .badge-card {
-
-        min-height:
-          126px;
+        padding:
+          27px;
 
       }
 
@@ -971,7 +1330,6 @@
       >
 
         <span></span>
-
         <span></span>
 
       </button>
@@ -983,39 +1341,65 @@
       >
 
         <li>
-          <a href="#home">Home</a>
+          <a href="#home">
+            Home
+          </a>
         </li>
 
-        <li>
-          <a href="#about">About</a>
-        </li>
 
         <li>
-          <a href="#experience">Experience</a>
+          <a href="#about">
+            About
+          </a>
         </li>
 
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
 
         <li>
-          <a href="#work">Work</a>
+          <a href="#experience">
+            Experience
+          </a>
         </li>
 
-        <li>
-          <a href="#certifications">Certifications</a>
-        </li>
 
         <li>
-          <a href="#badges">Badges</a>
+          <a href="#skills">
+            Skills
+          </a>
         </li>
 
-        <li>
-          <a href="#resume">Resume</a>
-        </li>
 
         <li>
-          <a href="#contact">Contact</a>
+          <a href="#work">
+            Work
+          </a>
+        </li>
+
+
+        <li>
+          <a href="#certifications">
+            Certifications
+          </a>
+        </li>
+
+
+        <li>
+          <a href="#badges">
+            Badges
+          </a>
+        </li>
+
+
+        <li>
+          <a href="#resume">
+            Resume
+          </a>
+        </li>
+
+
+        <li>
+          <a href="#contact">
+            Contact
+          </a>
         </li>
 
       </ul>
@@ -1089,7 +1473,7 @@
 
           Microsoft Certified Azure Administrator focused on
           cloud infrastructure, Azure administration, technical
-          mentoring, community leadership, and practical
+          mentoring, community leadership, and building practical
           cloud experiences.
 
         </p>
@@ -1157,10 +1541,6 @@
       </div>
 
 
-
-      <!-- ====================================================
-           HERO PORTRAIT
-      ===================================================== -->
 
       <div class="hero-visual">
 
@@ -1244,11 +1624,8 @@
 
 
         <h2>
-
           Cloud, community,<br />
-
           and continuous growth.
-
         </h2>
 
       </div>
@@ -1369,7 +1746,6 @@
 
         </div>
 
-
       </div>
 
     </section>
@@ -1378,6 +1754,22 @@
 
     <!-- ======================================================
          EXPERIENCE
+         
+         ORDER UPDATED:
+         
+         Co-Lead
+         ↓
+         Zee
+         ↓
+         IEEE CS
+         ↓
+         IEEE Documentation
+         ↓
+         Cloud Lead
+         ↓
+         Teaching Assistant
+         ↓
+         Event Management
     ======================================================= -->
 
     <section
@@ -1400,9 +1792,8 @@
 
         <p class="section-intro">
 
-          Chronologically arranged from my earliest community
-          role through my current professional and leadership
-          responsibilities.
+          Chronologically arranged by role start date while
+          keeping concurrent responsibilities visible.
 
         </p>
 
@@ -1411,6 +1802,7 @@
 
 
       <div class="experience-list">
+
 
 
         <!-- GDGoC CO-LEAD -->
@@ -1423,7 +1815,6 @@
 
 
           <div class="experience-content">
-
 
             <div class="experience-date">
               AUG 2026 — PRESENT
@@ -1457,8 +1848,8 @@
 
               Stepping into chapter-level leadership after serving
               as Cloud Lead, helping guide the core team, broader
-              operations, strategic direction and upcoming
-              technical initiatives.
+              operations, strategic direction and upcoming technical
+              initiatives.
 
             </p>
 
@@ -1478,7 +1869,6 @@
 
 
           <div class="experience-content">
-
 
             <div class="experience-date">
               JUN 2026 — PRESENT
@@ -1519,8 +1909,8 @@
             <ul>
 
               <li>
-                Directed the Microsoft Azure mentorship track for
-                aspiring cloud engineers across AZ-900 and AZ-104.
+                Directed the Microsoft Azure mentorship track
+                across AZ-900 and AZ-104.
               </li>
 
               <li>
@@ -1529,8 +1919,7 @@
               </li>
 
               <li>
-                Designed hands-on cloud computing roadmaps aligned
-                with certification and enterprise deployment goals.
+                Designed hands-on cloud computing roadmaps.
               </li>
 
               <li>
@@ -1556,7 +1945,6 @@
 
 
           <div class="experience-content">
-
 
             <div class="experience-date">
               MAY 2026 — PRESENT
@@ -1589,8 +1977,7 @@
             <p>
 
               Active membership reflecting ongoing involvement
-              in the professional technology community and
-              continued development within computing.
+              in the professional technology community.
 
             </p>
 
@@ -1610,7 +1997,6 @@
 
 
           <div class="experience-content">
-
 
             <div class="experience-date">
               FEB 2026 — PRESENT
@@ -1644,75 +2030,9 @@
 
               Driving the administrative documentation framework,
               corporate communication and strategic record-keeping
-              for the student branch and major flagship events.
+              for the student branch and flagship events.
 
             </p>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- TEACHING ASSISTANT -->
-
-        <article class="experience-item">
-
-          <div class="experience-marker">
-            <span></span>
-          </div>
-
-
-          <div class="experience-content">
-
-
-            <div class="experience-date">
-              SEP 2025 — JUN 2026
-            </div>
-
-
-            <div class="experience-heading">
-
-              <div>
-
-                <h3>
-                  Teaching Assistant
-                </h3>
-
-
-                <p class="experience-company">
-                  Bahria University
-                </p>
-
-              </div>
-
-
-              <span class="experience-type">
-                EDUCATION
-              </span>
-
-            </div>
-
-
-            <p>
-
-              Supported students during networking laboratories,
-              academic projects and practical coursework.
-
-            </p>
-
-
-            <div class="technical-tags">
-
-              <span>OSPF</span>
-              <span>RIP</span>
-              <span>EIGRP</span>
-              <span>VLANs</span>
-              <span>IP Addressing</span>
-              <span>Routing</span>
-              <span>Troubleshooting</span>
-
-            </div>
 
           </div>
 
@@ -1730,7 +2050,6 @@
 
 
           <div class="experience-content">
-
 
             <div class="experience-date">
               OCT 2025 — AUG 2026
@@ -1774,8 +2093,7 @@
 
               <li>
                 Architected a comprehensive 120-minute practical
-                sandbox challenge simulating real-world AWS
-                deployment scenarios.
+                sandbox challenge simulating real-world AWS deployment.
               </li>
 
               <li>
@@ -1825,7 +2143,7 @@
 
 
 
-        <!-- GDGoC EVENT MANAGEMENT -->
+        <!-- TEACHING ASSISTANT — NOW BELOW CLOUD LEAD -->
 
         <article class="experience-item">
 
@@ -1836,6 +2154,90 @@
 
           <div class="experience-content">
 
+            <div class="experience-date">
+              SEP 2025 — JUN 2026
+            </div>
+
+
+            <div class="experience-heading">
+
+              <div>
+
+                <h3>
+                  Teaching Assistant
+                </h3>
+
+
+                <p class="experience-company">
+                  Bahria University
+                </p>
+
+              </div>
+
+
+              <span class="experience-type">
+                EDUCATION
+              </span>
+
+            </div>
+
+
+            <p>
+
+              Supported students during networking laboratories,
+              academic projects and practical coursework.
+
+            </p>
+
+
+            <div class="technical-tags">
+
+              <span>
+                OSPF
+              </span>
+
+              <span>
+                RIP
+              </span>
+
+              <span>
+                EIGRP
+              </span>
+
+              <span>
+                VLANs
+              </span>
+
+              <span>
+                IP Addressing
+              </span>
+
+              <span>
+                Routing
+              </span>
+
+              <span>
+                Troubleshooting
+              </span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- EVENT MANAGEMENT -->
+
+        <article class="experience-item">
+
+          <div class="experience-marker">
+            <span></span>
+          </div>
+
+
+          <div class="experience-content">
 
             <div class="experience-date">
               FEB 2025 — OCT 2025
@@ -1930,9 +2332,17 @@
 
             <div class="skill-list">
 
-              <span>Microsoft Azure</span>
-              <span>AWS</span>
-              <span>Google Cloud</span>
+              <span>
+                Microsoft Azure
+              </span>
+
+              <span>
+                AWS
+              </span>
+
+              <span>
+                Google Cloud
+              </span>
 
             </div>
 
@@ -1954,11 +2364,25 @@
 
             <div class="skill-list">
 
-              <span>Compute</span>
-              <span>Storage</span>
-              <span>Identity</span>
-              <span>Virtual Machines</span>
-              <span>Networking</span>
+              <span>
+                Compute
+              </span>
+
+              <span>
+                Storage
+              </span>
+
+              <span>
+                Identity
+              </span>
+
+              <span>
+                Virtual Machines
+              </span>
+
+              <span>
+                Networking
+              </span>
 
             </div>
 
@@ -1986,12 +2410,29 @@
 
             <div class="skill-list">
 
-              <span>TCP/IP</span>
-              <span>DNS</span>
-              <span>DHCP</span>
-              <span>OSPF</span>
-              <span>VLAN</span>
-              <span>Subnetting</span>
+              <span>
+                TCP/IP
+              </span>
+
+              <span>
+                DNS
+              </span>
+
+              <span>
+                DHCP
+              </span>
+
+              <span>
+                OSPF
+              </span>
+
+              <span>
+                VLAN
+              </span>
+
+              <span>
+                Subnetting
+              </span>
 
             </div>
 
@@ -2013,10 +2454,21 @@
 
             <div class="skill-list">
 
-              <span>Linux</span>
-              <span>Windows Server</span>
-              <span>PowerShell</span>
-              <span>GitHub</span>
+              <span>
+                Linux
+              </span>
+
+              <span>
+                Windows Server
+              </span>
+
+              <span>
+                PowerShell
+              </span>
+
+              <span>
+                GitHub
+              </span>
 
             </div>
 
@@ -2056,8 +2508,8 @@
         <p class="section-intro">
 
           Each event is treated as one portfolio experience,
-          with the poster shown first and supporting photographs
-          grouped underneath it.
+          with posters establishing the event before the
+          supporting media.
 
         </p>
 
@@ -2165,7 +2617,8 @@
 
         <!-- ==================================================
              IEEE CODEX 2.0
-             NEW POSTER IS FIRST
+             
+             LARGE POSTER FIRST
         =================================================== -->
 
         <article class="work-experience">
@@ -2205,25 +2658,21 @@
 
 
 
-          <!-- ==================================================
-               NEW CODEX POSTER + SUPPORTING PHOTOS
-          =================================================== -->
-
-          <div class="event-media">
+          <div class="codex-media">
 
 
-            <!-- POSTER FIRST -->
+            <!-- POSTER -->
 
-            <div class="event-poster">
+            <div class="codex-poster">
 
               <!--
-                The new poster uploaded by you.
+                NEW CODEX POSTER
 
-                GitHub filename used here:
+                Rename the GitHub file to:
+
                 combined-image.jpg
 
-                If you rename it in GitHub, change ONLY
-                this src value.
+                OR change this src to your actual filename.
               -->
 
               <img
@@ -2238,7 +2687,7 @@
 
             <!-- SUPPORTING PHOTOS -->
 
-            <div class="event-screens">
+            <div class="codex-supporting">
 
 
               <figure>
@@ -2285,17 +2734,6 @@
               </figure>
 
 
-              <figure>
-
-                <img
-                  src="WhatsApp Image 2026-06-02 at 3.11.47 PM (1).jpeg"
-                  alt="IEEE Codex 2.0 Cloud Competition"
-                  class="modal-trigger"
-                />
-
-              </figure>
-
-
             </div>
 
 
@@ -2309,17 +2747,21 @@
               IEEE BULC
             </span>
 
+
             <span>
               CodeX Version 2.0
             </span>
+
 
             <span>
               Cloud Competition
             </span>
 
+
             <span>
               Cloud Computing
             </span>
+
 
             <span>
               GDGoC
@@ -2333,8 +2775,11 @@
 
 
         <!-- ==================================================
-             UMT CLOUD SESSION
+             UMT CLOUDVERSE
+             
              POSTER FIRST
+             AWARD SECOND
+             PHOTOS AFTER
         =================================================== -->
 
         <article class="work-experience">
@@ -2345,21 +2790,19 @@
             <div class="work-heading-content">
 
               <span class="work-label">
-                UMT · CLOUD
+                UMT · CLOUDVERSE
               </span>
 
 
               <h3>
-                UMT Cloud Session
+                UMT CloudVerse
               </h3>
 
 
               <p class="work-description">
 
-                A complete cloud-focused session experience,
-                with the event poster shown first followed
-                by the presentation, audience and technical
-                engagement photographs.
+                Guest speaking and technical cloud engagement
+                at UMT's CloudVerse event.
 
               </p>
 
@@ -2374,43 +2817,74 @@
 
 
 
-          <div class="event-media">
+          <div class="umt-media">
 
 
-            <!-- ==================================================
-                 UMT POSTER FIRST
-            =================================================== -->
+            <!-- =============================================
+                 FIRST TWO IMAGES
+                 
+                 1. UMT POSTER
+                 2. AWARD
+            ============================================== -->
 
-            <div class="event-poster">
 
-              <!--
-                Rename the UMT poster in GitHub to:
+            <div class="umt-feature-row">
 
-                umt-cloud-poster.jpg
 
-                OR change this src to the exact filename you use.
-              -->
+              <!-- UMT POSTER -->
 
-              <img
-                src="umt-cloud-poster.jpg"
-                alt="UMT Cloud Session poster"
-                class="modal-trigger"
-              />
+              <div class="umt-poster">
+
+                <!--
+                  Rename your uploaded UMT poster to:
+
+                  umt-cloudverse-poster.png
+                -->
+
+                <img
+                  src="umt-cloudverse-poster.png"
+                  alt="UMT CloudVerse Guest Speaker poster"
+                  class="modal-trigger"
+                />
+
+              </div>
+
+
+
+              <!-- AWARD -->
+
+              <div class="umt-award">
+
+                <!--
+                  Rename your uploaded award image to:
+
+                  umt-cloudverse-award.png
+                -->
+
+                <img
+                  src="umt-cloudverse-award.png"
+                  alt="UMT CloudVerse award presented to Muhammad Ephraim Sameer"
+                  class="modal-trigger"
+                />
+
+              </div>
 
             </div>
 
 
 
-            <!-- UMT SESSION PHOTOS -->
+            <!-- =============================================
+                 SESSION PHOTOS
+            ============================================== -->
 
-            <div class="event-screens">
+            <div class="umt-session-grid">
 
 
               <figure>
 
                 <img
                   src="WhatsApp Image 2026-06-22 at 1.33.45 PM.jpeg"
-                  alt="UMT Cloud Session"
+                  alt="UMT CloudVerse session"
                   class="modal-trigger"
                 />
 
@@ -2421,7 +2895,7 @@
 
                 <img
                   src="WhatsApp Image 2026-06-22 at 1.33.47 PM.jpeg"
-                  alt="UMT Cloud Session"
+                  alt="UMT CloudVerse session"
                   class="modal-trigger"
                 />
 
@@ -2432,7 +2906,7 @@
 
                 <img
                   src="WhatsApp Image 2026-06-22 at 1.33.54 PM.jpeg"
-                  alt="UMT Cloud Session"
+                  alt="UMT CloudVerse session"
                   class="modal-trigger"
                 />
 
@@ -2443,7 +2917,7 @@
 
                 <img
                   src="WhatsApp Image 2026-06-22 at 6.56.51 PM.jpeg"
-                  alt="UMT Cloud Session"
+                  alt="UMT CloudVerse session"
                   class="modal-trigger"
                 />
 
@@ -2454,7 +2928,7 @@
 
                 <img
                   src="WhatsApp Image 2026-06-22 at 8.16.19 PM.jpeg"
-                  alt="UMT Cloud Session"
+                  alt="UMT CloudVerse session"
                   class="modal-trigger"
                 />
 
@@ -2462,6 +2936,7 @@
 
 
             </div>
+
 
           </div>
 
@@ -2473,20 +2948,24 @@
               UMT
             </span>
 
-            <span>
-              Cloud Session
-            </span>
 
             <span>
-              Technical Presentation
+              CloudVerse
             </span>
+
+
+            <span>
+              Guest Speaker
+            </span>
+
 
             <span>
               Cloud Computing
             </span>
 
+
             <span>
-              Student Engagement
+              Technical Session
             </span>
 
           </div>
@@ -2536,10 +3015,6 @@
           </div>
 
 
-
-          <!-- ==================================================
-               CLOUD X POSTER
-          =================================================== -->
 
           <div class="event-media">
 
@@ -2604,6 +3079,7 @@
 
             </div>
 
+
           </div>
 
 
@@ -2614,21 +3090,26 @@
               IEEE
             </span>
 
+
             <span>
               Distinguished Lecture Program
             </span>
+
 
             <span>
               Cloud X
             </span>
 
+
             <span>
               Resource Person
             </span>
 
+
             <span>
               Azure
             </span>
+
 
             <span>
               Cloud Technology
@@ -2700,8 +3181,9 @@
 
           <p>
 
-            My primary cloud certification covering Azure
-            administration and core infrastructure capabilities.
+            My primary cloud certification covering
+            Azure administration and the core infrastructure
+            capabilities expected of an Azure Administrator.
 
           </p>
 
@@ -2711,6 +3193,7 @@
             <span>
               AZ-104
             </span>
+
 
             <span>
               Microsoft Certified
@@ -2773,12 +3256,7 @@
       <div class="badge-grid">
 
 
-
-        <!-- ==================================================
-             BADGE 01
-             IMAGE PATH:
-             assets/images/badges/introduction-to-iot.png
-        =================================================== -->
+        <!-- BADGE 01 -->
 
         <article
           class="badge-card"
@@ -2800,9 +3278,11 @@
               CISCO
             </span>
 
+
             <h3>
               Introduction to IoT
             </h3>
+
 
             <p>
               Issued 5 October 2024
@@ -2836,9 +3316,11 @@
               CISCO
             </span>
 
+
             <h3>
               Introduction to Cybersecurity
             </h3>
+
 
             <p>
               Issued 6 October 2024
@@ -2872,9 +3354,11 @@
               OPSWAT
             </span>
 
+
             <h3>
               Critical Infrastructure Protection
             </h3>
+
 
             <p>
               Issued 10 October 2024
@@ -2908,9 +3392,11 @@
               CISCO
             </span>
 
+
             <h3>
               Computer Hardware Basics
             </h3>
+
 
             <p>
               Issued 12 October 2024
@@ -2944,9 +3430,11 @@
               CISCO
             </span>
 
+
             <h3>
               Operating Systems Basics
             </h3>
+
 
             <p>
               Issued 25 October 2024
@@ -2980,9 +3468,11 @@
               CISCO
             </span>
 
+
             <h3>
               Cyber Threat Management
             </h3>
+
 
             <p>
               Issued 16 January 2025
@@ -3016,9 +3506,11 @@
               CISCO
             </span>
 
+
             <h3>
               Introduction to Data Science
             </h3>
+
 
             <p>
               Issued 16 January 2025
@@ -3052,9 +3544,11 @@
               CISCO
             </span>
 
+
             <h3>
               Introduction to Modern AI
             </h3>
+
 
             <p>
               Issued 19 January 2025
@@ -3088,9 +3582,11 @@
               CISCO
             </span>
 
+
             <h3>
               Digital Awareness
             </h3>
+
 
             <p>
               Issued 20 January 2025
@@ -3124,9 +3620,11 @@
               CISCO
             </span>
 
+
             <h3>
               Using Computer and Mobile Devices
             </h3>
+
 
             <p>
               Issued 22 January 2025
@@ -3160,9 +3658,11 @@
               CISCO
             </span>
 
+
             <h3>
               Network Support and Security
             </h3>
+
 
             <p>
               Issued 23 January 2025
@@ -3196,9 +3696,11 @@
               IBM SKILLSBUILD
             </span>
 
+
             <h3>
               Project Management Fundamentals
             </h3>
+
 
             <p>
               Issued 26 January 2025
@@ -3232,9 +3734,11 @@
               CISCO
             </span>
 
+
             <h3>
               Create Digital Content
             </h3>
+
 
             <p>
               Issued 29 January 2025
@@ -3268,9 +3772,11 @@
               CISCO
             </span>
 
+
             <h3>
               Network Addressing & Troubleshooting
             </h3>
+
 
             <p>
               Issued 1 February 2025
@@ -3304,9 +3810,11 @@
               IBM SKILLSBUILD
             </span>
 
+
             <h3>
               Artificial Intelligence Fundamentals
             </h3>
+
 
             <p>
               Issued 2 February 2025
@@ -3340,9 +3848,11 @@
               CISCO × IBM
             </span>
 
+
             <h3>
               AI Fundamentals with IBM SkillsBuild
             </h3>
+
 
             <p>
               Issued 2 February 2025
@@ -3376,9 +3886,11 @@
               AWS EDUCATE
             </span>
 
+
             <h3>
               Introduction to Generative AI
             </h3>
+
 
             <p>
               Issued 5 March 2025
@@ -3412,9 +3924,11 @@
               MICROSOFT
             </span>
 
+
             <h3>
               AI Skills Fest 2026
             </h3>
+
 
             <p>
               Issued 16 July 2026
@@ -3633,7 +4147,7 @@
 
 
         <a
-          href="https://drive.google.com/uc?export=download&id=1KoYn5EKrJGbTQHjJcAjL9eX88L7zkZRS"
+          href="https://drive.google.com/file/d/1KoYn5EKrJGbTQHjJcAjL9eX88L7zkZRS/view?usp=sharing"
           target="_blank"
           rel="noopener"
           class="resume-button"
@@ -3967,10 +4481,7 @@
       );
 
       if (modalImage) {
-
-        modalImage.src =
-          "";
-
+        modalImage.src = "";
       }
 
     }
@@ -4028,21 +4539,8 @@
     /* =====================================================
        CREDLY BADGE IMAGE LOADER
 
-       IMPORTANT:
-
-       The cards first display a clean fallback
-       monogram.
-
-       If you actually add the corresponding
-       image under:
-
-       assets/images/badges/
-
-       the real badge automatically replaces
-       the monogram.
-
-       This prevents the broken-image icons
-       visible in your screenshot.
+       Actual images replace the monogram automatically
+       when the corresponding files exist.
     ====================================================== */
 
     document
@@ -4093,12 +4591,7 @@
 
           image.onerror =
             () => {
-
-              /*
-                Keep the clean monogram.
-                Do NOT show a broken image.
-              */
-
+              /* Keep monogram fallback. */
             };
 
 
