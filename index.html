@@ -14,18 +14,15 @@
     Muhammad Ephraim Sameer | Cloud Engineer
   </title>
 
-
   <meta
     name="description"
     content="Muhammad Ephraim Sameer — Cloud Engineer, Microsoft Certified Azure Administrator, GDGoC Cloud Lead and technology community contributor."
   />
 
-
   <meta
     name="keywords"
     content="Muhammad Ephraim Sameer, Azure, Cloud Engineer, AZ-104, GDGoC, IEEE, Cloud Computing, Microsoft Azure"
   />
-
 
   <meta
     name="author"
@@ -53,7 +50,6 @@
     rel="stylesheet"
   >
 
-
   <link
     rel="stylesheet"
     href="style.css"
@@ -61,704 +57,380 @@
 
 
   <!-- ======================================================
-       PAGE-SPECIFIC UI IMPROVEMENTS
+       PAGE-SPECIFIC STYLES
   ======================================================= -->
 
   <style>
 
 
     /* =====================================================
-       HERO TYPOGRAPHY
+       HERO
     ====================================================== */
 
     .hero-description {
-
-      font-size:
-        16px;
-
-      line-height:
-        1.75;
-
-      max-width:
-        700px;
-
+      font-size: 16px;
+      line-height: 1.75;
+      max-width: 700px;
     }
 
 
     .hero-buttons .button {
-
-      min-height:
-        54px;
-
-      padding:
-        0 23px;
-
-      font-size:
-        13px;
-
+      min-height: 54px;
+      padding: 0 23px;
+      font-size: 13px;
     }
 
 
     .hero-links {
-
-      gap:
-        24px;
-
-      margin-top:
-        28px;
-
+      gap: 24px;
+      margin-top: 28px;
     }
 
 
     .hero-links a {
-
-      font-size:
-        12px;
-
+      font-size: 12px;
     }
 
 
 
     /* =====================================================
-       WORK EXPERIENCE
+       WORK LIST
     ====================================================== */
 
     .work-list {
-
-      display:
-        flex;
-
-      flex-direction:
-        column;
-
-      gap:
-        42px;
-
+      display: flex;
+      flex-direction: column;
+      gap: 42px;
     }
 
 
     .work-experience {
-
-      overflow:
-        hidden;
+      overflow: hidden;
 
       border:
-        1px solid
-        rgba(208,143,229,.15);
+        1px solid rgba(208, 143, 229, 0.15);
 
-      border-radius:
-        28px;
+      border-radius: 28px;
 
       background:
         linear-gradient(
           145deg,
-          rgba(35,15,47,.78),
-          rgba(12,6,17,.84)
+          rgba(35, 15, 47, 0.78),
+          rgba(12, 6, 17, 0.84)
         );
 
       box-shadow:
-        0 30px 90px rgba(0,0,0,.32);
-
+        0 30px 90px rgba(0, 0, 0, 0.32);
     }
 
 
     .work-heading {
+      padding: 38px 42px 30px;
 
-      padding:
-        38px 42px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
 
-      display:
-        flex;
-
-      justify-content:
-        space-between;
-
-      align-items:
-        flex-start;
-
-      gap:
-        30px;
-
+      gap: 30px;
     }
 
 
     .work-heading-content {
-
-      max-width:
-        800px;
-
+      max-width: 820px;
     }
 
 
     .work-label {
+      color: #bb71d5;
 
-      color:
-        #bb71d5;
+      font-size: 9px;
+      font-weight: 800;
 
-      font-size:
-        9px;
-
-      font-weight:
-        800;
-
-      letter-spacing:
-        .16em;
-
-      text-transform:
-        uppercase;
-
+      letter-spacing: .16em;
+      text-transform: uppercase;
     }
 
 
     .work-heading h3 {
-
-      margin-top:
-        10px;
+      margin-top: 10px;
 
       font-family:
         "Space Grotesk",
         sans-serif;
 
       font-size:
-        clamp(30px,4vw,52px);
+        clamp(30px, 4vw, 52px);
 
-      line-height:
-        .97;
+      line-height: .97;
 
-      letter-spacing:
-        -.055em;
-
+      letter-spacing: -.055em;
     }
 
 
     .work-description {
+      margin-top: 15px;
 
-      margin-top:
-        15px;
+      max-width: 800px;
 
-      max-width:
-        800px;
+      color: #9f8da7;
 
-      color:
-        #9f8da7;
-
-      font-size:
-        13px;
-
-      line-height:
-        1.7;
-
+      font-size: 13px;
+      line-height: 1.7;
     }
 
 
     .work-number {
+      flex-shrink: 0;
 
-      flex-shrink:
-        0;
+      min-width: 92px;
 
-      min-width:
-        92px;
+      padding: 9px 12px;
 
-      padding:
-        9px 12px;
-
-      text-align:
-        center;
+      text-align: center;
 
       border:
         1px solid
         rgba(208,143,229,.15);
 
-      border-radius:
-        999px;
+      border-radius: 999px;
 
-      color:
-        #bda3c5;
+      color: #bda3c5;
 
       background:
         rgba(255,255,255,.02);
 
-      font-size:
-        9px;
-
-      font-weight:
-        700;
-
+      font-size: 9px;
+      font-weight: 700;
     }
 
 
 
     /* =====================================================
-       STANDARD EVENT MEDIA
+       LARGE POSTER LAYOUT
     ====================================================== */
 
-    .event-media {
+    .poster-event {
+      padding: 0 18px 18px;
 
-      padding:
-        0 14px 14px;
+      display: flex;
+      flex-direction: column;
 
-      display:
-        grid;
-
-      grid-template-columns:
-        1.05fr 1.55fr;
-
-      gap:
-        8px;
-
+      gap: 12px;
     }
 
 
-    .event-poster {
+    .poster-primary {
+      width: 100%;
 
-      min-height:
-        560px;
+      min-height: 700px;
 
-      overflow:
-        hidden;
+      max-height: 860px;
 
-      border-radius:
-        19px;
+      overflow: hidden;
 
-      background:
-        #09070d;
+      border-radius: 22px;
 
-      cursor:
-        zoom-in;
-
-    }
-
-
-    .event-poster img {
-
-      width:
-        100%;
-
-      height:
-        100%;
-
-      object-fit:
-        cover;
-
-      transition:
-        transform .45s ease,
-        filter .35s ease;
-
-    }
-
-
-    .event-poster:hover img {
-
-      transform:
-        scale(1.015);
-
-      filter:
-        brightness(1.04);
-
-    }
-
-
-    .event-screens {
-
-      display:
-        grid;
-
-      grid-template-columns:
-        1fr 1fr;
-
-      gap:
-        8px;
-
-    }
-
-
-    .event-screens figure {
-
-      margin:
-        0;
-
-      min-height:
-        270px;
-
-      overflow:
-        hidden;
-
-      border-radius:
-        15px;
-
-      background:
-        #09070d;
-
-      cursor:
-        zoom-in;
-
-    }
-
-
-    .event-screens img {
-
-      width:
-        100%;
-
-      height:
-        100%;
-
-      object-fit:
-        cover;
-
-      transition:
-        transform .4s ease;
-
-    }
-
-
-    .event-screens figure:hover img {
-
-      transform:
-        scale(1.025);
-
-    }
-
-
-
-    /* =====================================================
-       CODEX — LARGE POSTER TREATMENT
-       
-       This specifically fixes the squeezed poster shown
-       in your screenshot.
-    ====================================================== */
-
-    .codex-media {
-
-      padding:
-        0 18px 18px;
-
-      display:
-        flex;
-
-      flex-direction:
-        column;
-
-      gap:
-        12px;
-
-    }
-
-
-    .codex-poster {
-
-      width:
-        100%;
-
-      min-height:
-        700px;
-
-      max-height:
-        820px;
-
-      overflow:
-        hidden;
-
-      border-radius:
-        22px;
-
-      background:
-        #130916;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        center;
-
-      cursor:
-        zoom-in;
+      background: #100812;
 
       border:
         1px solid
         rgba(208,143,229,.10);
 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      cursor: zoom-in;
     }
 
 
-    .codex-poster img {
+    .poster-primary img {
+      width: 100%;
+      height: 100%;
 
-      width:
-        100%;
-
-      height:
-        100%;
-
-      object-fit:
-        contain;
+      object-fit: contain;
 
       transition:
-        transform .4s ease;
-
+        transform .4s ease,
+        filter .3s ease;
     }
 
 
-    .codex-poster:hover img {
-
-      transform:
-        scale(1.01);
-
-    }
-
-
-    .codex-supporting {
-
-      display:
-        grid;
-
-      grid-template-columns:
-        repeat(4,1fr);
-
-      gap:
-        8px;
-
-    }
-
-
-    .codex-supporting figure {
-
-      height:
-        255px;
-
-      margin:
-        0;
-
-      overflow:
-        hidden;
-
-      border-radius:
-        15px;
-
-      background:
-        #09070d;
-
-      cursor:
-        zoom-in;
-
-    }
-
-
-    .codex-supporting img {
-
-      width:
-        100%;
-
-      height:
-        100%;
-
-      object-fit:
-        cover;
-
-      transition:
-        transform .4s ease;
-
-    }
-
-
-    .codex-supporting figure:hover img {
-
-      transform:
-        scale(1.025);
-
+    .poster-primary:hover img {
+      transform: scale(1.01);
+      filter: brightness(1.04);
     }
 
 
 
     /* =====================================================
-       UMT — POSTER + AWARD + SESSION PHOTOS
+       SUPPORTING MEDIA
     ====================================================== */
 
-    .umt-media {
-
-      padding:
-        0 18px 18px;
-
-      display:
-        flex;
-
-      flex-direction:
-        column;
-
-      gap:
-        12px;
-
-    }
-
-
-    .umt-feature-row {
-
-      display:
-        grid;
+    .supporting-grid {
+      display: grid;
 
       grid-template-columns:
-        1.2fr .8fr;
+        repeat(4, 1fr);
 
-      gap:
-        10px;
-
+      gap: 8px;
     }
 
 
-    .umt-poster {
+    .supporting-grid figure {
+      margin: 0;
 
-      min-height:
-        580px;
+      height: 255px;
 
-      overflow:
-        hidden;
+      overflow: hidden;
 
-      border-radius:
-        20px;
+      border-radius: 15px;
 
-      background:
-        #10070a;
+      background: #09070d;
 
-      cursor:
-        zoom-in;
-
+      cursor: zoom-in;
     }
 
 
-    .umt-poster img {
+    .supporting-grid img {
+      width: 100%;
+      height: 100%;
 
-      width:
-        100%;
-
-      height:
-        100%;
-
-      object-fit:
-        contain;
-
-      background:
-        #5c0e18;
+      object-fit: cover;
 
       transition:
         transform .4s ease;
-
     }
 
 
-    .umt-poster:hover img {
-
-      transform:
-        scale(1.01);
-
+    .supporting-grid figure:hover img {
+      transform: scale(1.025);
     }
 
 
-    .umt-award {
 
-      min-height:
-        580px;
+    /* =====================================================
+       UMT TOP TWO IMAGES
+       
+       POSTER FIRST
+       AWARD SECOND
+    ====================================================== */
 
-      overflow:
-        hidden;
+    .umt-top-row {
+      display: grid;
 
-      border-radius:
-        20px;
+      grid-template-columns:
+        1.15fr .85fr;
 
-      background:
-        #10070a;
-
-      cursor:
-        zoom-in;
-
+      gap: 10px;
     }
 
 
-    .umt-award img {
+    .umt-poster-large {
+      min-height: 610px;
 
-      width:
-        100%;
+      overflow: hidden;
 
-      height:
-        100%;
+      border-radius: 22px;
 
-      object-fit:
-        cover;
+      background: #5c0e18;
+
+      cursor: zoom-in;
+    }
+
+
+    .umt-poster-large img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+
+      background: #5c0e18;
 
       transition:
         transform .4s ease;
-
     }
 
 
-    .umt-award:hover img {
+    .umt-poster-large:hover img {
+      transform: scale(1.01);
+    }
 
-      transform:
-        scale(1.02);
 
+    .umt-award-large {
+      min-height: 610px;
+
+      overflow: hidden;
+
+      border-radius: 22px;
+
+      background: #0d0910;
+
+      cursor: zoom-in;
+    }
+
+
+    .umt-award-large img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+
+      background:
+        linear-gradient(
+          145deg,
+          #1b0e20,
+          #0b0710
+        );
+
+      transition:
+        transform .4s ease;
+    }
+
+
+    .umt-award-large:hover img {
+      transform: scale(1.01);
     }
 
 
     .umt-session-grid {
-
-      display:
-        grid;
+      display: grid;
 
       grid-template-columns:
-        repeat(5,1fr);
+        repeat(5, 1fr);
 
-      gap:
-        8px;
-
+      gap: 8px;
     }
 
 
     .umt-session-grid figure {
+      margin: 0;
 
-      height:
-        245px;
+      height: 245px;
 
-      margin:
-        0;
+      overflow: hidden;
 
-      overflow:
-        hidden;
+      border-radius: 14px;
 
-      border-radius:
-        14px;
+      background: #09070d;
 
-      background:
-        #09070d;
-
-      cursor:
-        zoom-in;
-
+      cursor: zoom-in;
     }
 
 
     .umt-session-grid img {
+      width: 100%;
+      height: 100%;
 
-      width:
-        100%;
-
-      height:
-        100%;
-
-      object-fit:
-        cover;
+      object-fit: cover;
 
       transition:
         transform .4s ease;
-
     }
 
 
     .umt-session-grid figure:hover img {
-
-      transform:
-        scale(1.025);
-
+      transform: scale(1.025);
     }
 
 
@@ -768,84 +440,56 @@
     ====================================================== */
 
     .work-meta {
+      padding: 0 42px 35px;
 
-      padding:
-        0 42px 35px;
+      display: flex;
+      flex-wrap: wrap;
 
-      display:
-        flex;
-
-      flex-wrap:
-        wrap;
-
-      gap:
-        8px;
-
+      gap: 8px;
     }
 
 
     .work-meta span {
-
-      padding:
-        7px 10px;
+      padding: 7px 10px;
 
       border:
         1px solid
         rgba(208,143,229,.11);
 
-      border-radius:
-        8px;
+      border-radius: 8px;
 
-      color:
-        #a28ca8;
+      color: #a28ca8;
 
       background:
         rgba(255,255,255,.018);
 
-      font-size:
-        9px;
-
+      font-size: 9px;
     }
 
 
 
     /* =====================================================
-       AZ-104 — MORE SPACE
+       AZ-104
     ====================================================== */
 
     .az104-work {
-
-      display:
-        grid;
+      display: grid;
 
       grid-template-columns:
         .85fr 1.15fr;
 
-      gap:
-        0;
-
-      min-height:
-        650px;
-
+      min-height: 650px;
     }
 
 
     .az104-image {
+      min-height: 650px;
 
-      min-height:
-        650px;
+      padding: 45px;
 
-      padding:
-        45px;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       background:
         linear-gradient(
@@ -853,56 +497,38 @@
           rgba(76,31,98,.24),
           rgba(16,7,21,.45)
         );
-
     }
 
 
     .az104-image img {
+      width: 100%;
 
-      width:
-        100%;
+      max-width: 560px;
 
-      max-width:
-        560px;
+      max-height: 560px;
 
-      max-height:
-        560px;
+      object-fit: contain;
 
-      object-fit:
-        contain;
+      border-radius: 18px;
 
-      border-radius:
-        18px;
-
-      cursor:
-        zoom-in;
+      cursor: zoom-in;
 
       box-shadow:
         0 30px 80px
         rgba(0,0,0,.35);
-
     }
 
 
     .az104-copy {
+      padding: 70px;
 
-      padding:
-        70px;
-
-      display:
-        flex;
-
-      flex-direction:
-        column;
-
-      justify-content:
-        center;
-
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
 
     .az104-copy h3 {
-
       font-family:
         "Space Grotesk",
         sans-serif;
@@ -910,116 +536,77 @@
       font-size:
         clamp(42px,5vw,76px);
 
-      line-height:
-        .94;
+      line-height: .94;
 
-      letter-spacing:
-        -.065em;
-
+      letter-spacing: -.065em;
     }
 
 
     .az104-copy p {
+      max-width: 680px;
 
-      max-width:
-        680px;
+      margin-top: 22px;
 
-      margin-top:
-        22px;
+      color: #9f8da7;
 
-      color:
-        #9f8da7;
+      font-size: 15px;
 
-      font-size:
-        15px;
-
-      line-height:
-        1.8;
-
+      line-height: 1.8;
     }
 
 
     .az104-link {
+      width: fit-content;
 
-      width:
-        fit-content;
+      margin-top: 28px;
 
-      margin-top:
-        28px;
+      color: #ca8dde;
 
-      color:
-        #ca8dde;
-
-      font-size:
-        12px;
-
-      font-weight:
-        700;
-
+      font-size: 12px;
+      font-weight: 700;
     }
 
 
 
     /* =====================================================
-       CREDENTIAL TEXT SIZE
+       CREDENTIALS
     ====================================================== */
 
     .certification-info h3 {
-
       font-size:
         clamp(38px,5vw,68px) !important;
-
     }
 
 
     .certification-info p {
-
-      font-size:
-        15px;
-
-      line-height:
-        1.75;
-
+      font-size: 15px;
+      line-height: 1.75;
     }
 
 
 
     /* =====================================================
-       EXPERIENCE ORDER / SPACING
+       EXPERIENCE
     ====================================================== */
 
     .experience-content {
-
-      padding:
-        34px;
-
+      padding: 34px;
     }
 
 
     .experience-heading h3 {
-
-      font-size:
-        27px;
-
+      font-size: 27px;
     }
 
 
     .experience-company {
-
-      font-size:
-        12px;
-
+      font-size: 12px;
     }
 
 
     .experience-content > p {
-
-      font-size:
-        14px;
-
-      line-height:
-        1.75;
-
+      font-size: 14px;
+      line-height: 1.75;
     }
 
 
@@ -1029,26 +616,17 @@
     ====================================================== */
 
     .badge-card {
-
-      min-height:
-        148px;
-
+      min-height: 148px;
     }
 
 
     .badge-card h3 {
-
-      font-size:
-        15px;
-
+      font-size: 15px;
     }
 
 
     .badge-card p {
-
-      font-size:
-        10px;
-
+      font-size: 10px;
     }
 
 
@@ -1059,27 +637,21 @@
 
     @media (max-width: 1100px) {
 
-      .codex-supporting {
-
+      .supporting-grid {
         grid-template-columns:
-          repeat(2,1fr);
+          repeat(2, 1fr);
+      }
 
+
+      .umt-top-row {
+        grid-template-columns:
+          1fr 1fr;
       }
 
 
       .umt-session-grid {
-
         grid-template-columns:
-          repeat(3,1fr);
-
-      }
-
-
-      .umt-feature-row {
-
-        grid-template-columns:
-          1fr 1fr;
-
+          repeat(3, 1fr);
       }
 
     }
@@ -1087,61 +659,40 @@
 
     @media (max-width: 900px) {
 
-      .event-media,
       .az104-work {
-
-        grid-template-columns:
-          1fr;
-
+        grid-template-columns: 1fr;
       }
 
 
-      .codex-poster {
-
-        min-height:
-          620px;
-
+      .poster-primary {
+        min-height: 620px;
       }
 
 
-      .umt-feature-row {
-
-        grid-template-columns:
-          1fr;
-
+      .umt-top-row {
+        grid-template-columns: 1fr;
       }
 
 
-      .umt-poster,
-      .umt-award {
-
-        min-height:
-          550px;
-
+      .umt-poster-large,
+      .umt-award-large {
+        min-height: 550px;
       }
 
 
       .umt-session-grid {
-
         grid-template-columns:
-          repeat(2,1fr);
-
+          repeat(2, 1fr);
       }
 
 
       .az104-image {
-
-        min-height:
-          520px;
-
+        min-height: 520px;
       }
 
 
       .az104-copy {
-
-        padding:
-          55px;
-
+        padding: 55px;
       }
 
     }
@@ -1150,134 +701,102 @@
     @media (max-width: 650px) {
 
       .hero-buttons .button {
-
-        min-height:
-          50px;
-
-        font-size:
-          12px;
-
+        min-height: 50px;
+        font-size: 12px;
       }
 
 
       .hero-links {
-
-        gap:
-          15px;
-
+        gap: 15px;
       }
 
 
       .hero-links a {
-
-        font-size:
-          11px;
-
+        font-size: 11px;
       }
 
 
       .work-heading {
-
-        padding:
-          28px 24px 23px;
+        padding: 28px 24px 23px;
 
         flex-direction:
           column;
-
       }
 
 
       .work-meta {
-
         padding:
           0 24px 26px;
-
       }
 
 
-      .event-media,
-      .codex-media,
-      .umt-media {
-
+      .poster-event {
         padding:
           0 8px 8px;
-
       }
 
 
-      .codex-poster {
-
+      .poster-primary {
         min-height:
           520px;
-
       }
 
 
-      .codex-supporting {
-
+      .supporting-grid {
         grid-template-columns:
           1fr 1fr;
-
       }
 
 
-      .codex-supporting figure {
-
+      .supporting-grid figure {
         height:
           200px;
-
       }
 
 
-      .umt-poster,
-      .umt-award {
+      .umt-top-row {
+        grid-template-columns:
+          1fr;
+      }
 
+
+      .umt-poster-large,
+      .umt-award-large {
         min-height:
-          430px;
-
+          440px;
       }
 
 
       .umt-session-grid {
-
         grid-template-columns:
           1fr 1fr;
-
       }
 
 
       .umt-session-grid figure {
-
         height:
           205px;
-
       }
 
 
       .az104-image {
-
         min-height:
           430px;
 
         padding:
           24px;
-
       }
 
 
       .az104-copy {
-
         padding:
           40px 27px;
-
       }
 
 
       .experience-content {
-
         padding:
           27px;
-
       }
 
     }
@@ -1297,9 +816,7 @@
   ======================================================= -->
 
   <div class="ambient ambient-one"></div>
-
   <div class="ambient ambient-two"></div>
-
   <div class="ambient ambient-three"></div>
 
   <div class="grid-background"></div>
@@ -1341,65 +858,39 @@
       >
 
         <li>
-          <a href="#home">
-            Home
-          </a>
+          <a href="#home">Home</a>
         </li>
 
-
         <li>
-          <a href="#about">
-            About
-          </a>
+          <a href="#about">About</a>
         </li>
 
-
         <li>
-          <a href="#experience">
-            Experience
-          </a>
+          <a href="#experience">Experience</a>
         </li>
 
-
         <li>
-          <a href="#skills">
-            Skills
-          </a>
+          <a href="#skills">Skills</a>
         </li>
 
-
         <li>
-          <a href="#work">
-            Work
-          </a>
+          <a href="#work">Work</a>
         </li>
 
-
         <li>
-          <a href="#certifications">
-            Certifications
-          </a>
+          <a href="#certifications">Certifications</a>
         </li>
 
-
         <li>
-          <a href="#badges">
-            Badges
-          </a>
+          <a href="#badges">Badges</a>
         </li>
 
-
         <li>
-          <a href="#resume">
-            Resume
-          </a>
+          <a href="#resume">Resume</a>
         </li>
 
-
         <li>
-          <a href="#contact">
-            Contact
-          </a>
+          <a href="#contact">Contact</a>
         </li>
 
       </ul>
@@ -1439,13 +930,9 @@
         <div class="hero-eyebrow">
 
           CLOUD ENGINEER
-
           <span>•</span>
-
           AZURE
-
           <span>•</span>
-
           TECHNOLOGY
 
         </div>
@@ -1746,6 +1233,7 @@
 
         </div>
 
+
       </div>
 
     </section>
@@ -1754,22 +1242,6 @@
 
     <!-- ======================================================
          EXPERIENCE
-         
-         ORDER UPDATED:
-         
-         Co-Lead
-         ↓
-         Zee
-         ↓
-         IEEE CS
-         ↓
-         IEEE Documentation
-         ↓
-         Cloud Lead
-         ↓
-         Teaching Assistant
-         ↓
-         Event Management
     ======================================================= -->
 
     <section
@@ -1804,8 +1276,9 @@
       <div class="experience-list">
 
 
-
-        <!-- GDGoC CO-LEAD -->
+        <!-- ==================================================
+             GDGoC BULC
+        =================================================== -->
 
         <article class="experience-item">
 
@@ -1815,6 +1288,7 @@
 
 
           <div class="experience-content">
+
 
             <div class="experience-date">
               AUG 2026 — PRESENT
@@ -1826,7 +1300,7 @@
               <div>
 
                 <h3>
-                  GDGoC Co-Lead
+                  GDGoC BULC
                 </h3>
 
 
@@ -1848,8 +1322,8 @@
 
               Stepping into chapter-level leadership after serving
               as Cloud Lead, helping guide the core team, broader
-              operations, strategic direction and upcoming technical
-              initiatives.
+              operations, strategic direction and upcoming
+              technical initiatives.
 
             </p>
 
@@ -1859,7 +1333,9 @@
 
 
 
-        <!-- ZEE OUTSOURCING -->
+        <!-- ==================================================
+             ZEE OUTSOURCING
+        =================================================== -->
 
         <article class="experience-item">
 
@@ -1869,6 +1345,7 @@
 
 
           <div class="experience-content">
+
 
             <div class="experience-date">
               JUN 2026 — PRESENT
@@ -1935,7 +1412,9 @@
 
 
 
-        <!-- IEEE COMPUTER SOCIETY -->
+        <!-- ==================================================
+             IEEE MEMBER
+        =================================================== -->
 
         <article class="experience-item">
 
@@ -1945,6 +1424,7 @@
 
 
           <div class="experience-content">
+
 
             <div class="experience-date">
               MAY 2026 — PRESENT
@@ -1956,7 +1436,7 @@
               <div>
 
                 <h3>
-                  Member
+                  IEEE Member
                 </h3>
 
 
@@ -1976,7 +1456,7 @@
 
             <p>
 
-              Active membership reflecting ongoing involvement
+              Active membership reflecting continued involvement
               in the professional technology community.
 
             </p>
@@ -1987,7 +1467,9 @@
 
 
 
-        <!-- IEEE DOCUMENTATION -->
+        <!-- ==================================================
+             IEEE DOCUMENTATION VICE HEAD
+        =================================================== -->
 
         <article class="experience-item">
 
@@ -1997,6 +1479,7 @@
 
 
           <div class="experience-content">
+
 
             <div class="experience-date">
               FEB 2026 — PRESENT
@@ -2008,7 +1491,7 @@
               <div>
 
                 <h3>
-                  Documentation Vice Head
+                  IEEE Documentation Vice Head
                 </h3>
 
 
@@ -2040,7 +1523,9 @@
 
 
 
-        <!-- GDGoC CLOUD LEAD -->
+        <!-- ==================================================
+             GDGoC BULC CLOUD LEAD
+        =================================================== -->
 
         <article class="experience-item featured-experience">
 
@@ -2050,6 +1535,7 @@
 
 
           <div class="experience-content">
+
 
             <div class="experience-date">
               OCT 2025 — AUG 2026
@@ -2061,7 +1547,7 @@
               <div>
 
                 <h3>
-                  GDGoC Cloud Lead
+                  GDGoC BULC Cloud Lead
                 </h3>
 
 
@@ -2093,7 +1579,8 @@
 
               <li>
                 Architected a comprehensive 120-minute practical
-                sandbox challenge simulating real-world AWS deployment.
+                sandbox challenge simulating real-world AWS
+                deployment scenarios.
               </li>
 
               <li>
@@ -2143,7 +1630,9 @@
 
 
 
-        <!-- TEACHING ASSISTANT — NOW BELOW CLOUD LEAD -->
+        <!-- ==================================================
+             TEACHING ASSISTANT
+        =================================================== -->
 
         <article class="experience-item">
 
@@ -2153,6 +1642,7 @@
 
 
           <div class="experience-content">
+
 
             <div class="experience-date">
               SEP 2025 — JUN 2026
@@ -2192,33 +1682,13 @@
 
             <div class="technical-tags">
 
-              <span>
-                OSPF
-              </span>
-
-              <span>
-                RIP
-              </span>
-
-              <span>
-                EIGRP
-              </span>
-
-              <span>
-                VLANs
-              </span>
-
-              <span>
-                IP Addressing
-              </span>
-
-              <span>
-                Routing
-              </span>
-
-              <span>
-                Troubleshooting
-              </span>
+              <span>OSPF</span>
+              <span>RIP</span>
+              <span>EIGRP</span>
+              <span>VLANs</span>
+              <span>IP Addressing</span>
+              <span>Routing</span>
+              <span>Troubleshooting</span>
 
             </div>
 
@@ -2228,7 +1698,9 @@
 
 
 
-        <!-- EVENT MANAGEMENT -->
+        <!-- ==================================================
+             GDGoC EVENT MANAGEMENT
+        =================================================== -->
 
         <article class="experience-item">
 
@@ -2238,6 +1710,7 @@
 
 
           <div class="experience-content">
+
 
             <div class="experience-date">
               FEB 2025 — OCT 2025
@@ -2336,9 +1809,11 @@
                 Microsoft Azure
               </span>
 
+
               <span>
                 AWS
               </span>
+
 
               <span>
                 Google Cloud
@@ -2347,7 +1822,6 @@
             </div>
 
           </div>
-
 
 
           <div class="skill-category">
@@ -2368,17 +1842,21 @@
                 Compute
               </span>
 
+
               <span>
                 Storage
               </span>
+
 
               <span>
                 Identity
               </span>
 
+
               <span>
                 Virtual Machines
               </span>
+
 
               <span>
                 Networking
@@ -2387,7 +1865,6 @@
             </div>
 
           </div>
-
 
         </div>
 
@@ -2414,21 +1891,26 @@
                 TCP/IP
               </span>
 
+
               <span>
                 DNS
               </span>
+
 
               <span>
                 DHCP
               </span>
 
+
               <span>
                 OSPF
               </span>
 
+
               <span>
                 VLAN
               </span>
+
 
               <span>
                 Subnetting
@@ -2458,13 +1940,16 @@
                 Linux
               </span>
 
+
               <span>
                 Windows Server
               </span>
 
+
               <span>
                 PowerShell
               </span>
+
 
               <span>
                 GitHub
@@ -2473,7 +1958,6 @@
             </div>
 
           </div>
-
 
         </div>
 
@@ -2507,9 +1991,9 @@
 
         <p class="section-intro">
 
-          Each event is treated as one portfolio experience,
-          with posters establishing the event before the
-          supporting media.
+          Each event is treated as one complete portfolio
+          experience. Posters come first, followed by the
+          supporting event media.
 
         </p>
 
@@ -2617,8 +2101,6 @@
 
         <!-- ==================================================
              IEEE CODEX 2.0
-             
-             LARGE POSTER FIRST
         =================================================== -->
 
         <article class="work-experience">
@@ -2658,22 +2140,12 @@
 
 
 
-          <div class="codex-media">
+          <div class="poster-event">
 
 
-            <!-- POSTER -->
+            <!-- CODEX POSTER FIRST -->
 
-            <div class="codex-poster">
-
-              <!--
-                NEW CODEX POSTER
-
-                Rename the GitHub file to:
-
-                combined-image.jpg
-
-                OR change this src to your actual filename.
-              -->
+            <div class="poster-primary">
 
               <img
                 src="combined-image.jpg"
@@ -2685,9 +2157,9 @@
 
 
 
-            <!-- SUPPORTING PHOTOS -->
+            <!-- CODEX SUPPORTING MEDIA -->
 
-            <div class="codex-supporting">
+            <div class="supporting-grid">
 
 
               <figure>
@@ -2733,9 +2205,7 @@
 
               </figure>
 
-
             </div>
-
 
           </div>
 
@@ -2776,10 +2246,6 @@
 
         <!-- ==================================================
              UMT CLOUDVERSE
-             
-             POSTER FIRST
-             AWARD SECOND
-             PHOTOS AFTER
         =================================================== -->
 
         <article class="work-experience">
@@ -2801,8 +2267,8 @@
 
               <p class="work-description">
 
-                Guest speaking and technical cloud engagement
-                at UMT's CloudVerse event.
+                Guest speaking and cloud-focused technical
+                engagement at UMT's CloudVerse event.
 
               </p>
 
@@ -2817,67 +2283,46 @@
 
 
 
-          <div class="umt-media">
+          <div class="poster-event">
 
 
-            <!-- =============================================
-                 FIRST TWO IMAGES
-                 
-                 1. UMT POSTER
-                 2. AWARD
-            ============================================== -->
+            <!-- =================================================
+                 FIRST IMAGE — UMT POSTER
+            ================================================== -->
 
+            <div class="poster-primary">
 
-            <div class="umt-feature-row">
-
-
-              <!-- UMT POSTER -->
-
-              <div class="umt-poster">
-
-                <!--
-                  Rename your uploaded UMT poster to:
-
-                  umt-cloudverse-poster.png
-                -->
-
-                <img
-                  src="umt-cloudverse-poster.png"
-                  alt="UMT CloudVerse Guest Speaker poster"
-                  class="modal-trigger"
-                />
-
-              </div>
-
-
-
-              <!-- AWARD -->
-
-              <div class="umt-award">
-
-                <!--
-                  Rename your uploaded award image to:
-
-                  umt-cloudverse-award.png
-                -->
-
-                <img
-                  src="umt-cloudverse-award.png"
-                  alt="UMT CloudVerse award presented to Muhammad Ephraim Sameer"
-                  class="modal-trigger"
-                />
-
-              </div>
+              <img
+                src="WhatsApp Image 2026-06-22 at 8.16.19 PM.jpeg"
+                alt="UMT CloudVerse poster"
+                class="modal-trigger"
+              />
 
             </div>
 
 
 
-            <!-- =============================================
-                 SESSION PHOTOS
-            ============================================== -->
+            <!-- =================================================
+                 SECOND IMAGE — UMT AWARD
+            ================================================== -->
 
-            <div class="umt-session-grid">
+            <div class="poster-primary">
+
+              <img
+                src="WhatsApp Image 2026-06-22 at 6.56.51 PM.jpeg"
+                alt="UMT CloudVerse award"
+                class="modal-trigger"
+              />
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SESSION PHOTOS
+            ================================================== -->
+
+            <div class="supporting-grid">
 
 
               <figure>
@@ -2917,7 +2362,7 @@
 
                 <img
                   src="WhatsApp Image 2026-06-22 at 6.56.51 PM.jpeg"
-                  alt="UMT CloudVerse session"
+                  alt="UMT CloudVerse award"
                   class="modal-trigger"
                 />
 
@@ -2928,15 +2373,13 @@
 
                 <img
                   src="WhatsApp Image 2026-06-22 at 8.16.19 PM.jpeg"
-                  alt="UMT CloudVerse session"
+                  alt="UMT CloudVerse poster"
                   class="modal-trigger"
                 />
 
               </figure>
 
-
             </div>
-
 
           </div>
 
@@ -3016,10 +2459,12 @@
 
 
 
-          <div class="event-media">
+          <div class="poster-event">
 
 
-            <div class="event-poster">
+            <!-- CLOUD X POSTER FIRST -->
+
+            <div class="poster-primary">
 
               <img
                 src="1787061152991.jpg"
@@ -3030,7 +2475,10 @@
             </div>
 
 
-            <div class="event-screens">
+
+            <!-- CLOUD X SUPPORTING MEDIA -->
+
+            <div class="supporting-grid">
 
 
               <figure>
@@ -3076,9 +2524,7 @@
 
               </figure>
 
-
             </div>
-
 
           </div>
 
@@ -3181,8 +2627,8 @@
 
           <p>
 
-            My primary cloud certification covering
-            Azure administration and the core infrastructure
+            My primary cloud certification covering Azure
+            administration and the core infrastructure
             capabilities expected of an Azure Administrator.
 
           </p>
@@ -3256,8 +2702,6 @@
       <div class="badge-grid">
 
 
-        <!-- BADGE 01 -->
-
         <article
           class="badge-card"
           data-badge-image="assets/images/badges/introduction-to-iot.png"
@@ -3293,8 +2737,6 @@
         </article>
 
 
-
-        <!-- BADGE 02 -->
 
         <article
           class="badge-card"
@@ -3332,8 +2774,6 @@
 
 
 
-        <!-- BADGE 03 -->
-
         <article
           class="badge-card"
           data-badge-image="assets/images/badges/opswat-critical-infrastructure.png"
@@ -3369,8 +2809,6 @@
         </article>
 
 
-
-        <!-- BADGE 04 -->
 
         <article
           class="badge-card"
@@ -3408,8 +2846,6 @@
 
 
 
-        <!-- BADGE 05 -->
-
         <article
           class="badge-card"
           data-badge-image="assets/images/badges/operating-systems-basics.png"
@@ -3445,8 +2881,6 @@
         </article>
 
 
-
-        <!-- BADGE 06 -->
 
         <article
           class="badge-card"
@@ -3484,8 +2918,6 @@
 
 
 
-        <!-- BADGE 07 -->
-
         <article
           class="badge-card"
           data-badge-image="assets/images/badges/introduction-to-data-science.png"
@@ -3521,8 +2953,6 @@
         </article>
 
 
-
-        <!-- BADGE 08 -->
 
         <article
           class="badge-card"
@@ -3560,8 +2990,6 @@
 
 
 
-        <!-- BADGE 09 -->
-
         <article
           class="badge-card"
           data-badge-image="assets/images/badges/digital-awareness.png"
@@ -3597,8 +3025,6 @@
         </article>
 
 
-
-        <!-- BADGE 10 -->
 
         <article
           class="badge-card"
@@ -3636,8 +3062,6 @@
 
 
 
-        <!-- BADGE 11 -->
-
         <article
           class="badge-card"
           data-badge-image="assets/images/badges/network-support-security.png"
@@ -3673,8 +3097,6 @@
         </article>
 
 
-
-        <!-- BADGE 12 -->
 
         <article
           class="badge-card"
@@ -3712,8 +3134,6 @@
 
 
 
-        <!-- BADGE 13 -->
-
         <article
           class="badge-card"
           data-badge-image="assets/images/badges/create-digital-content.png"
@@ -3749,8 +3169,6 @@
         </article>
 
 
-
-        <!-- BADGE 14 -->
 
         <article
           class="badge-card"
@@ -3788,8 +3206,6 @@
 
 
 
-        <!-- BADGE 15 -->
-
         <article
           class="badge-card"
           data-badge-image="assets/images/badges/artificial-intelligence-fundamentals.png"
@@ -3825,8 +3241,6 @@
         </article>
 
 
-
-        <!-- BADGE 16 -->
 
         <article
           class="badge-card"
@@ -3864,8 +3278,6 @@
 
 
 
-        <!-- BADGE 17 -->
-
         <article
           class="badge-card"
           data-badge-image="assets/images/badges/aws-generative-ai.png"
@@ -3901,8 +3313,6 @@
         </article>
 
 
-
-        <!-- BADGE 18 -->
 
         <article
           class="badge-card badge-featured"
@@ -4358,6 +3768,7 @@
 
   <script>
 
+
     /* =====================================================
        MOBILE MENU
     ====================================================== */
@@ -4537,10 +3948,7 @@
 
 
     /* =====================================================
-       CREDLY BADGE IMAGE LOADER
-
-       Actual images replace the monogram automatically
-       when the corresponding files exist.
+       CREDLY BADGE LOADER
     ====================================================== */
 
     document
@@ -4600,6 +4008,7 @@
 
         }
       );
+
 
   </script>
 
