@@ -374,10 +374,13 @@
         0;
 
       min-width:
-        92px;
+        190px;
+
+      max-width:
+        270px;
 
       padding:
-        9px 12px;
+        9px 14px;
 
       text-align:
         center;
@@ -398,8 +401,14 @@
       font-size:
         9px;
 
+      line-height:
+        1.35;
+
       font-weight:
         700;
+
+      letter-spacing:
+        .02em;
 
     }
 
@@ -652,6 +661,76 @@
 
     }
 
+
+
+    /* =====================================================
+       ZEE OUTSOURCING TRAINING GALLERY
+    ====================================================== */
+
+    .zee-training-grid {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      gap:
+        10px;
+
+    }
+
+
+    .zee-training-grid figure {
+
+      margin:
+        0;
+
+      height:
+        270px;
+
+      overflow:
+        hidden;
+
+      border-radius:
+        16px;
+
+      background:
+        #09070d;
+
+      cursor:
+        zoom-in;
+
+      border:
+        1px solid
+        rgba(208,143,229,.08);
+
+    }
+
+
+    .zee-training-grid img {
+
+      width:
+        100%;
+
+      height:
+        100%;
+
+      object-fit:
+        cover;
+
+      transition:
+        transform .4s ease;
+
+    }
+
+
+    .zee-training-grid figure:hover img {
+
+      transform:
+        scale(1.025);
+
+    }
 
 
     /* =====================================================
@@ -1407,6 +1486,20 @@
       }
 
 
+      .work-number {
+
+        min-width:
+          0;
+
+        max-width:
+          100%;
+
+        width:
+          fit-content;
+
+      }
+
+
       .work-meta {
 
         padding:
@@ -1438,6 +1531,22 @@
 
         max-height:
           600px;
+
+      }
+
+
+      .zee-training-grid {
+
+        grid-template-columns:
+          1fr 1fr;
+
+      }
+
+
+      .zee-training-grid figure {
+
+        height:
+          210px;
 
       }
 
@@ -3226,70 +3335,7 @@
 
 
               <span>
-                PowerShell
-              </span>
-
-
-              <span>
-                GitHub
-              </span>
-
-
-            </div>
-
-
-          </div>
-
-
-        </div>
-
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- ======================================================
-         FEATURED WORK
-    ======================================================= -->
-
-    <section
-      class="section"
-      id="work"
-    >
-
-
-      <div class="section-header">
-
-
-        <span class="section-label">
-          04 / FEATURED WORK
-        </span>
-
-
-        <h2>
-          Experiences, not photo dumps.
-        </h2>
-
-
-        <p class="section-intro">
-
-          Each event is treated as one complete portfolio
-          experience. Posters are shown once at their natural
-          proportions, followed by supporting event media.
-
-        </p>
-
-
-      </div>
-
-
-
-      <div class="work-list">
-
-
+             
 
         <!-- ==================================================
              AZ-104
@@ -3327,7 +3373,7 @@
 
 
             <span class="work-number">
-              01 / 04
+              17 October 2025 · Renewed until October 2027
             </span>
 
 
@@ -3411,7 +3457,7 @@
 
 
         <!-- ==================================================
-             IEEE CODEX 2.0
+             ZEE OUTSOURCING UK TRAINING SESSIONS
         =================================================== -->
 
         <article class="work-experience">
@@ -3424,21 +3470,20 @@
 
 
               <span class="work-label">
-                IEEE BULC × CODEX 2.0
+                ZEE OUTSOURCING · TRAINING
               </span>
 
 
               <h3>
-                IEEE Codex 2.0
-                Cloud Competition
+                Zee Outsourcing Uk Training Sessions
               </h3>
 
 
               <p class="work-description">
 
-                A flagship IEEE BULC event centered around
-                cloud computing, practical technical skills
-                and the "Master the Cloud" competition experience.
+                A collection of training and mentorship sessions
+                delivered through my professional cloud engineering
+                and mentorship role at Zee Outsourcing Solutions.
 
               </p>
 
@@ -3447,7 +3492,168 @@
 
 
             <span class="work-number">
-              02 / 04
+              22 June – 15 August 2026
+            </span>
+
+
+          </div>
+
+
+          <div class="poster-event">
+
+
+            <div class="zee-training-grid">
+
+
+              <figure>
+
+                <img
+                  src="in1.jpeg"
+                  alt="Zee Outsourcing UK Training Session 1"
+                  class="modal-trigger"
+                />
+
+              </figure>
+
+
+              <figure>
+
+                <img
+                  src="in2.jpeg"
+                  alt="Zee Outsourcing UK Training Session 2"
+                  class="modal-trigger"
+                />
+
+              </figure>
+
+
+              <figure>
+
+                <img
+                  src="in3.jpeg"
+                  alt="Zee Outsourcing UK Training Session 3"
+                  class="modal-trigger"
+                />
+
+              </figure>
+
+
+              <figure>
+
+                <img
+                  src="in5.jpeg"
+                  alt="Zee Outsourcing UK Training Session 4"
+                  class="modal-trigger"
+                />
+
+              </figure>
+
+
+              <figure>
+
+                <img
+                  src="in6.jpeg"
+                  alt="Zee Outsourcing UK Training Session 5"
+                  class="modal-trigger"
+                />
+
+              </figure>
+
+
+            </div>
+
+
+          </div>
+
+
+          <div class="work-meta">
+
+
+            <span>
+              Zee Outsourcing Solutions
+            </span>
+
+
+            <span>
+              Cloud Training
+            </span>
+
+
+            <span>
+              Azure Mentorship
+            </span>
+
+
+            <span>
+              Technical Sessions
+            </span>
+
+
+          </div>
+
+
+          <div class="sdg-tags"
+               style="padding: 0 42px 30px; margin-top: -10px;">
+
+
+            <span class="sdg-tag">
+              <strong>SDG 4</strong> · Technical Learning
+            </span>
+
+
+            <span class="sdg-tag">
+              <strong>SDG 8</strong> · Career Skills
+            </span>
+
+
+            <span class="sdg-tag">
+              <strong>SDG 9</strong> · Cloud Technology
+            </span>
+
+
+          </div>
+
+
+        </article>
+
+<!-- ==================================================
+             IEEE DLP CLOUD X
+        =================================================== -->
+
+        <article class="work-experience">
+
+
+          <div class="work-heading">
+
+
+            <div class="work-heading-content">
+
+
+              <span class="work-label">
+                IEEE · CLOUD X
+              </span>
+
+
+              <h3>
+                IEEE DLP Cloud X:
+                For the Digital Future
+              </h3>
+
+
+              <p class="work-description">
+
+                Distinguished Lecture Program focused on cloud
+                technologies and the digital future, featuring
+                my participation as a resource person.
+
+              </p>
+
+
+            </div>
+
+
+            <span class="work-number">
+              13 August 2026
             </span>
 
 
@@ -3458,12 +3664,12 @@
           <div class="poster-event">
 
 
-            <div class="codex-poster">
+            <div class="poster-primary">
 
 
               <img
-                src="combined-image.jpg"
-                alt="IEEE BULC CodeX Version 2.0 Cloud Competition poster"
+                src="1787061152991.jpg"
+                alt="IEEE DLP Cloud X: For the Digital Future poster"
                 class="modal-trigger"
               />
 
@@ -3479,8 +3685,8 @@
 
 
                 <img
-                  src="WhatsApp Image 2026-06-02 at 3.11.45 PM.jpeg"
-                  alt="IEEE Codex 2.0 Cloud Competition"
+                  src="1787061152599.jpg"
+                  alt="IEEE Cloud X Google Meet session"
                   class="modal-trigger"
                 />
 
@@ -3492,8 +3698,8 @@
 
 
                 <img
-                  src="WhatsApp Image 2026-06-02 at 3.11.45 PM (1).jpeg"
-                  alt="IEEE Codex 2.0 Cloud Competition"
+                  src="1787061153056.jpg"
+                  alt="IEEE Cloud X Azure virtual machine demonstration"
                   class="modal-trigger"
                 />
 
@@ -3505,8 +3711,8 @@
 
 
                 <img
-                  src="WhatsApp Image 2026-06-02 at 3.11.45 PM (2).jpeg"
-                  alt="IEEE Codex 2.0 Cloud Competition"
+                  src="1787061152759.jpg"
+                  alt="IEEE Cloud X Azure services demonstration"
                   class="modal-trigger"
                 />
 
@@ -3518,8 +3724,8 @@
 
 
                 <img
-                  src="WhatsApp Image 2026-06-02 at 3.11.47 PM.jpeg"
-                  alt="IEEE Codex 2.0 Cloud Competition"
+                  src="1787061152675.jpg"
+                  alt="IEEE Cloud X virtual machine presentation"
                   class="modal-trigger"
                 />
 
@@ -3538,31 +3744,37 @@
 
 
             <span>
-              IEEE BULC
+              IEEE
             </span>
 
 
             <span>
-              CodeX Version 2.0
+              Distinguished Lecture Program
             </span>
 
 
             <span>
-              Cloud Competition
+              Cloud X
             </span>
 
 
             <span>
-              Cloud Computing
+              Resource Person
             </span>
 
 
             <span>
-              GDGoC
+              Azure
+            </span>
+
+
+            <span>
+              Public Speaking
             </span>
 
 
           </div>
+
 
 
           <div class="sdg-tags"
@@ -3570,22 +3782,17 @@
 
 
             <span class="sdg-tag">
-              <strong>SDG 4</strong> · Technical Learning
+              <strong>SDG 4</strong> · Technical Education
             </span>
 
 
             <span class="sdg-tag">
-              <strong>SDG 8</strong> · Employability Skills
+              <strong>SDG 9</strong> · Innovation & Infrastructure
             </span>
 
 
             <span class="sdg-tag">
-              <strong>SDG 9</strong> · Innovation
-            </span>
-
-
-            <span class="sdg-tag">
-              <strong>SDG 17</strong> · IEEE × GDGoC Collaboration
+              <strong>SDG 17</strong> · Cross-Organization Collaboration
             </span>
 
 
@@ -3594,9 +3801,7 @@
 
         </article>
 
-
-
-        <!-- ==================================================
+<!-- ==================================================
              UMT CLOUDVERSE
         =================================================== -->
 
@@ -3631,7 +3836,7 @@
 
 
             <span class="work-number">
-              03 / 04
+              22 June 2026
             </span>
 
 
@@ -3786,10 +3991,8 @@
 
         </article>
 
-
-
-        <!-- ==================================================
-             IEEE DLP CLOUD X
+<!-- ==================================================
+             IEEE CODEX 2.0
         =================================================== -->
 
         <article class="work-experience">
@@ -3802,21 +4005,21 @@
 
 
               <span class="work-label">
-                IEEE · CLOUD X
+                IEEE BULC × CODEX 2.0
               </span>
 
 
               <h3>
-                IEEE DLP Cloud X:
-                For the Digital Future
+                IEEE Codex 2.0
+                Cloud Competition
               </h3>
 
 
               <p class="work-description">
 
-                Distinguished Lecture Program focused on cloud
-                technologies and the digital future, featuring
-                my participation as a resource person.
+                A flagship IEEE BULC event centered around
+                cloud computing, practical technical skills
+                and the "Master the Cloud" competition experience.
 
               </p>
 
@@ -3825,7 +4028,7 @@
 
 
             <span class="work-number">
-              04 / 04
+              14 May 2026
             </span>
 
 
@@ -3836,12 +4039,12 @@
           <div class="poster-event">
 
 
-            <div class="poster-primary">
+            <div class="codex-poster">
 
 
               <img
-                src="1787061152991.jpg"
-                alt="IEEE DLP Cloud X: For the Digital Future poster"
+                src="combined-image.jpg"
+                alt="IEEE BULC CodeX Version 2.0 Cloud Competition poster"
                 class="modal-trigger"
               />
 
@@ -3857,8 +4060,8 @@
 
 
                 <img
-                  src="1787061152599.jpg"
-                  alt="IEEE Cloud X Google Meet session"
+                  src="WhatsApp Image 2026-06-02 at 3.11.45 PM.jpeg"
+                  alt="IEEE Codex 2.0 Cloud Competition"
                   class="modal-trigger"
                 />
 
@@ -3870,8 +4073,8 @@
 
 
                 <img
-                  src="1787061153056.jpg"
-                  alt="IEEE Cloud X Azure virtual machine demonstration"
+                  src="WhatsApp Image 2026-06-02 at 3.11.45 PM (1).jpeg"
+                  alt="IEEE Codex 2.0 Cloud Competition"
                   class="modal-trigger"
                 />
 
@@ -3883,8 +4086,8 @@
 
 
                 <img
-                  src="1787061152759.jpg"
-                  alt="IEEE Cloud X Azure services demonstration"
+                  src="WhatsApp Image 2026-06-02 at 3.11.45 PM (2).jpeg"
+                  alt="IEEE Codex 2.0 Cloud Competition"
                   class="modal-trigger"
                 />
 
@@ -3896,8 +4099,8 @@
 
 
                 <img
-                  src="1787061152675.jpg"
-                  alt="IEEE Cloud X virtual machine presentation"
+                  src="WhatsApp Image 2026-06-02 at 3.11.47 PM.jpeg"
+                  alt="IEEE Codex 2.0 Cloud Competition"
                   class="modal-trigger"
                 />
 
@@ -3916,11 +4119,63 @@
 
 
             <span>
-              IEEE
+              IEEE BULC
             </span>
 
 
             <span>
+              CodeX Version 2.0
+            </span>
+
+
+            <span>
+              Cloud Competition
+            </span>
+
+
+            <span>
+              Cloud Computing
+            </span>
+
+
+            <span>
+              GDGoC
+            </span>
+
+
+          </div>
+
+
+          <div class="sdg-tags"
+               style="padding: 0 42px 30px; margin-top: -10px;">
+
+
+            <span class="sdg-tag">
+              <strong>SDG 4</strong> · Technical Learning
+            </span>
+
+
+            <span class="sdg-tag">
+              <strong>SDG 8</strong> · Employability Skills
+            </span>
+
+
+            <span class="sdg-tag">
+              <strong>SDG 9</strong> · Innovation
+            </span>
+
+
+            <span class="sdg-tag">
+              <strong>SDG 17</strong> · IEEE × GDGoC Collaboration
+            </span>
+
+
+          </div>
+
+
+        </article>
+
+      <span>
               Distinguished Lecture Program
             </span>
 
@@ -6883,9 +7138,95 @@
     "es": "Volver arriba ↑"
   },
   "© 2026 Muhammad Ephraim Sameer": {
-    "ar": "© 2026 محمد إفرايم سمير",
+    "ar": "© 2026 محمد إفراهيم سمير",
     "fr": "© 2026 Muhammad Ephraim Sameer",
     "es": "© 2026 Muhammad Ephraim Sameer"
+  }
+,
+  "Muhammad Ephraim": {
+    "ar": "محمد إفراهيم",
+    "fr": "Muhammad Ephraim",
+    "es": "Muhammad Ephraim"
+  },
+  "Sameer.": {
+    "ar": "سمير.",
+    "fr": "Sameer.",
+    "es": "Sameer."
+  },
+  "17 October 2025 · Renewed until October 2027": {
+    "ar": "17 أكتوبر 2025 · مجددة حتى أكتوبر 2027",
+    "fr": "17 octobre 2025 · renouvelée jusqu’en octobre 2027",
+    "es": "17 de octubre de 2025 · renovada hasta octubre de 2027"
+  },
+  "14 May 2026": {
+    "ar": "14 مايو 2026",
+    "fr": "14 mai 2026",
+    "es": "14 de mayo de 2026"
+  },
+  "22 June 2026": {
+    "ar": "22 يونيو 2026",
+    "fr": "22 juin 2026",
+    "es": "22 de junio de 2026"
+  },
+  "13 August 2026": {
+    "ar": "13 أغسطس 2026",
+    "fr": "13 août 2026",
+    "es": "13 de agosto de 2026"
+  },
+  "22 June – 15 August 2026": {
+    "ar": "22 يونيو – 15 أغسطس 2026",
+    "fr": "22 juin – 15 août 2026",
+    "es": "22 de junio – 15 de agosto de 2026"
+  },
+  "Zee Outsourcing Uk Training Sessions": {
+    "ar": "جلسات تدريب Zee Outsourcing UK",
+    "fr": "Sessions de formation Zee Outsourcing UK",
+    "es": "Sesiones de formación de Zee Outsourcing UK"
+  },
+  "ZEE OUTSOURCING · TRAINING": {
+    "ar": "ZEE OUTSOURCING · تدريب",
+    "fr": "ZEE OUTSOURCING · FORMATION",
+    "es": "ZEE OUTSOURCING · FORMACIÓN"
+  },
+  "A collection of training and mentorship sessions delivered through my professional cloud engineering and mentorship role at Zee Outsourcing Solutions.": {
+    "ar": "مجموعة من جلسات التدريب والإرشاد التي قدمتها ضمن دوري المهني في هندسة السحابة والإرشاد لدى Zee Outsourcing Solutions.",
+    "fr": "Une collection de sessions de formation et de mentorat réalisées dans le cadre de mon rôle professionnel en ingénierie cloud et mentorat chez Zee Outsourcing Solutions.",
+    "es": "Una colección de sesiones de formación y mentoría realizadas como parte de mi función profesional de ingeniería cloud y mentoría en Zee Outsourcing Solutions."
+  },
+  "Zee Outsourcing Solutions": {
+    "ar": "Zee Outsourcing Solutions",
+    "fr": "Zee Outsourcing Solutions",
+    "es": "Zee Outsourcing Solutions"
+  },
+  "Cloud Training": {
+    "ar": "تدريب سحابي",
+    "fr": "Formation Cloud",
+    "es": "Formación Cloud"
+  },
+  "Azure Mentorship": {
+    "ar": "إرشاد Azure",
+    "fr": "Mentorat Azure",
+    "es": "Mentoría de Azure"
+  },
+  "Technical Sessions": {
+    "ar": "جلسات تقنية",
+    "fr": "Sessions techniques",
+    "es": "Sesiones técnicas"
+  },
+  "· Technical Learning": {
+    "ar": "· تعلم تقني",
+    "fr": "· Apprentissage technique",
+    "es": "· Aprendizaje técnico"
+  },
+  "· Career Skills": {
+    "ar": "· مهارات مهنية",
+    "fr": "· Compétences professionnelles",
+    "es": "· Habilidades profesionales"
+  },
+  "· Cloud Technology": {
+    "ar": "· تكنولوجيا السحابة",
+    "fr": "· Technologie Cloud",
+    "es": "· Tecnología Cloud"
   }
 };
 
@@ -6896,8 +7237,8 @@
       direction: "ltr"
     },
     ar: {
-      title: "محمد إفرايم سمير | مهندس سحابة ومتحدث عام",
-      description: "محمد إفرايم سمير — مهندس سحابة، مسؤول Azure معتمد من Microsoft، متحدث عام وقائد سحابة في GDGoC BULC.",
+      title: "محمد إفراهيم سمير | مهندس سحابة ومتحدث عام",
+      description: "محمد إفراهيم سمير — مهندس سحابة، مسؤول Azure معتمد من Microsoft، متحدث عام وقائد سحابة في GDGoC BULC.",
       direction: "rtl"
     },
     fr: {
@@ -7016,6 +7357,22 @@
     }
   }
 
+  function updateBrandNames(language) {
+    const brands = document.querySelectorAll(".brand");
+
+    brands.forEach((brand) => {
+      const names = {
+        en: ["Ephraim", "Sameer"],
+        ar: ["محمد إفراهيم", "سمير"],
+        fr: ["Muhammad Ephraim", "Sameer"],
+        es: ["Muhammad Ephraim", "Sameer"]
+      };
+
+      const pair = names[language] || names.en;
+      brand.innerHTML = `${pair[0]}<span>${pair[1]}</span>`;
+    });
+  }
+
   function applyLanguage(language) {
     if (!portfolioLanguageMeta[language]) {
       language = "en";
@@ -7049,6 +7406,7 @@
         ) || "en";
 
       updateMetadata(saved);
+      updateBrandNames(saved);
 
       if (selector) {
         selector.value = saved;
