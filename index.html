@@ -1,66 +1,26 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-
-  <meta charset="UTF-8" />
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-
-  <title>
-    Muhammad Ephraim Sameer | Cloud Engineer & Public Speaker
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
+    Muhammad Ephraim Sameer | Cloud Engineer &amp; Public Speaker
   </title>
-
-  <meta
-    name="description"
-    content="Muhammad Ephraim Sameer — Cloud Engineer, Microsoft Certified Azure Administrator, Public Speaker, GDGoC BULC Cloud Lead and technology community contributor."
-  />
-
-  <meta
-    name="keywords"
-    content="Muhammad Ephraim Sameer, Azure, Cloud Engineer, Public Speaker, AZ-104, GDGoC, IEEE, Cloud Computing, SDG"
-  />
-
-  <meta
-    name="author"
-    content="Muhammad Ephraim Sameer"
-  />
-
-
-  <!-- ======================================================
+<meta content="Muhammad Ephraim Sameer — Cloud Engineer, Microsoft Certified Azure Administrator, Public Speaker, GDGoC BULC Cloud Lead and technology community contributor." name="description"/>
+<meta content="Muhammad Ephraim Sameer, Azure, Cloud Engineer, Public Speaker, AZ-104, GDGoC, IEEE, Cloud Computing, SDG" name="keywords"/>
+<meta content="Muhammad Ephraim Sameer" name="author"/>
+<!-- ======================================================
        FONTS
   ======================================================= -->
-
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
-
-  <link
-    rel="stylesheet"
-    href="style.css"
-  />
-
-
-  <!-- ======================================================
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Noto+Sans+Arabic:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet">
+<!-- ======================================================
        PAGE-SPECIFIC STYLES
   ======================================================= -->
-
-  <style>
+<style>
 
 
     /* =====================================================
@@ -368,19 +328,16 @@
     }
 
 
-    .work-number {
+    .work-date {
 
       flex-shrink:
         0;
 
       min-width:
-        190px;
-
-      max-width:
-        270px;
+        92px;
 
       padding:
-        9px 14px;
+        9px 12px;
 
       text-align:
         center;
@@ -401,14 +358,8 @@
       font-size:
         9px;
 
-      line-height:
-        1.35;
-
       font-weight:
         700;
-
-      letter-spacing:
-        .02em;
 
     }
 
@@ -661,76 +612,6 @@
 
     }
 
-
-
-    /* =====================================================
-       ZEE OUTSOURCING TRAINING GALLERY
-    ====================================================== */
-
-    .zee-training-grid {
-
-      display:
-        grid;
-
-      grid-template-columns:
-        repeat(3,1fr);
-
-      gap:
-        10px;
-
-    }
-
-
-    .zee-training-grid figure {
-
-      margin:
-        0;
-
-      height:
-        270px;
-
-      overflow:
-        hidden;
-
-      border-radius:
-        16px;
-
-      background:
-        #09070d;
-
-      cursor:
-        zoom-in;
-
-      border:
-        1px solid
-        rgba(208,143,229,.08);
-
-    }
-
-
-    .zee-training-grid img {
-
-      width:
-        100%;
-
-      height:
-        100%;
-
-      object-fit:
-        cover;
-
-      transition:
-        transform .4s ease;
-
-    }
-
-
-    .zee-training-grid figure:hover img {
-
-      transform:
-        scale(1.025);
-
-    }
 
 
     /* =====================================================
@@ -1486,20 +1367,6 @@
       }
 
 
-      .work-number {
-
-        min-width:
-          0;
-
-        max-width:
-          100%;
-
-        width:
-          fit-content;
-
-      }
-
-
       .work-meta {
 
         padding:
@@ -1531,22 +1398,6 @@
 
         max-height:
           600px;
-
-      }
-
-
-      .zee-training-grid {
-
-        grid-template-columns:
-          1fr 1fr;
-
-      }
-
-
-      .zee-training-grid figure {
-
-        height:
-          210px;
 
       }
 
@@ -1627,9 +1478,115 @@
 
     }
 
-  </style>
+  
 
+    /* =====================================================
+       BREATHABLE FEATURE MEDIA / NATURAL DIMENSIONS
+    ====================================================== */
 
+    .poster-event {
+      padding: 0 22px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .poster-primary,
+    .codex-poster,
+    .umt-feature-image {
+      width: 100%;
+      height: auto;
+      min-height: 0;
+      padding: 18px;
+      box-sizing: border-box;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .poster-primary img,
+    .codex-poster img,
+    .umt-feature-image img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: none;
+      object-fit: contain;
+      margin: 0 auto;
+      border-radius: 14px;
+    }
+
+    .supporting-grid,
+    .umt-session-grid {
+      gap: 12px;
+    }
+
+    .work-experience .work-date {
+      min-width: 165px;
+      white-space: nowrap;
+      letter-spacing: .02em;
+    }
+
+    /* Five-photo training group */
+    .zee-training-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .zee-training-grid figure {
+      height: 280px;
+    }
+
+    @media (min-width: 1200px) {
+      .poster-primary img,
+      .codex-poster img,
+      .umt-feature-image img {
+        max-width: min(100%, 1120px);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .zee-training-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 650px) {
+      .poster-event {
+        padding: 0 10px 12px;
+        gap: 18px;
+      }
+
+      .poster-primary,
+      .codex-poster,
+      .umt-feature-image {
+        padding: 10px;
+        border-radius: 18px;
+      }
+
+      .poster-primary img,
+      .codex-poster img,
+      .umt-feature-image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: none;
+      }
+
+      .work-experience .work-date {
+        min-width: 0;
+        white-space: normal;
+      }
+
+      .zee-training-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .zee-training-grid figure {
+        height: auto;
+        min-height: 230px;
+      }
+    }
+</style>
 <style>
   /* =====================================================
      MULTILINGUAL LANGUAGE SELECTOR
@@ -1798,146 +1755,80 @@
     }
   }
 </style>
-
-</head>
-
-
-
+</link></head>
 <body>
-
-
-
-  <!-- ======================================================
+<!-- ======================================================
        BACKGROUND
   ======================================================= -->
-
-  <div class="ambient ambient-one"></div>
-
-  <div class="ambient ambient-two"></div>
-
-  <div class="ambient ambient-three"></div>
-
-  <div class="grid-background"></div>
-
-
-
-  <!-- ======================================================
+<div class="ambient ambient-one"></div>
+<div class="ambient ambient-two"></div>
+<div class="ambient ambient-three"></div>
+<div class="grid-background"></div>
+<!-- ======================================================
        NAVIGATION
   ======================================================= -->
-
-  <header class="site-header">
-
-    <nav class="navbar">
-
-
-      <a
-        href="#home"
-        class="brand"
-      >
+<header class="site-header">
+<nav class="navbar">
+<a class="brand" href="#home">
         Ephraim<span>Sameer</span>
-      </a>
-
-
-      <button
-        id="menuToggle"
-        class="menu-toggle"
-        aria-label="Open navigation"
-      >
-
-        <span></span>
-
-        <span></span>
-
-      </button>
-
-
-      
-<div class="language-switcher" aria-label="Language selector">
-  <label for="siteLanguage" class="sr-only">Language</label>
-  <select id="siteLanguage" aria-label="Language">
-    <option value="en">EN · English</option>
-    <option value="ar">AR · العربية</option>
-    <option value="fr">FR · Français</option>
-    <option value="es">ES · Español</option>
-  </select>
+</a>
+<button aria-label="Open navigation" class="menu-toggle" id="menuToggle">
+<span></span>
+<span></span>
+</button>
+<div aria-label="Language selector" class="language-switcher">
+<label class="sr-only" for="siteLanguage">Language</label>
+<select aria-label="Language" id="siteLanguage">
+<option value="en">EN · English</option>
+<option value="ar">AR · العربية</option>
+<option value="fr">FR · Français</option>
+<option value="es">ES · Español</option>
+</select>
 </div>
-
-      <ul
-        class="nav-links"
-        id="navLinks"
-      >
-
-        <li>
-          <a href="#home">Home</a>
-        </li>
-
-        <li>
-          <a href="#about">About</a>
-        </li>
-
-        <li>
-          <a href="#experience">Experience</a>
-        </li>
-
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
-
-        <li>
-          <a href="#work">Work</a>
-        </li>
-
-        <li>
-          <a href="#certifications">Certifications</a>
-        </li>
-
-        <li>
-          <a href="#badges">Badges</a>
-        </li>
-
-        <li>
-          <a href="#resume">Resume</a>
-        </li>
-
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-
-      </ul>
-
-    </nav>
-
-  </header>
-
-
-
-  <main>
-
-
-
-    <!-- ======================================================
+<ul class="nav-links" id="navLinks">
+<li>
+<a href="#home">Home</a>
+</li>
+<li>
+<a href="#about">About</a>
+</li>
+<li>
+<a href="#experience">Experience</a>
+</li>
+<li>
+<a href="#skills">Skills</a>
+</li>
+<li>
+<a href="#work">Work</a>
+</li>
+<li>
+<a href="#certifications">Certifications</a>
+</li>
+<li>
+<a href="#badges">Badges</a>
+</li>
+<li>
+<a href="#resume">Resume</a>
+</li>
+<li>
+<a href="#contact">Contact</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<!-- ======================================================
          HERO
     ======================================================= -->
-
-    <section
-      class="hero"
-      id="home"
-    >
-
-
-      <div class="hero-content">
-
-
-        <div class="availability">
-
-          <span class="availability-dot"></span>
+<section class="hero" id="home">
+<div class="hero-content">
+<div class="availability">
+<span class="availability-dot"></span>
 
           OPEN TO OPPORTUNITIES
 
         </div>
-
-
-        <div class="hero-eyebrow">
+<div class="hero-eyebrow">
 
           CLOUD ENGINEER
 
@@ -1950,54 +1841,38 @@
           PUBLIC SPEAKER
 
         </div>
-
-
-        <h1>
+<h1>
 
           Muhammad Ephraim
 
           <span>
             Sameer.
           </span>
-
-        </h1>
-
-
-        <!-- NEW PUBLIC SPEAKER TAGLINE -->
-
-        <div class="speaker-line">
-
-          <strong>
+</h1>
+<!-- NEW PUBLIC SPEAKER TAGLINE -->
+<div class="speaker-line">
+<strong>
             Cloud Engineer
           </strong>
-
-          <span>
+<span>
             •
           </span>
-
-          <strong>
+<strong>
             Public Speaker
           </strong>
-
-          <span>
+<span>
             •
           </span>
-
-          <strong>
+<strong>
             Technology Community Builder
           </strong>
-
-        </div>
-
-
-        <p class="hero-position">
+</div>
+<p class="hero-position">
 
           Cloud Engineer @ Zee Outsourcing Solutions
 
         </p>
-
-
-        <p class="hero-description">
+<p class="hero-description">
 
           Microsoft Certified Azure Administrator focused on
           cloud infrastructure, Azure administration, technical
@@ -2005,233 +1880,107 @@
           and building practical cloud experiences.
 
         </p>
-
-
-        <div class="hero-buttons">
-
-
-          <a
-            href="#experience"
-            class="button button-primary"
-          >
+<div class="hero-buttons">
+<a class="button button-primary" href="#experience">
             Explore Experience
           </a>
-
-
-          <a
-            href="#resume"
-            class="button button-outline"
-          >
+<a class="button button-outline" href="#resume">
             Download Resume
           </a>
-
-
-        </div>
-
-
-        <div class="hero-links">
-
-
-          <a
-            href="https://www.linkedin.com/in/mephraimsameer"
-            target="_blank"
-            rel="noopener"
-          >
+</div>
+<div class="hero-links">
+<a href="https://www.linkedin.com/in/mephraimsameer" rel="noopener" target="_blank">
             LinkedIn
           </a>
-
-
-          <a
-            href="https://github.com/Ephraim-Sameer"
-            target="_blank"
-            rel="noopener"
-          >
+<a href="https://github.com/Ephraim-Sameer" rel="noopener" target="_blank">
             GitHub
           </a>
-
-
-          <a
-            href="https://www.credly.com/users/muhammad-ephraim"
-            target="_blank"
-            rel="noopener"
-          >
+<a href="https://www.credly.com/users/muhammad-ephraim" rel="noopener" target="_blank">
             Credly
           </a>
-
-
-          <a
-            href="https://learn.microsoft.com/en-us/users/EphraimSameer-8314/credentials/4B16C47E0E8B6917?ref=https%3a%2f%2fwww.linkedin.com%2f"
-            target="_blank"
-            rel="noopener"
-          >
+<a href="https://learn.microsoft.com/en-us/users/EphraimSameer-8314/credentials/4B16C47E0E8B6917?ref=https%3a%2f%2fwww.linkedin.com%2f" rel="noopener" target="_blank">
             Microsoft Credential
           </a>
-
-
-        </div>
-
-
-        <!-- HERO SDG STRIP -->
-
-        <div class="sdg-impact">
-
-
-          <div class="sdg-impact-label">
+</div>
+<!-- HERO SDG STRIP -->
+<div class="sdg-impact">
+<div class="sdg-impact-label">
             TECHNOLOGY WITH PURPOSE
           </div>
-
-
-          <div class="sdg-impact-title">
+<div class="sdg-impact-title">
             My work naturally aligns with selected UN Sustainable Development Goals.
           </div>
-
-
-          <div class="sdg-badges">
-
-            <span class="sdg-badge">
-              <strong>SDG 4</strong> · Quality Education
+<div class="sdg-badges">
+<span class="sdg-badge">
+<strong>SDG 4</strong> · Quality Education
             </span>
-
-            <span class="sdg-badge">
-              <strong>SDG 8</strong> · Decent Work
+<span class="sdg-badge">
+<strong>SDG 8</strong> · Decent Work
             </span>
-
-            <span class="sdg-badge">
-              <strong>SDG 9</strong> · Innovation
+<span class="sdg-badge">
+<strong>SDG 9</strong> · Innovation
             </span>
-
-            <span class="sdg-badge">
-              <strong>SDG 17</strong> · Partnerships
+<span class="sdg-badge">
+<strong>SDG 17</strong> · Partnerships
             </span>
-
-          </div>
-
-
-        </div>
-
-
-      </div>
-
-
-
-      <div class="hero-visual">
-
-
-        <div class="hero-ring"></div>
-
-
-        <div class="hero-photo">
-
-
-          <img
-            src="5.JPG"
-            alt="Muhammad Ephraim Sameer"
-          />
-
-
-        </div>
-
-
-        <div class="hero-float hero-float-one">
-
-
-          <div class="float-icon">
+</div>
+</div>
+</div>
+<div class="hero-visual">
+<div class="hero-ring"></div>
+<div class="hero-photo">
+<img alt="Muhammad Ephraim Sameer" src="5.JPG"/>
+</div>
+<div class="hero-float hero-float-one">
+<div class="float-icon">
             ☁
           </div>
-
-
-          <div>
-
-            <strong>
+<div>
+<strong>
               AZ-104
             </strong>
-
-            <span>
+<span>
               Azure Administrator
             </span>
-
-          </div>
-
-
-        </div>
-
-
-        <div class="hero-float hero-float-two">
-
-
-          <div class="float-icon">
+</div>
+</div>
+<div class="hero-float hero-float-two">
+<div class="float-icon">
             ◈
           </div>
-
-
-          <div>
-
-            <strong>
+<div>
+<strong>
               PUBLIC SPEAKER
             </strong>
-
-            <span>
+<span>
               Cloud · Technology · Education
             </span>
-
-          </div>
-
-
-        </div>
-
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- ======================================================
+</div>
+</div>
+</div>
+</section>
+<!-- ======================================================
          ABOUT
     ======================================================= -->
-
-    <section
-      class="section"
-      id="about"
-    >
-
-
-      <div class="section-header">
-
-
-        <span class="section-label">
+<section class="section" id="about">
+<div class="section-header">
+<span class="section-label">
           01 / ABOUT
         </span>
-
-
-        <h2>
-          Cloud, community,<br />
+<h2>
+          Cloud, community,<br/>
           and continuous growth.
         </h2>
-
-
-      </div>
-
-
-
-      <div class="about-layout">
-
-
-        <div class="about-main">
-
-
-          <span class="about-kicker">
+</div>
+<div class="about-layout">
+<div class="about-main">
+<span class="about-kicker">
             WHO I AM
           </span>
-
-
-          <h3>
+<h3>
             I'm building my career around cloud technology and public speaking.
           </h3>
-
-
-          <p>
+<p>
 
             I'm Muhammad Ephraim Sameer, a Cloud Engineer with
             a growing professional focus around Microsoft Azure,
@@ -2239,9 +1988,7 @@
             speaking and technology communities.
 
           </p>
-
-
-          <p>
+<p>
 
             My journey combines professional cloud engineering
             with hands-on teaching, community leadership,
@@ -2249,235 +1996,119 @@
             award ceremonies and public cloud sessions.
 
           </p>
-
-
-          <div class="about-tags">
-
-
-            <span>
+<div class="about-tags">
+<span>
               Microsoft Azure
             </span>
-
-
-            <span>
+<span>
               Cloud Infrastructure
             </span>
-
-
-            <span>
+<span>
               Public Speaking
             </span>
-
-
-            <span>
+<span>
               Technical Mentoring
             </span>
-
-
-            <span>
+<span>
               Community Leadership
             </span>
-
-
-          </div>
-
-
-          <!-- ABOUT SDG ALIGNMENT -->
-
-          <div class="sdg-tags">
-
-
-            <span class="sdg-tag">
-              <strong>SDG 4</strong> · Learning & Skills
+</div>
+<!-- ABOUT SDG ALIGNMENT -->
+<div class="sdg-tags">
+<span class="sdg-tag">
+<strong>SDG 4</strong> · Learning &amp; Skills
             </span>
-
-
-            <span class="sdg-tag">
-              <strong>SDG 8</strong> · Employability & Growth
+<span class="sdg-tag">
+<strong>SDG 8</strong> · Employability &amp; Growth
             </span>
-
-
-            <span class="sdg-tag">
-              <strong>SDG 9</strong> · Technology & Innovation
+<span class="sdg-tag">
+<strong>SDG 9</strong> · Technology &amp; Innovation
             </span>
-
-
-            <span class="sdg-tag">
-              <strong>SDG 17</strong> · Collaboration
+<span class="sdg-tag">
+<strong>SDG 17</strong> · Collaboration
             </span>
-
-
-          </div>
-
-
-        </div>
-
-
-
-        <div class="about-side">
-
-
-          <div class="about-stat">
-
-
-            <strong>
+</div>
+</div>
+<div class="about-side">
+<div class="about-stat">
+<strong>
               AZ-104
             </strong>
-
-
-            <span>
+<span>
               Microsoft Certified
             </span>
-
-
-          </div>
-
-
-          <div class="about-stat">
-
-
-            <strong>
+</div>
+<div class="about-stat">
+<strong>
               Azure
             </strong>
-
-
-            <span>
+<span>
               Cloud Engineering
             </span>
-
-
-          </div>
-
-
-          <div class="about-stat">
-
-
-            <strong>
+</div>
+<div class="about-stat">
+<strong>
               PUBLIC
             </strong>
-
-
-            <span>
+<span>
               Speaker
             </span>
-
-
-          </div>
-
-
-          <div class="about-stat">
-
-
-            <strong>
+</div>
+<div class="about-stat">
+<strong>
               GDGoC
             </strong>
-
-
-            <span>
+<span>
               Community Leadership
             </span>
-
-
-          </div>
-
-
-        </div>
-
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- ======================================================
+</div>
+</div>
+</div>
+</section>
+<!-- ======================================================
          EXPERIENCE
     ======================================================= -->
-
-    <section
-      class="section experience-section"
-      id="experience"
-    >
-
-
-      <div class="section-header">
-
-
-        <span class="section-label">
+<section class="section experience-section" id="experience">
+<div class="section-header">
+<span class="section-label">
           02 / EXPERIENCE
         </span>
-
-
-        <h2>
+<h2>
           The journey so far.
         </h2>
-
-
-        <p class="section-intro">
+<p class="section-intro">
 
           Chronologically arranged by role start date while
           keeping concurrent responsibilities visible.
 
         </p>
-
-
-      </div>
-
-
-
-      <div class="experience-list">
-
-
-
-        <!-- ==================================================
+</div>
+<div class="experience-list">
+<!-- ==================================================
              GDGoC BULC CO-LEAD
         =================================================== -->
-
-        <article class="experience-item">
-
-
-          <div class="experience-marker">
-            <span></span>
-          </div>
-
-
-          <div class="experience-content">
-
-
-            <div class="experience-date">
+<article class="experience-item">
+<div class="experience-marker">
+<span></span>
+</div>
+<div class="experience-content">
+<div class="experience-date">
               AUG 2026 — PRESENT
             </div>
-
-
-            <div class="experience-heading">
-
-
-              <div>
-
-
-                <h3>
+<div class="experience-heading">
+<div>
+<h3>
                   GDGoC BULC Co-Lead
                 </h3>
-
-
-                <p class="experience-company">
+<p class="experience-company">
                   Google Developer Groups on Campus
                 </p>
-
-
-              </div>
-
-
-              <span class="experience-type">
+</div>
+<span class="experience-type">
                 LEADERSHIP
               </span>
-
-
-            </div>
-
-
-            <p>
+</div>
+<p>
 
               Stepping into chapter-level leadership after serving
               as Cloud Lead, helping guide the core team, broader
@@ -2485,339 +2116,177 @@
               technical initiatives.
 
             </p>
-
-
-            <div class="sdg-tags">
-
-
-              <span class="sdg-tag">
-                <strong>SDG 4</strong> · Youth Learning
+<div class="sdg-tags">
+<span class="sdg-tag">
+<strong>SDG 4</strong> · Youth Learning
               </span>
-
-
-              <span class="sdg-tag">
-                <strong>SDG 17</strong> · Partnerships
+<span class="sdg-tag">
+<strong>SDG 17</strong> · Partnerships
               </span>
-
-
-            </div>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <!-- ==================================================
+</div>
+</div>
+</article>
+<!-- ==================================================
              ZEE OUTSOURCING
         =================================================== -->
-
-        <article class="experience-item">
-
-
-          <div class="experience-marker">
-            <span></span>
-          </div>
-
-
-          <div class="experience-content">
-
-
-            <div class="experience-date">
+<article class="experience-item">
+<div class="experience-marker">
+<span></span>
+</div>
+<div class="experience-content">
+<div class="experience-date">
               JUN 2026 — PRESENT
             </div>
-
-
-            <div class="experience-heading">
-
-
-              <div>
-
-
-                <h3>
+<div class="experience-heading">
+<div>
+<h3>
                   Cloud Engineer Mentor × Content Manager
                 </h3>
-
-
-                <p class="experience-company">
+<p class="experience-company">
                   Zee Outsourcing Solutions Pvt. Ltd.
                 </p>
-
-
-              </div>
-
-
-              <span class="experience-type">
+</div>
+<span class="experience-type">
                 PROFESSIONAL
               </span>
-
-
-            </div>
-
-
-            <p>
+</div>
+<p>
 
               A dual-impact role combining technical cloud mentorship
               with digital brand and content strategy.
 
             </p>
-
-
-            <ul>
-
-
-              <li>
+<ul>
+<li>
                 Directed the Microsoft Azure mentorship track
                 across AZ-900 and AZ-104.
               </li>
-
-
-              <li>
+<li>
                 Instructed internship cohorts on Azure infrastructure,
                 compute, networking, identity governance and security.
               </li>
-
-
-              <li>
+<li>
                 Designed hands-on cloud computing roadmaps
                 aligned with professional certification goals.
               </li>
-
-
-              <li>
+<li>
                 Managed digital content, promotional graphics,
                 corporate communication and professional announcements.
               </li>
-
-
-            </ul>
-
-
-            <div class="sdg-tags">
-
-
-              <span class="sdg-tag">
-                <strong>SDG 4</strong> · Technical Skills
+</ul>
+<div class="sdg-tags">
+<span class="sdg-tag">
+<strong>SDG 4</strong> · Technical Skills
               </span>
-
-
-              <span class="sdg-tag">
-                <strong>SDG 8</strong> · Career Development
+<span class="sdg-tag">
+<strong>SDG 8</strong> · Career Development
               </span>
-
-
-              <span class="sdg-tag">
-                <strong>SDG 9</strong> · Cloud Technology
+<span class="sdg-tag">
+<strong>SDG 9</strong> · Cloud Technology
               </span>
-
-
-            </div>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <!-- ==================================================
+</div>
+</div>
+</article>
+<!-- ==================================================
              IEEE MEMBER
         =================================================== -->
-
-        <article class="experience-item">
-
-
-          <div class="experience-marker">
-            <span></span>
-          </div>
-
-
-          <div class="experience-content">
-
-
-            <div class="experience-date">
+<article class="experience-item">
+<div class="experience-marker">
+<span></span>
+</div>
+<div class="experience-content">
+<div class="experience-date">
               MAY 2026 — PRESENT
             </div>
-
-
-            <div class="experience-heading">
-
-
-              <div>
-
-
-                <h3>
+<div class="experience-heading">
+<div>
+<h3>
                   IEEE Member
                 </h3>
-
-
-                <p class="experience-company">
+<p class="experience-company">
                   IEEE Computer Society
                 </p>
-
-
-              </div>
-
-
-              <span class="experience-type">
+</div>
+<span class="experience-type">
                 PROFESSIONAL
               </span>
-
-
-            </div>
-
-
-            <p>
+</div>
+<p>
 
               Active membership reflecting continued involvement
               in the professional technology community.
 
             </p>
-
-
-            <div class="sdg-tags">
-
-
-              <span class="sdg-tag">
-                <strong>SDG 17</strong> · Professional Partnerships
+<div class="sdg-tags">
+<span class="sdg-tag">
+<strong>SDG 17</strong> · Professional Partnerships
               </span>
-
-
-            </div>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <!-- ==================================================
+</div>
+</div>
+</article>
+<!-- ==================================================
              IEEE DOCUMENTATION
         =================================================== -->
-
-        <article class="experience-item">
-
-
-          <div class="experience-marker">
-            <span></span>
-          </div>
-
-
-          <div class="experience-content">
-
-
-            <div class="experience-date">
+<article class="experience-item">
+<div class="experience-marker">
+<span></span>
+</div>
+<div class="experience-content">
+<div class="experience-date">
               FEB 2026 — PRESENT
             </div>
-
-
-            <div class="experience-heading">
-
-
-              <div>
-
-
-                <h3>
+<div class="experience-heading">
+<div>
+<h3>
                   IEEE Documentation Vice Head
                 </h3>
-
-
-                <p class="experience-company">
+<p class="experience-company">
                   IEEE BULC Student Chapter
                 </p>
-
-
-              </div>
-
-
-              <span class="experience-type">
+</div>
+<span class="experience-type">
                 LEADERSHIP
               </span>
-
-
-            </div>
-
-
-            <p>
+</div>
+<p>
 
               Driving the administrative documentation framework,
               corporate communication and strategic record-keeping
               for the student branch and flagship events.
 
             </p>
-
-
-            <div class="sdg-tags">
-
-
-              <span class="sdg-tag">
-                <strong>SDG 17</strong> · Institutional Collaboration
+<div class="sdg-tags">
+<span class="sdg-tag">
+<strong>SDG 17</strong> · Institutional Collaboration
               </span>
-
-
-            </div>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <!-- ==================================================
+</div>
+</div>
+</article>
+<!-- ==================================================
              GDGoC BULC CLOUD LEAD
         =================================================== -->
-
-        <article class="experience-item featured-experience">
-
-
-          <div class="experience-marker">
-            <span></span>
-          </div>
-
-
-          <div class="experience-content">
-
-
-            <div class="experience-date">
+<article class="experience-item featured-experience">
+<div class="experience-marker">
+<span></span>
+</div>
+<div class="experience-content">
+<div class="experience-date">
               OCT 2025 — AUG 2026
             </div>
-
-
-            <div class="experience-heading">
-
-
-              <div>
-
-
-                <h3>
+<div class="experience-heading">
+<div>
+<h3>
                   GDGoC BULC Cloud Lead
                 </h3>
-
-
-                <p class="experience-company">
+<p class="experience-company">
                   Google Developer Groups on Campus
                 </p>
-
-
-              </div>
-
-
-              <span class="experience-type">
+</div>
+<span class="experience-type">
                 CLOUD LEAD
               </span>
-
-
-            </div>
-
-
-            <p>
+</div>
+<p>
 
               Spearheaded the Cloud Computing track for the
               IEEE Codex 2.0 × GDGoC competition, overseeing
@@ -2825,275 +2294,151 @@
               evaluation of cloud challenges.
 
             </p>
-
-
-            <ul>
-
-
-              <li>
+<ul>
+<li>
                 Architected a comprehensive 120-minute practical
                 sandbox challenge simulating real-world AWS
                 deployment scenarios.
               </li>
-
-
-              <li>
+<li>
                 Designed scenarios involving custom VPCs,
                 Auto Scaling Groups and Application Load Balancers.
               </li>
-
-
-              <li>
+<li>
                 Developed and automated a 55-question rapid-fire
                 theoretical assessment with objective grading.
               </li>
-
-
-              <li>
+<li>
                 Authored evaluation rubrics and collaborated with
                 faculty and external industry experts.
               </li>
-
-
-              <li>
+<li>
                 Hosted the GDGoC orientation session to introduce
                 participants to the community, cloud track and
                 upcoming technical activities.
               </li>
-
-
-              <li>
+<li>
                 Hosted the award ceremony session, presenting
                 competition outcomes and recognizing participant
                 achievements.
               </li>
-
-
-              <li>
+<li>
                 Served as a public-facing speaker across technical
                 sessions and community activities.
               </li>
-
-
-            </ul>
-
-
-            <div class="experience-transition">
-
-
-              <span>
+</ul>
+<div class="experience-transition">
+<span>
                 PRECEDED BY
               </span>
-
-
-              <strong>
+<strong>
                 Event Management × Cyber Security
               </strong>
-
-
-              <small>
+<small>
                 Feb 2025 — Oct 2025
               </small>
-
-
-            </div>
-
-
-            <div class="sdg-tags">
-
-
-              <span class="sdg-tag">
-                <strong>SDG 4</strong> · Technical Education
+</div>
+<div class="sdg-tags">
+<span class="sdg-tag">
+<strong>SDG 4</strong> · Technical Education
               </span>
-
-
-              <span class="sdg-tag">
-                <strong>SDG 8</strong> · Career Skills
+<span class="sdg-tag">
+<strong>SDG 8</strong> · Career Skills
               </span>
-
-
-              <span class="sdg-tag">
-                <strong>SDG 9</strong> · Cloud Innovation
+<span class="sdg-tag">
+<strong>SDG 9</strong> · Cloud Innovation
               </span>
-
-
-              <span class="sdg-tag">
-                <strong>SDG 17</strong> · Community Partnerships
+<span class="sdg-tag">
+<strong>SDG 17</strong> · Community Partnerships
               </span>
-
-
-            </div>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <!-- ==================================================
+</div>
+</div>
+</article>
+<!-- ==================================================
              TEACHING ASSISTANT
         =================================================== -->
-
-        <article class="experience-item">
-
-
-          <div class="experience-marker">
-            <span></span>
-          </div>
-
-
-          <div class="experience-content">
-
-
-            <div class="experience-date">
+<article class="experience-item">
+<div class="experience-marker">
+<span></span>
+</div>
+<div class="experience-content">
+<div class="experience-date">
               SEP 2025 — JUN 2026
             </div>
-
-
-            <div class="experience-heading">
-
-
-              <div>
-
-
-                <h3>
+<div class="experience-heading">
+<div>
+<h3>
                   Teaching Assistant
                 </h3>
-
-
-                <p class="experience-company">
+<p class="experience-company">
                   Bahria University
                 </p>
-
-
-              </div>
-
-
-              <span class="experience-type">
+</div>
+<span class="experience-type">
                 EDUCATION
               </span>
-
-
-            </div>
-
-
-            <p>
+</div>
+<p>
 
               Supported students during networking laboratories,
               academic projects and practical coursework.
 
             </p>
-
-
-            <div class="technical-tags">
-
-
-              <span>
+<div class="technical-tags">
+<span>
                 OSPF
               </span>
-
-
-              <span>
+<span>
                 RIP
               </span>
-
-
-              <span>
+<span>
                 EIGRP
               </span>
-
-
-              <span>
+<span>
                 VLANs
               </span>
-
-
-              <span>
+<span>
                 IP Addressing
               </span>
-
-
-              <span>
+<span>
                 Routing
               </span>
-
-
-              <span>
+<span>
                 Troubleshooting
               </span>
-
-
-            </div>
-
-
-            <div class="sdg-tags">
-
-
-              <span class="sdg-tag">
-                <strong>SDG 4</strong> · Quality Education
+</div>
+<div class="sdg-tags">
+<span class="sdg-tag">
+<strong>SDG 4</strong> · Quality Education
               </span>
-
-
-            </div>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <!-- ==================================================
+</div>
+</div>
+</article>
+<!-- ==================================================
              EVENT MANAGEMENT
         =================================================== -->
-
-        <article class="experience-item">
-
-
-          <div class="experience-marker">
-            <span></span>
-          </div>
-
-
-          <div class="experience-content">
-
-
-            <div class="experience-date">
+<article class="experience-item">
+<div class="experience-marker">
+<span></span>
+</div>
+<div class="experience-content">
+<div class="experience-date">
               FEB 2025 — OCT 2025
             </div>
-
-
-            <div class="experience-heading">
-
-
-              <div>
-
-
-                <h3>
+<div class="experience-heading">
+<div>
+<h3>
                   Event Management × Cyber Security
                 </h3>
-
-
-                <p class="experience-company">
+<p class="experience-company">
                   Google Developer Groups on Campus
                 </p>
-
-
-              </div>
-
-
-              <span class="experience-type">
+</div>
+<span class="experience-type">
                 COMMUNITY
               </span>
-
-
-            </div>
-
-
-            <p>
+</div>
+<p>
 
               Started my GDGoC journey through event management
               and cybersecurity activities, building the community
@@ -3101,2197 +2446,949 @@
               Cloud Lead role.
 
             </p>
-
-
-            <div class="sdg-tags">
-
-
-              <span class="sdg-tag">
-                <strong>SDG 4</strong> · Community Learning
+<div class="sdg-tags">
+<span class="sdg-tag">
+<strong>SDG 4</strong> · Community Learning
               </span>
-
-
-              <span class="sdg-tag">
-                <strong>SDG 17</strong> · Partnerships
+<span class="sdg-tag">
+<strong>SDG 17</strong> · Partnerships
               </span>
-
-
-            </div>
-
-
-          </div>
-
-
-        </article>
-
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ======================================================
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- ======================================================
          SKILLS
     ======================================================= -->
-
-    <section
-      class="section"
-      id="skills"
-    >
-
-
-      <div class="section-header">
-
-
-        <span class="section-label">
+<section class="section" id="skills">
+<div class="section-header">
+<span class="section-label">
           03 / SKILLS
         </span>
-
-
-        <h2>
+<h2>
           Technologies I work with.
         </h2>
-
-
-      </div>
-
-
-
-      <div class="skills-layout">
-
-
-        <div class="skills-column">
-
-
-          <div class="skill-category">
-
-
-            <span class="skill-number">
+</div>
+<div class="skills-layout">
+<div class="skills-column">
+<div class="skill-category">
+<span class="skill-number">
               01
             </span>
-
-
-            <h3>
+<h3>
               Cloud Platforms
             </h3>
-
-
-            <div class="skill-list">
-
-
-              <span>
+<div class="skill-list">
+<span>
                 Microsoft Azure
               </span>
-
-
-              <span>
+<span>
                 AWS
               </span>
-
-
-              <span>
+<span>
                 Google Cloud
               </span>
-
-
-            </div>
-
-
-          </div>
-
-
-          <div class="skill-category">
-
-
-            <span class="skill-number">
+</div>
+</div>
+<div class="skill-category">
+<span class="skill-number">
               02
             </span>
-
-
-            <h3>
+<h3>
               Infrastructure
             </h3>
-
-
-            <div class="skill-list">
-
-
-              <span>
+<div class="skill-list">
+<span>
                 Compute
               </span>
-
-
-              <span>
+<span>
                 Storage
               </span>
-
-
-              <span>
+<span>
                 Identity
               </span>
-
-
-              <span>
+<span>
                 Virtual Machines
               </span>
-
-
-              <span>
+<span>
                 Networking
               </span>
-
-
-            </div>
-
-
-          </div>
-
-
-        </div>
-
-
-
-        <div class="skills-column">
-
-
-          <div class="skill-category">
-
-
-            <span class="skill-number">
+</div>
+</div>
+</div>
+<div class="skills-column">
+<div class="skill-category">
+<span class="skill-number">
               03
             </span>
-
-
-            <h3>
+<h3>
               Networking
             </h3>
-
-
-            <div class="skill-list">
-
-
-              <span>
+<div class="skill-list">
+<span>
                 TCP/IP
               </span>
-
-
-              <span>
+<span>
                 DNS
               </span>
-
-
-              <span>
+<span>
                 DHCP
               </span>
-
-
-              <span>
+<span>
                 OSPF
               </span>
-
-
-              <span>
+<span>
                 VLAN
               </span>
-
-
-              <span>
+<span>
                 Subnetting
               </span>
-
-
-            </div>
-
-
-          </div>
-
-
-
-          <div class="skill-category">
-
-
-            <span class="skill-number">
+</div>
+</div>
+<div class="skill-category">
+<span class="skill-number">
               04
             </span>
-
-
-            <h3>
-              Tools & Systems
+<h3>
+              Tools &amp; Systems
             </h3>
-
-
-            <div class="skill-list">
-
-
-              <span>
+<div class="skill-list">
+<span>
                 Linux
               </span>
-
-
-              <span>
+<span>
                 Windows Server
               </span>
+<span>
+                PowerShell
+              </span>
+<span>
+                GitHub
+              </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ======================================================
+         FEATURED WORK
+    ======================================================= -->
+<section class="section" id="work">
+<div class="section-header">
+<span class="section-label">
+          04 / FEATURED WORK
+        </span>
+<h2>
+          Experiences, not photo dumps.
+        </h2>
+<p class="section-intro">
 
+          Each event is treated as one complete portfolio
+          experience. Posters are shown once at their natural
+          proportions, followed by supporting event media.
 
-              <span>
-             
-
-        <!-- ==================================================
+        </p>
+</div>
+<div class="work-list">
+<!-- ==================================================
              AZ-104
         =================================================== -->
 
-        <article class="work-experience">
+<!-- ==================================================
+             IEEE CODEX 2.0
+        =================================================== -->
 
+<!-- ==================================================
+             UMT CLOUDVERSE
+        =================================================== -->
 
-          <div class="work-heading">
+<!-- ==================================================
+             IEEE DLP CLOUD X
+        =================================================== -->
 
-
-            <div class="work-heading-content">
-
-
-              <span class="work-label">
+<article class="work-experience">
+<div class="work-heading">
+<div class="work-heading-content">
+<span class="work-label">
                 CERTIFICATION
               </span>
-
-
-              <h3>
+<h3>
                 Microsoft Azure Administrator
               </h3>
-
-
-              <p class="work-description">
+<p class="work-description">
 
                 Microsoft Certified: Azure Administrator Associate
                 (AZ-104), forming the core of my Azure administration
                 and cloud infrastructure profile.
 
               </p>
-
-
-            </div>
-
-
-            <span class="work-number">
-              17 October 2025 · Renewed until October 2027
-            </span>
-
-
-          </div>
-
-
-
-          <div class="az104-work">
-
-
-            <div class="az104-image">
-
-
-              <img
-                src="Screenshot 2026-07-02 124058.png"
-                alt="Microsoft Certified Azure Administrator Associate"
-                class="modal-trigger"
-              />
-
-
-            </div>
-
-
-
-            <div class="az104-copy">
-
-
-              <span class="work-label">
+</div>
+<span class="work-date">17 OCT 2025 · RENEWED UNTIL OCT 2027</span>
+</div>
+<div class="az104-work">
+<div class="az104-image">
+<img alt="Microsoft Certified Azure Administrator Associate" class="modal-trigger" src="Screenshot 2026-07-02 124058.png"/>
+</div>
+<div class="az104-copy">
+<span class="work-label">
                 MICROSOFT
               </span>
-
-
-              <h3>
+<h3>
                 AZ-104
               </h3>
-
-
-              <p>
+<p>
 
                 Microsoft Certified Azure Administrator Associate
                 covering core Azure administration, infrastructure
                 and platform management.
 
               </p>
-
-
-              <a
-                href="https://learn.microsoft.com/en-us/users/EphraimSameer-8314/credentials/4B16C47E0E8B6917?ref=https%3a%2f%2fwww.linkedin.com%2f"
-                target="_blank"
-                rel="noopener"
-                class="az104-link"
-              >
+<a class="az104-link" href="https://learn.microsoft.com/en-us/users/EphraimSameer-8314/credentials/4B16C47E0E8B6917?ref=https%3a%2f%2fwww.linkedin.com%2f" rel="noopener" target="_blank">
                 Verify Microsoft credential →
               </a>
-
-
-              <div class="sdg-tags">
-
-
-                <span class="sdg-tag">
-                  <strong>SDG 9</strong> · Infrastructure
+<div class="sdg-tags">
+<span class="sdg-tag">
+<strong>SDG 9</strong> · Infrastructure
                 </span>
-
-
-                <span class="sdg-tag">
-                  <strong>SDG 8</strong> · Professional Skills
+<span class="sdg-tag">
+<strong>SDG 8</strong> · Professional Skills
                 </span>
-
-
-              </div>
-
-
-            </div>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <!-- ==================================================
-             ZEE OUTSOURCING UK TRAINING SESSIONS
-        =================================================== -->
-
-        <article class="work-experience">
-
-
-          <div class="work-heading">
-
-
-            <div class="work-heading-content">
-
-
-              <span class="work-label">
-                ZEE OUTSOURCING · TRAINING
-              </span>
-
-
-              <h3>
-                Zee Outsourcing Uk Training Sessions
-              </h3>
-
-
-              <p class="work-description">
-
-                A collection of training and mentorship sessions
-                delivered through my professional cloud engineering
-                and mentorship role at Zee Outsourcing Solutions.
-
-              </p>
-
-
-            </div>
-
-
-            <span class="work-number">
-              22 June – 15 August 2026
-            </span>
-
-
-          </div>
-
-
-          <div class="poster-event">
-
-
-            <div class="zee-training-grid">
-
-
-              <figure>
-
-                <img
-                  src="in1.jpeg"
-                  alt="Zee Outsourcing UK Training Session 1"
-                  class="modal-trigger"
-                />
-
-              </figure>
-
-
-              <figure>
-
-                <img
-                  src="in2.jpeg"
-                  alt="Zee Outsourcing UK Training Session 2"
-                  class="modal-trigger"
-                />
-
-              </figure>
-
-
-              <figure>
-
-                <img
-                  src="in3.jpeg"
-                  alt="Zee Outsourcing UK Training Session 3"
-                  class="modal-trigger"
-                />
-
-              </figure>
-
-
-              <figure>
-
-                <img
-                  src="in5.jpeg"
-                  alt="Zee Outsourcing UK Training Session 4"
-                  class="modal-trigger"
-                />
-
-              </figure>
-
-
-              <figure>
-
-                <img
-                  src="in6.jpeg"
-                  alt="Zee Outsourcing UK Training Session 5"
-                  class="modal-trigger"
-                />
-
-              </figure>
-
-
-            </div>
-
-
-          </div>
-
-
-          <div class="work-meta">
-
-
-            <span>
-              Zee Outsourcing Solutions
-            </span>
-
-
-            <span>
-              Cloud Training
-            </span>
-
-
-            <span>
-              Azure Mentorship
-            </span>
-
-
-            <span>
-              Technical Sessions
-            </span>
-
-
-          </div>
-
-
-          <div class="sdg-tags"
-               style="padding: 0 42px 30px; margin-top: -10px;">
-
-
-            <span class="sdg-tag">
-              <strong>SDG 4</strong> · Technical Learning
-            </span>
-
-
-            <span class="sdg-tag">
-              <strong>SDG 8</strong> · Career Skills
-            </span>
-
-
-            <span class="sdg-tag">
-              <strong>SDG 9</strong> · Cloud Technology
-            </span>
-
-
-          </div>
-
-
-        </article>
-
-<!-- ==================================================
-             IEEE DLP CLOUD X
-        =================================================== -->
-
-        <article class="work-experience">
-
-
-          <div class="work-heading">
-
-
-            <div class="work-heading-content">
-
-
-              <span class="work-label">
+</div>
+</div>
+</div>
+</article><article class="work-experience">
+<div class="work-heading">
+<div class="work-heading-content">
+<span class="work-label">ZEE OUTSOURCING · TRAINING</span>
+<h3>Zee Outsourcing UK Training Sessions</h3>
+<p class="work-description">
+        A series of hands-on cloud training sessions focused on practical Azure learning,
+        guided demonstrations, mentoring and real-world technical development.
+      </p>
+</div>
+<span class="work-date">22 JUN — 15 AUG 2026</span>
+</div>
+<div class="poster-event">
+<div class="supporting-grid zee-training-grid">
+<figure><img alt="Zee Outsourcing UK Training Session 1" class="modal-trigger" src="in1.jpeg"/></figure>
+<figure><img alt="Zee Outsourcing UK Training Session 2" class="modal-trigger" src="in2.jpeg"/></figure>
+<figure><img alt="Zee Outsourcing UK Training Session 3" class="modal-trigger" src="in3.jpeg"/></figure>
+<figure><img alt="Zee Outsourcing UK Training Session 4" class="modal-trigger" src="in5.jpeg"/></figure>
+<figure><img alt="Zee Outsourcing UK Training Session 5" class="modal-trigger" src="in6.jpeg"/></figure>
+</div>
+</div>
+<div class="work-meta">
+<span>Zee Outsourcing Solutions</span>
+<span>UK Training Sessions</span>
+<span>Cloud Training</span>
+<span>Azure</span>
+<span>Technical Mentoring</span>
+</div>
+<div class="sdg-tags" style="padding: 0 42px 30px; margin-top: -10px;">
+<span class="sdg-tag"><strong>SDG 4</strong> · Technical Learning</span>
+<span class="sdg-tag"><strong>SDG 8</strong> · Career Skills</span>
+<span class="sdg-tag"><strong>SDG 9</strong> · Cloud Technology</span>
+</div>
+</article><article class="work-experience">
+<div class="work-heading">
+<div class="work-heading-content">
+<span class="work-label">
                 IEEE · CLOUD X
               </span>
-
-
-              <h3>
+<h3>
                 IEEE DLP Cloud X:
                 For the Digital Future
               </h3>
-
-
-              <p class="work-description">
+<p class="work-description">
 
                 Distinguished Lecture Program focused on cloud
                 technologies and the digital future, featuring
                 my participation as a resource person.
 
               </p>
-
-
-            </div>
-
-
-            <span class="work-number">
-              13 August 2026
-            </span>
-
-
-          </div>
-
-
-
-          <div class="poster-event">
-
-
-            <div class="poster-primary">
-
-
-              <img
-                src="1787061152991.jpg"
-                alt="IEEE DLP Cloud X: For the Digital Future poster"
-                class="modal-trigger"
-              />
-
-
-            </div>
-
-
-
-            <div class="supporting-grid">
-
-
-              <figure>
-
-
-                <img
-                  src="1787061152599.jpg"
-                  alt="IEEE Cloud X Google Meet session"
-                  class="modal-trigger"
-                />
-
-
-              </figure>
-
-
-              <figure>
-
-
-                <img
-                  src="1787061153056.jpg"
-                  alt="IEEE Cloud X Azure virtual machine demonstration"
-                  class="modal-trigger"
-                />
-
-
-              </figure>
-
-
-              <figure>
-
-
-                <img
-                  src="1787061152759.jpg"
-                  alt="IEEE Cloud X Azure services demonstration"
-                  class="modal-trigger"
-                />
-
-
-              </figure>
-
-
-              <figure>
-
-
-                <img
-                  src="1787061152675.jpg"
-                  alt="IEEE Cloud X virtual machine presentation"
-                  class="modal-trigger"
-                />
-
-
-              </figure>
-
-
-            </div>
-
-
-          </div>
-
-
-
-          <div class="work-meta">
-
-
-            <span>
+</div>
+<span class="work-date">13 AUG 2026</span>
+</div>
+<div class="poster-event">
+<div class="poster-primary">
+<img alt="IEEE DLP Cloud X: For the Digital Future poster" class="modal-trigger" src="1787061152991.jpg"/>
+</div>
+<div class="supporting-grid">
+<figure>
+<img alt="IEEE Cloud X Google Meet session" class="modal-trigger" src="1787061152599.jpg"/>
+</figure>
+<figure>
+<img alt="IEEE Cloud X Azure virtual machine demonstration" class="modal-trigger" src="1787061153056.jpg"/>
+</figure>
+<figure>
+<img alt="IEEE Cloud X Azure services demonstration" class="modal-trigger" src="1787061152759.jpg"/>
+</figure>
+<figure>
+<img alt="IEEE Cloud X virtual machine presentation" class="modal-trigger" src="1787061152675.jpg"/>
+</figure>
+</div>
+</div>
+<div class="work-meta">
+<span>
               IEEE
             </span>
-
-
-            <span>
+<span>
               Distinguished Lecture Program
             </span>
-
-
-            <span>
+<span>
               Cloud X
             </span>
-
-
-            <span>
+<span>
               Resource Person
             </span>
-
-
-            <span>
+<span>
               Azure
             </span>
-
-
-            <span>
+<span>
               Public Speaking
             </span>
-
-
-          </div>
-
-
-
-          <div class="sdg-tags"
-               style="padding: 0 42px 30px; margin-top: -10px;">
-
-
-            <span class="sdg-tag">
-              <strong>SDG 4</strong> · Technical Education
+</div>
+<div class="sdg-tags" style="padding: 0 42px 30px; margin-top: -10px;">
+<span class="sdg-tag">
+<strong>SDG 4</strong> · Technical Education
             </span>
-
-
-            <span class="sdg-tag">
-              <strong>SDG 9</strong> · Innovation & Infrastructure
+<span class="sdg-tag">
+<strong>SDG 9</strong> · Innovation &amp; Infrastructure
             </span>
-
-
-            <span class="sdg-tag">
-              <strong>SDG 17</strong> · Cross-Organization Collaboration
+<span class="sdg-tag">
+<strong>SDG 17</strong> · Cross-Organization Collaboration
             </span>
-
-
-          </div>
-
-
-        </article>
-
-<!-- ==================================================
-             UMT CLOUDVERSE
-        =================================================== -->
-
-        <article class="work-experience">
-
-
-          <div class="work-heading">
-
-
-            <div class="work-heading-content">
-
-
-              <span class="work-label">
+</div>
+</article><article class="work-experience">
+<div class="work-heading">
+<div class="work-heading-content">
+<span class="work-label">
                 UMT · CLOUDVERSE
               </span>
-
-
-              <h3>
+<h3>
                 UMT CloudVerse
               </h3>
-
-
-              <p class="work-description">
+<p class="work-description">
 
                 Guest speaking and cloud-focused technical
                 engagement at UMT's CloudVerse event.
 
               </p>
-
-
-            </div>
-
-
-            <span class="work-number">
-              22 June 2026
-            </span>
-
-
-          </div>
-
-
-
-          <div class="poster-event">
-
-
-            <!-- UMT POSTER -->
-
-            <div class="umt-feature-image">
-
-
-              <img
-                src="WhatsApp Image 2026-06-22 at 8.16.19 PM.jpeg"
-                alt="UMT CloudVerse poster"
-                class="modal-trigger"
-              />
-
-
-            </div>
-
-
-
-            <!-- UMT AWARD -->
-
-            <div class="umt-feature-image">
-
-
-              <img
-                src="WhatsApp Image 2026-06-22 at 6.56.51 PM.jpeg"
-                alt="UMT CloudVerse award"
-                class="modal-trigger"
-              />
-
-
-            </div>
-
-
-
-            <!-- UMT SESSION PHOTOS -->
-
-            <div class="umt-session-grid">
-
-
-              <figure>
-
-
-                <img
-                  src="WhatsApp Image 2026-06-22 at 1.33.45 PM.jpeg"
-                  alt="UMT CloudVerse session"
-                  class="modal-trigger"
-                />
-
-
-              </figure>
-
-
-              <figure>
-
-
-                <img
-                  src="WhatsApp Image 2026-06-22 at 1.33.47 PM.jpeg"
-                  alt="UMT CloudVerse session"
-                  class="modal-trigger"
-                />
-
-
-              </figure>
-
-
-              <figure>
-
-
-                <img
-                  src="WhatsApp Image 2026-06-22 at 1.33.54 PM.jpeg"
-                  alt="UMT CloudVerse session"
-                  class="modal-trigger"
-                />
-
-
-              </figure>
-
-
-            </div>
-
-
-          </div>
-
-
-
-          <div class="work-meta">
-
-
-            <span>
+</div>
+<span class="work-date">22 JUN 2026</span>
+</div>
+<div class="poster-event">
+<!-- UMT POSTER -->
+<div class="umt-feature-image">
+<img alt="UMT CloudVerse poster" class="modal-trigger" src="WhatsApp Image 2026-06-22 at 8.16.19 PM.jpeg"/>
+</div>
+<!-- UMT AWARD -->
+<div class="umt-feature-image">
+<img alt="UMT CloudVerse award" class="modal-trigger" src="WhatsApp Image 2026-06-22 at 6.56.51 PM.jpeg"/>
+</div>
+<!-- UMT SESSION PHOTOS -->
+<div class="umt-session-grid">
+<figure>
+<img alt="UMT CloudVerse session" class="modal-trigger" src="WhatsApp Image 2026-06-22 at 1.33.45 PM.jpeg"/>
+</figure>
+<figure>
+<img alt="UMT CloudVerse session" class="modal-trigger" src="WhatsApp Image 2026-06-22 at 1.33.47 PM.jpeg"/>
+</figure>
+<figure>
+<img alt="UMT CloudVerse session" class="modal-trigger" src="WhatsApp Image 2026-06-22 at 1.33.54 PM.jpeg"/>
+</figure>
+</div>
+</div>
+<div class="work-meta">
+<span>
               UMT
             </span>
-
-
-            <span>
+<span>
               CloudVerse
             </span>
-
-
-            <span>
+<span>
               Guest Speaker
             </span>
-
-
-            <span>
+<span>
               Cloud Computing
             </span>
-
-
-            <span>
+<span>
               Technical Session
             </span>
-
-
-            <span>
+<span>
               Public Speaking
             </span>
-
-
-          </div>
-
-
-
-          <div class="sdg-tags"
-               style="padding: 0 42px 30px; margin-top: -10px;">
-
-
-            <span class="sdg-tag">
-              <strong>SDG 4</strong> · Knowledge Sharing
+</div>
+<div class="sdg-tags" style="padding: 0 42px 30px; margin-top: -10px;">
+<span class="sdg-tag">
+<strong>SDG 4</strong> · Knowledge Sharing
             </span>
-
-
-            <span class="sdg-tag">
-              <strong>SDG 8</strong> · Tech Careers
+<span class="sdg-tag">
+<strong>SDG 8</strong> · Tech Careers
             </span>
-
-
-            <span class="sdg-tag">
-              <strong>SDG 9</strong> · Cloud Technology
+<span class="sdg-tag">
+<strong>SDG 9</strong> · Cloud Technology
             </span>
-
-
-          </div>
-
-
-        </article>
-
-<!-- ==================================================
-             IEEE CODEX 2.0
-        =================================================== -->
-
-        <article class="work-experience">
-
-
-          <div class="work-heading">
-
-
-            <div class="work-heading-content">
-
-
-              <span class="work-label">
+</div>
+</article><article class="work-experience">
+<div class="work-heading">
+<div class="work-heading-content">
+<span class="work-label">
                 IEEE BULC × CODEX 2.0
               </span>
-
-
-              <h3>
+<h3>
                 IEEE Codex 2.0
                 Cloud Competition
               </h3>
-
-
-              <p class="work-description">
+<p class="work-description">
 
                 A flagship IEEE BULC event centered around
                 cloud computing, practical technical skills
                 and the "Master the Cloud" competition experience.
 
               </p>
-
-
-            </div>
-
-
-            <span class="work-number">
-              14 May 2026
-            </span>
-
-
-          </div>
-
-
-
-          <div class="poster-event">
-
-
-            <div class="codex-poster">
-
-
-              <img
-                src="combined-image.jpg"
-                alt="IEEE BULC CodeX Version 2.0 Cloud Competition poster"
-                class="modal-trigger"
-              />
-
-
-            </div>
-
-
-
-            <div class="supporting-grid">
-
-
-              <figure>
-
-
-                <img
-                  src="WhatsApp Image 2026-06-02 at 3.11.45 PM.jpeg"
-                  alt="IEEE Codex 2.0 Cloud Competition"
-                  class="modal-trigger"
-                />
-
-
-              </figure>
-
-
-              <figure>
-
-
-                <img
-                  src="WhatsApp Image 2026-06-02 at 3.11.45 PM (1).jpeg"
-                  alt="IEEE Codex 2.0 Cloud Competition"
-                  class="modal-trigger"
-                />
-
-
-              </figure>
-
-
-              <figure>
-
-
-                <img
-                  src="WhatsApp Image 2026-06-02 at 3.11.45 PM (2).jpeg"
-                  alt="IEEE Codex 2.0 Cloud Competition"
-                  class="modal-trigger"
-                />
-
-
-              </figure>
-
-
-              <figure>
-
-
-                <img
-                  src="WhatsApp Image 2026-06-02 at 3.11.47 PM.jpeg"
-                  alt="IEEE Codex 2.0 Cloud Competition"
-                  class="modal-trigger"
-                />
-
-
-              </figure>
-
-
-            </div>
-
-
-          </div>
-
-
-
-          <div class="work-meta">
-
-
-            <span>
+</div>
+<span class="work-date">14 MAY 2026</span>
+</div>
+<div class="poster-event">
+<div class="codex-poster">
+<img alt="IEEE BULC CodeX Version 2.0 Cloud Competition poster" class="modal-trigger" src="combined-image.jpg"/>
+</div>
+<div class="supporting-grid">
+<figure>
+<img alt="IEEE Codex 2.0 Cloud Competition" class="modal-trigger" src="WhatsApp Image 2026-06-02 at 3.11.45 PM.jpeg"/>
+</figure>
+<figure>
+<img alt="IEEE Codex 2.0 Cloud Competition" class="modal-trigger" src="WhatsApp Image 2026-06-02 at 3.11.45 PM (1).jpeg"/>
+</figure>
+<figure>
+<img alt="IEEE Codex 2.0 Cloud Competition" class="modal-trigger" src="WhatsApp Image 2026-06-02 at 3.11.45 PM (2).jpeg"/>
+</figure>
+<figure>
+<img alt="IEEE Codex 2.0 Cloud Competition" class="modal-trigger" src="WhatsApp Image 2026-06-02 at 3.11.47 PM.jpeg"/>
+</figure>
+</div>
+</div>
+<div class="work-meta">
+<span>
               IEEE BULC
             </span>
-
-
-            <span>
+<span>
               CodeX Version 2.0
             </span>
-
-
-            <span>
+<span>
               Cloud Competition
             </span>
-
-
-            <span>
+<span>
               Cloud Computing
             </span>
-
-
-            <span>
+<span>
               GDGoC
             </span>
-
-
-          </div>
-
-
-          <div class="sdg-tags"
-               style="padding: 0 42px 30px; margin-top: -10px;">
-
-
-            <span class="sdg-tag">
-              <strong>SDG 4</strong> · Technical Learning
+</div>
+<div class="sdg-tags" style="padding: 0 42px 30px; margin-top: -10px;">
+<span class="sdg-tag">
+<strong>SDG 4</strong> · Technical Learning
             </span>
-
-
-            <span class="sdg-tag">
-              <strong>SDG 8</strong> · Employability Skills
+<span class="sdg-tag">
+<strong>SDG 8</strong> · Employability Skills
             </span>
-
-
-            <span class="sdg-tag">
-              <strong>SDG 9</strong> · Innovation
+<span class="sdg-tag">
+<strong>SDG 9</strong> · Innovation
             </span>
-
-
-            <span class="sdg-tag">
-              <strong>SDG 17</strong> · IEEE × GDGoC Collaboration
+<span class="sdg-tag">
+<strong>SDG 17</strong> · IEEE × GDGoC Collaboration
             </span>
-
-
-          </div>
-
-
-        </article>
-
-      <span>
-              Distinguished Lecture Program
-            </span>
-
-
-            <span>
-              Cloud X
-            </span>
-
-
-            <span>
-              Resource Person
-            </span>
-
-
-            <span>
-              Azure
-            </span>
-
-
-            <span>
-              Public Speaking
-            </span>
-
-
-          </div>
-
-
-
-          <div class="sdg-tags"
-               style="padding: 0 42px 30px; margin-top: -10px;">
-
-
-            <span class="sdg-tag">
-              <strong>SDG 4</strong> · Technical Education
-            </span>
-
-
-            <span class="sdg-tag">
-              <strong>SDG 9</strong> · Innovation & Infrastructure
-            </span>
-
-
-            <span class="sdg-tag">
-              <strong>SDG 17</strong> · Cross-Organization Collaboration
-            </span>
-
-
-          </div>
-
-
-        </article>
-
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ======================================================
+</div>
+</article></div>
+</section>
+<!-- ======================================================
          CERTIFICATIONS
     ======================================================= -->
-
-    <section
-      class="section"
-      id="certifications"
-    >
-
-
-      <div class="section-header">
-
-
-        <span class="section-label">
+<section class="section" id="certifications">
+<div class="section-header">
+<span class="section-label">
           05 / CERTIFICATIONS
         </span>
-
-
-        <h2>
+<h2>
           The credentials behind the profile.
         </h2>
-
-
-      </div>
-
-
-
-      <div class="certification-feature">
-
-
-        <div class="certification-image">
-
-
-          <img
-            src="Screenshot 2026-07-02 124058.png"
-            alt="Microsoft Certified Azure Administrator Associate"
-            class="modal-trigger"
-          />
-
-
-        </div>
-
-
-        <div class="certification-info">
-
-
-          <span class="cert-provider">
+</div>
+<div class="certification-feature">
+<div class="certification-image">
+<img alt="Microsoft Certified Azure Administrator Associate" class="modal-trigger" src="Screenshot 2026-07-02 124058.png"/>
+</div>
+<div class="certification-info">
+<span class="cert-provider">
             MICROSOFT
           </span>
-
-
-          <h3>
+<h3>
             Microsoft Certified:
             Azure Administrator Associate
           </h3>
-
-
-          <p>
+<p>
 
             My primary cloud certification covering Azure
             administration and the core infrastructure
             capabilities expected of an Azure Administrator.
 
           </p>
-
-
-          <div class="certification-meta">
-
-
-            <span>
+<div class="certification-meta">
+<span>
               AZ-104
             </span>
-
-
-            <span>
+<span>
               Microsoft Certified
             </span>
-
-
-          </div>
-
-
-          <a
-            href="https://learn.microsoft.com/en-us/users/EphraimSameer-8314/credentials/4B16C47E0E8B6917?ref=https%3a%2f%2fwww.linkedin.com%2f"
-            target="_blank"
-            rel="noopener"
-            class="button button-primary"
-          >
+</div>
+<a class="button button-primary" href="https://learn.microsoft.com/en-us/users/EphraimSameer-8314/credentials/4B16C47E0E8B6917?ref=https%3a%2f%2fwww.linkedin.com%2f" rel="noopener" target="_blank">
             Verify Microsoft Credential
           </a>
-
-
-        </div>
-
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- ======================================================
+</div>
+</div>
+</section>
+<!-- ======================================================
          CREDLY BADGES
     ======================================================= -->
-
-    <section
-      class="section"
-      id="badges"
-    >
-
-
-      <div class="section-header">
-
-
-        <span class="section-label">
+<section class="section" id="badges">
+<div class="section-header">
+<span class="section-label">
           06 / CREDLY BADGES
         </span>
-
-
-        <h2>
+<h2>
           Continuous learning, made visible.
         </h2>
-
-
-        <p class="section-intro">
+<p class="section-intro">
 
           A curated display of my digital credentials spanning
           networking, cybersecurity, AI, cloud and digital skills.
 
         </p>
-
-
-      </div>
-
-
-
-      <div class="badge-grid">
-
-
-        <article
-          class="badge-card"
-          data-badge-image="assets/images/badges/introduction-to-iot.png"
-        >
-
-          <div class="badge-emblem">
-
-            <span class="badge-monogram">
+</div>
+<div class="badge-grid">
+<article class="badge-card" data-badge-image="assets/images/badges/introduction-to-iot.png">
+<div class="badge-emblem">
+<span class="badge-monogram">
               IoT
             </span>
-
-          </div>
-
-
-          <div class="badge-card-content">
-
-
-            <span class="badge-provider">
+</div>
+<div class="badge-card-content">
+<span class="badge-provider">
               CISCO
             </span>
-
-
-            <h3>
+<h3>
               Introduction to IoT
             </h3>
-
-
-            <p>
+<p>
               Issued 5 October 2024
             </p>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <article
-          class="badge-card"
-          data-badge-image="assets/images/badges/introduction-to-cybersecurity.png"
-        >
-
-          <div class="badge-emblem">
-
-            <span class="badge-monogram">
+</div>
+</article>
+<article class="badge-card" data-badge-image="assets/images/badges/introduction-to-cybersecurity.png">
+<div class="badge-emblem">
+<span class="badge-monogram">
               CY
             </span>
-
-          </div>
-
-
-          <div class="badge-card-content">
-
-
-            <span class="badge-provider">
+</div>
+<div class="badge-card-content">
+<span class="badge-provider">
               CISCO
             </span>
-
-
-            <h3>
+<h3>
               Introduction to Cybersecurity
             </h3>
-
-
-            <p>
+<p>
               Issued 6 October 2024
             </p>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <article
-          class="badge-card"
-          data-badge-image="assets/images/badges/opswat-critical-infrastructure.png"
-        >
-
-          <div class="badge-emblem">
-
-            <span class="badge-monogram">
+</div>
+</article>
+<article class="badge-card" data-badge-image="assets/images/badges/opswat-critical-infrastructure.png">
+<div class="badge-emblem">
+<span class="badge-monogram">
               ICIP
             </span>
-
-          </div>
-
-
-          <div class="badge-card-content">
-
-
-            <span class="badge-provider">
+</div>
+<div class="badge-card-content">
+<span class="badge-provider">
               OPSWAT
             </span>
-
-
-            <h3>
+<h3>
               Critical Infrastructure Protection
             </h3>
-
-
-            <p>
+<p>
               Issued 10 October 2024
             </p>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <article
-          class="badge-card"
-          data-badge-image="assets/images/badges/computer-hardware-basics.png"
-        >
-
-          <div class="badge-emblem">
-
-            <span class="badge-monogram">
+</div>
+</article>
+<article class="badge-card" data-badge-image="assets/images/badges/computer-hardware-basics.png">
+<div class="badge-emblem">
+<span class="badge-monogram">
               HW
             </span>
-
-          </div>
-
-
-          <div class="badge-card-content">
-
-
-            <span class="badge-provider">
+</div>
+<div class="badge-card-content">
+<span class="badge-provider">
               CISCO
             </span>
-
-
-            <h3>
+<h3>
               Computer Hardware Basics
             </h3>
-
-
-            <p>
+<p>
               Issued 12 October 2024
             </p>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <article
-          class="badge-card"
-          data-badge-image="assets/images/badges/operating-systems-basics.png"
-        >
-
-          <div class="badge-emblem">
-
-            <span class="badge-monogram">
+</div>
+</article>
+<article class="badge-card" data-badge-image="assets/images/badges/operating-systems-basics.png">
+<div class="badge-emblem">
+<span class="badge-monogram">
               OS
             </span>
-
-          </div>
-
-
-          <div class="badge-card-content">
-
-
-            <span class="badge-provider">
+</div>
+<div class="badge-card-content">
+<span class="badge-provider">
               CISCO
             </span>
-
-
-            <h3>
+<h3>
               Operating Systems Basics
             </h3>
-
-
-            <p>
+<p>
               Issued 25 October 2024
             </p>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <article
-          class="badge-card"
-          data-badge-image="assets/images/badges/cyber-threat-management.png"
-        >
-
-          <div class="badge-emblem">
-
-            <span class="badge-monogram">
+</div>
+</article>
+<article class="badge-card" data-badge-image="assets/images/badges/cyber-threat-management.png">
+<div class="badge-emblem">
+<span class="badge-monogram">
               CTM
             </span>
-
-          </div>
-
-
-          <div class="badge-card-content">
-
-
-            <span class="badge-provider">
+</div>
+<div class="badge-card-content">
+<span class="badge-provider">
               CISCO
             </span>
-
-
-            <h3>
+<h3>
               Cyber Threat Management
             </h3>
-
-
-            <p>
+<p>
               Issued 16 January 2025
             </p>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <article
-          class="badge-card"
-          data-badge-image="assets/images/badges/introduction-to-data-science.png"
-        >
-
-          <div class="badge-emblem">
-
-            <span class="badge-monogram">
+</div>
+</article>
+<article class="badge-card" data-badge-image="assets/images/badges/introduction-to-data-science.png">
+<div class="badge-emblem">
+<span class="badge-monogram">
               DS
             </span>
-
-          </div>
-
-
-          <div class="badge-card-content">
-
-
-            <span class="badge-provider">
+</div>
+<div class="badge-card-content">
+<span class="badge-provider">
               CISCO
             </span>
-
-
-            <h3>
+<h3>
               Introduction to Data Science
             </h3>
-
-
-            <p>
+<p>
               Issued 16 January 2025
             </p>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <article
-          class="badge-card"
-          data-badge-image="assets/images/badges/introduction-to-modern-ai.png"
-        >
-
-          <div class="badge-emblem">
-
-            <span class="badge-monogram">
+</div>
+</article>
+<article class="badge-card" data-badge-image="assets/images/badges/introduction-to-modern-ai.png">
+<div class="badge-emblem">
+<span class="badge-monogram">
               AI
             </span>
-
-          </div>
-
-
-          <div class="badge-card-content">
-
-
-            <span class="badge-provider">
+</div>
+<div class="badge-card-content">
+<span class="badge-provider">
               CISCO
             </span>
-
-
-            <h3>
+<h3>
               Introduction to Modern AI
             </h3>
-
-
-            <p>
+<p>
               Issued 19 January 2025
             </p>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <article
-          class="badge-card"
-          data-badge-image="assets/images/badges/digital-awareness.png"
-        >
-
-          <div class="badge-emblem">
-
-            <span class="badge-monogram">
+</div>
+</article>
+<article class="badge-card" data-badge-image="assets/images/badges/digital-awareness.png">
+<div class="badge-emblem">
+<span class="badge-monogram">
               DA
             </span>
-
-          </div>
-
-
-          <div class="badge-card-content">
-
-
-            <span class="badge-provider">
+</div>
+<div class="badge-card-content">
+<span class="badge-provider">
               CISCO
             </span>
-
-
-            <h3>
+<h3>
               Digital Awareness
             </h3>
-
-
-            <p>
+<p>
               Issued 20 January 2025
             </p>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <article
-          class="badge-card"
-          data-badge-image="assets/images/badges/using-computer-mobile-devices.png"
-        >
-
-          <div class="badge-emblem">
-
-            <span class="badge-monogram">
+</div>
+</article>
+<article class="badge-card" data-badge-image="assets/images/badges/using-computer-mobile-devices.png">
+<div class="badge-emblem">
+<span class="badge-monogram">
               PC
             </span>
-
-          </div>
-
-
-          <div class="badge-card-content">
-
-
-            <span class="badge-provider">
+</div>
+<div class="badge-card-content">
+<span class="badge-provider">
               CISCO
             </span>
-
-
-            <h3>
+<h3>
               Using Computer and Mobile Devices
             </h3>
-
-
-            <p>
+<p>
               Issued 22 January 2025
             </p>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <article
-          class="badge-card"
-          data-badge-image="assets/images/badges/network-support-security.png"
-        >
-
-          <div class="badge-emblem">
-
-            <span class="badge-monogram">
+</div>
+</article>
+<article class="badge-card" data-badge-image="assets/images/badges/network-support-security.png">
+<div class="badge-emblem">
+<span class="badge-monogram">
               NS
             </span>
-
-          </div>
-
-
-          <div class="badge-card-content">
-
-
-            <span class="badge-provider">
+</div>
+<div class="badge-card-content">
+<span class="badge-provider">
               CISCO
             </span>
-
-
-            <h3>
+<h3>
               Network Support and Security
             </h3>
-
-
-            <p>
+<p>
               Issued 23 January 2025
             </p>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <article
-          class="badge-card"
-          data-badge-image="assets/images/badges/project-management-fundamentals.png"
-        >
-
-          <div class="badge-emblem">
-
-            <span class="badge-monogram">
+</div>
+</article>
+<article class="badge-card" data-badge-image="assets/images/badges/project-management-fundamentals.png">
+<div class="badge-emblem">
+<span class="badge-monogram">
               PM
             </span>
-
-          </div>
-
-
-          <div class="badge-card-content">
-
-
-            <span class="badge-provider">
+</div>
+<div class="badge-card-content">
+<span class="badge-provider">
               IBM SKILLSBUILD
             </span>
-
-
-            <h3>
+<h3>
               Project Management Fundamentals
             </h3>
-
-
-            <p>
+<p>
               Issued 26 January 2025
             </p>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <article
-          class="badge-card"
-          data-badge-image="assets/images/badges/create-digital-content.png"
-        >
-
-          <div class="badge-emblem">
-
-            <span class="badge-monogram">
+</div>
+</article>
+<article class="badge-card" data-badge-image="assets/images/badges/create-digital-content.png">
+<div class="badge-emblem">
+<span class="badge-monogram">
               DC
             </span>
-
-          </div>
-
-
-          <div class="badge-card-content">
-
-
-            <span class="badge-provider">
+</div>
+<div class="badge-card-content">
+<span class="badge-provider">
               CISCO
             </span>
-
-
-            <h3>
+<h3>
               Create Digital Content
             </h3>
-
-
-            <p>
+<p>
               Issued 29 January 2025
             </p>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <article
-          class="badge-card"
-          data-badge-image="assets/images/badges/network-addressing.png"
-        >
-
-          <div class="badge-emblem">
-
-            <span class="badge-monogram">
+</div>
+</article>
+<article class="badge-card" data-badge-image="assets/images/badges/network-addressing.png">
+<div class="badge-emblem">
+<span class="badge-monogram">
               NET
             </span>
-
-          </div>
-
-
-          <div class="badge-card-content">
-
-
-            <span class="badge-provider">
+</div>
+<div class="badge-card-content">
+<span class="badge-provider">
               CISCO
             </span>
-
-
-            <h3>
-              Network Addressing & Troubleshooting
+<h3>
+              Network Addressing &amp; Troubleshooting
             </h3>
-
-
-            <p>
+<p>
               Issued 1 February 2025
             </p>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <article
-          class="badge-card"
-          data-badge-image="assets/images/badges/artificial-intelligence-fundamentals.png"
-        >
-
-          <div class="badge-emblem">
-
-            <span class="badge-monogram">
+</div>
+</article>
+<article class="badge-card" data-badge-image="assets/images/badges/artificial-intelligence-fundamentals.png">
+<div class="badge-emblem">
+<span class="badge-monogram">
               AI
             </span>
-
-          </div>
-
-
-          <div class="badge-card-content">
-
-
-            <span class="badge-provider">
+</div>
+<div class="badge-card-content">
+<span class="badge-provider">
               IBM SKILLSBUILD
             </span>
-
-
-            <h3>
+<h3>
               Artificial Intelligence Fundamentals
             </h3>
-
-
-            <p>
+<p>
               Issued 2 February 2025
             </p>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <article
-          class="badge-card"
-          data-badge-image="assets/images/badges/ai-fundamentals-ibm.png"
-        >
-
-          <div class="badge-emblem">
-
-            <span class="badge-monogram">
+</div>
+</article>
+<article class="badge-card" data-badge-image="assets/images/badges/ai-fundamentals-ibm.png">
+<div class="badge-emblem">
+<span class="badge-monogram">
               AI+
             </span>
-
-          </div>
-
-
-          <div class="badge-card-content">
-
-
-            <span class="badge-provider">
+</div>
+<div class="badge-card-content">
+<span class="badge-provider">
               CISCO × IBM
             </span>
-
-
-            <h3>
+<h3>
               AI Fundamentals with IBM SkillsBuild
             </h3>
-
-
-            <p>
+<p>
               Issued 2 February 2025
             </p>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <article
-          class="badge-card"
-          data-badge-image="assets/images/badges/aws-generative-ai.png"
-        >
-
-          <div class="badge-emblem">
-
-            <span class="badge-monogram">
+</div>
+</article>
+<article class="badge-card" data-badge-image="assets/images/badges/aws-generative-ai.png">
+<div class="badge-emblem">
+<span class="badge-monogram">
               AWS
             </span>
-
-          </div>
-
-
-          <div class="badge-card-content">
-
-
-            <span class="badge-provider">
+</div>
+<div class="badge-card-content">
+<span class="badge-provider">
               AWS EDUCATE
             </span>
-
-
-            <h3>
+<h3>
               Introduction to Generative AI
             </h3>
-
-
-            <p>
+<p>
               Issued 5 March 2025
             </p>
-
-
-          </div>
-
-
-        </article>
-
-
-
-        <article
-          class="badge-card badge-featured"
-          data-badge-image="assets/images/badges/ai-skills-fest-2026.png"
-        >
-
-          <div class="badge-emblem">
-
-            <span class="badge-monogram">
+</div>
+</article>
+<article class="badge-card badge-featured" data-badge-image="assets/images/badges/ai-skills-fest-2026.png">
+<div class="badge-emblem">
+<span class="badge-monogram">
               MS
             </span>
-
-          </div>
-
-
-          <div class="badge-card-content">
-
-
-            <span class="badge-provider">
+</div>
+<div class="badge-card-content">
+<span class="badge-provider">
               MICROSOFT
             </span>
-
-
-            <h3>
+<h3>
               AI Skills Fest 2026
             </h3>
-
-
-            <p>
+<p>
               Issued 16 July 2026
             </p>
-
-
-          </div>
-
-
-        </article>
-
-
-      </div>
-
-
-
-      <div class="badge-footer">
-
-
-        <a
-          href="https://www.credly.com/users/muhammad-ephraim"
-          target="_blank"
-          rel="noopener"
-          class="button button-outline"
-        >
+</div>
+</article>
+</div>
+<div class="badge-footer">
+<a class="button button-outline" href="https://www.credly.com/users/muhammad-ephraim" rel="noopener" target="_blank">
           View Full Credly Profile →
         </a>
-
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- ======================================================
+</div>
+</section>
+<!-- ======================================================
          EDUCATION
     ======================================================= -->
-
-    <section
-      class="section"
-      id="education"
-    >
-
-
-      <div class="section-header">
-
-
-        <span class="section-label">
+<section class="section" id="education">
+<div class="section-header">
+<span class="section-label">
           07 / EDUCATION
         </span>
-
-
-        <h2>
+<h2>
           Academic foundation.
         </h2>
-
-
-      </div>
-
-
-
-      <div class="education-list">
-
-
-        <article class="education-row">
-
-
-          <div class="education-date">
+</div>
+<div class="education-list">
+<article class="education-row">
+<div class="education-date">
             SEP 2024 — JUN 2028
           </div>
-
-
-          <div>
-
-
-            <h3>
+<div>
+<h3>
               Bahria University
             </h3>
-
-
-            <p>
+<p>
               BSCS · Computer Science
             </p>
-
-
-          </div>
-
-
-          <span class="education-status">
+</div>
+<span class="education-status">
             CURRENT
           </span>
-
-
-        </article>
-
-
-
-        <article class="education-row">
-
-
-          <div class="education-date">
+</article>
+<article class="education-row">
+<div class="education-date">
             JUN 2025 — SEP 2025
           </div>
-
-
-          <div>
-
-
-            <h3>
+<div>
+<h3>
               Corvit Networks
             </h3>
-
-
-            <p>
-              Cisco Certified Network Associate (CCNA) R&S Training
+<p>
+              Cisco Certified Network Associate (CCNA) R&amp;S Training
             </p>
-
-
-          </div>
-
-
-          <span class="education-status">
+</div>
+<span class="education-status">
             TRAINING
           </span>
-
-
-        </article>
-
-
-
-        <article class="education-row">
-
-
-          <div class="education-date">
+</article>
+<article class="education-row">
+<div class="education-date">
             MAY 2025 — JUN 2025
           </div>
-
-
-          <div>
-
-
-            <h3>
+<div>
+<h3>
               Corvit Networks
             </h3>
-
-
-            <p>
+<p>
               Azure Administrator (AZ-104) Training
             </p>
-
-
-          </div>
-
-
-          <span class="education-status">
+</div>
+<span class="education-status">
             TRAINING
           </span>
-
-
-        </article>
-
-
-
-        <article class="education-row">
-
-
-          <div class="education-date">
+</article>
+<article class="education-row">
+<div class="education-date">
             AUG 2019 — APR 2024
           </div>
-
-
-          <div>
-
-
-            <h3>
+<div>
+<h3>
               International School of Pakistan, Kuwait
             </h3>
-
-
-            <p>
+<p>
               High School Diploma · Computer Science
             </p>
-
-
-          </div>
-
-
-          <span class="education-status">
+</div>
+<span class="education-status">
             COMPLETED
           </span>
-
-
-        </article>
-
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- ======================================================
+</article>
+</div>
+</section>
+<!-- ======================================================
          SDG IMPACT
     ======================================================= -->
-
-    <section
-      class="section"
-      id="impact"
-    >
-
-
-      <div class="section-header">
-
-
-        <span class="section-label">
+<section class="section" id="impact">
+<div class="section-header">
+<span class="section-label">
           08 / SDG IMPACT
         </span>
-
-
-        <h2>
+<h2>
           Technology with purpose.
         </h2>
-
-
-        <p class="section-intro">
+<p class="section-intro">
 
           My activities connect most naturally with four
           Sustainable Development Goals through education,
@@ -5299,255 +3396,132 @@
           cross-community collaboration.
 
         </p>
-
-
-      </div>
-
-
-
-      <div class="sdg-section">
-
-
-        <div class="sdg-section-header">
-
-
-          <h3>
+</div>
+<div class="sdg-section">
+<div class="sdg-section-header">
+<h3>
             Four goals that reflect the work I actually do.
           </h3>
-
-
-          <p>
+<p>
 
             These are presented as areas of alignment rather than
             a claim of formal UN affiliation or certification.
 
           </p>
-
-
-        </div>
-
-
-
-        <div class="sdg-grid">
-
-
-          <!-- SDG 4 -->
-
-          <div class="sdg-card">
-
-
-            <div class="sdg-number">
+</div>
+<div class="sdg-grid">
+<!-- SDG 4 -->
+<div class="sdg-card">
+<div class="sdg-number">
               04
             </div>
-
-
-            <h4>
+<h4>
               Quality Education
             </h4>
-
-
-            <p>
+<p>
 
               Teaching assistant work, Azure mentorship,
               public speaking, technical sessions, orientation
               sessions and knowledge sharing.
 
             </p>
-
-
-          </div>
-
-
-
-          <!-- SDG 8 -->
-
-          <div class="sdg-card">
-
-
-            <div class="sdg-number">
+</div>
+<!-- SDG 8 -->
+<div class="sdg-card">
+<div class="sdg-number">
               08
             </div>
-
-
-            <h4>
-              Decent Work & Economic Growth
+<h4>
+              Decent Work &amp; Economic Growth
             </h4>
-
-
-            <p>
+<p>
 
               Career-focused cloud mentorship, employability
               skills, professional development and exposure
               to real-world technology.
 
             </p>
-
-
-          </div>
-
-
-
-          <!-- SDG 9 -->
-
-          <div class="sdg-card">
-
-
-            <div class="sdg-number">
+</div>
+<!-- SDG 9 -->
+<div class="sdg-card">
+<div class="sdg-number">
               09
             </div>
-
-
-            <h4>
-              Industry, Innovation & Infrastructure
+<h4>
+              Industry, Innovation &amp; Infrastructure
             </h4>
-
-
-            <p>
+<p>
 
               Cloud architecture, Azure and AWS infrastructure,
               practical competitions and technology-focused
               technical sessions.
 
             </p>
-
-
-          </div>
-
-
-
-          <!-- SDG 17 -->
-
-          <div class="sdg-card">
-
-
-            <div class="sdg-number">
+</div>
+<!-- SDG 17 -->
+<div class="sdg-card">
+<div class="sdg-number">
               17
             </div>
-
-
-            <h4>
+<h4>
               Partnerships for the Goals
             </h4>
-
-
-            <p>
+<p>
 
               Collaboration across GDGoC, IEEE, universities,
               industry mentors, technical communities and
               event organizers.
 
             </p>
-
-
-          </div>
-
-
-        </div>
-
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- ======================================================
+</div>
+</div>
+</div>
+</section>
+<!-- ======================================================
          RESUME
     ======================================================= -->
-
-    <section
-      class="section"
-      id="resume"
-    >
-
-
-      <div class="resume-section">
-
-
-        <div>
-
-
-          <span class="section-label">
+<section class="section" id="resume">
+<div class="resume-section">
+<div>
+<span class="section-label">
             09 / RESUME
           </span>
-
-
-          <h2>
+<h2>
             Want the full picture?
           </h2>
-
-
-          <p>
+<p>
 
             My resume contains the complete overview of my
             professional experience, education, cloud skills,
             certifications and technical involvement.
 
           </p>
-
-
-        </div>
-
-
-        <a
-          href="https://drive.google.com/file/d/1KoYn5EKrJGbTQHjJcAjL9eX88L7zkZRS/view?usp=sharing"
-          target="_blank"
-          rel="noopener"
-          class="resume-button"
-        >
+</div>
+<a class="resume-button" href="https://drive.google.com/file/d/1KoYn5EKrJGbTQHjJcAjL9eX88L7zkZRS/view?usp=sharing" rel="noopener" target="_blank">
 
           Download Resume
 
           <span>
             ↓
           </span>
-
-
-        </a>
-
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- ======================================================
+</a>
+</div>
+</section>
+<!-- ======================================================
          CONTACT
     ======================================================= -->
-
-    <section
-      class="section"
-      id="contact"
-    >
-
-
-      <div class="section-header">
-
-
-        <span class="section-label">
+<section class="section" id="contact">
+<div class="section-header">
+<span class="section-label">
           10 / CONTACT
         </span>
-
-
-        <h2>
+<h2>
           Let's build something.
         </h2>
-
-
-      </div>
-
-
-
-      <div class="contact-section">
-
-
-        <div>
-
-
-          <p class="contact-big">
+</div>
+<div class="contact-section">
+<div>
+<p class="contact-big">
 
             Open to cloud opportunities,
             speaking engagements,
@@ -5555,174 +3529,78 @@
             technology conversations.
 
           </p>
-
-
-        </div>
-
-
-
-        <div class="contact-links">
-
-
-          <a
-            href="https://www.linkedin.com/in/mephraimsameer"
-            target="_blank"
-            rel="noopener"
-          >
+</div>
+<div class="contact-links">
+<a href="https://www.linkedin.com/in/mephraimsameer" rel="noopener" target="_blank">
 
             LinkedIn
 
             <span>
               ↗
             </span>
-
-
-          </a>
-
-
-          <a
-            href="https://github.com/Ephraim-Sameer"
-            target="_blank"
-            rel="noopener"
-          >
+</a>
+<a href="https://github.com/Ephraim-Sameer" rel="noopener" target="_blank">
 
             GitHub
 
             <span>
               ↗
             </span>
-
-
-          </a>
-
-
-          <a
-            href="https://www.credly.com/users/muhammad-ephraim"
-            target="_blank"
-            rel="noopener"
-          >
+</a>
+<a href="https://www.credly.com/users/muhammad-ephraim" rel="noopener" target="_blank">
 
             Credly
 
             <span>
               ↗
             </span>
-
-
-          </a>
-
-
-          <a
-            href="https://learn.microsoft.com/en-us/users/EphraimSameer-8314/credentials/4B16C47E0E8B6917?ref=https%3a%2f%2fwww.linkedin.com%2f"
-            target="_blank"
-            rel="noopener"
-          >
+</a>
+<a href="https://learn.microsoft.com/en-us/users/EphraimSameer-8314/credentials/4B16C47E0E8B6917?ref=https%3a%2f%2fwww.linkedin.com%2f" rel="noopener" target="_blank">
 
             Microsoft Credential
 
             <span>
               ↗
             </span>
-
-
-          </a>
-
-
-        </div>
-
-
-      </div>
-
-
-    </section>
-
-
-  </main>
-
-
-
-  <!-- ======================================================
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- ======================================================
        IMAGE MODAL
   ======================================================= -->
-
-  <div
-    class="image-modal"
-    id="imageModal"
-    aria-hidden="true"
-  >
-
-
-    <button
-      class="modal-close"
-      id="modalClose"
-      aria-label="Close image"
-    >
+<div aria-hidden="true" class="image-modal" id="imageModal">
+<button aria-label="Close image" class="modal-close" id="modalClose">
       ×
     </button>
-
-
-    <img
-      id="modalImage"
-      src=""
-      alt="Image preview"
-    />
-
-
-  </div>
-
-
-
-  <!-- ======================================================
+<img alt="Image preview" id="modalImage" src=""/>
+</div>
+<!-- ======================================================
        FOOTER
   ======================================================= -->
-
-  <footer class="footer">
-
-
-    <div>
-
-
-      <a
-        href="#home"
-        class="brand"
-      >
+<footer class="footer">
+<div>
+<a class="brand" href="#home">
         Ephraim<span>Sameer</span>
-      </a>
-
-
-      <p>
+</a>
+<p>
         Cloud Engineer · Public Speaker · Azure · Technology
       </p>
-
-
-    </div>
-
-
-    <div class="footer-right">
-
-
-      <a href="#home">
+</div>
+<div class="footer-right">
+<a href="#home">
         Back to top ↑
       </a>
-
-
-      <span>
+<span>
         © 2026 Muhammad Ephraim Sameer
       </span>
-
-
-    </div>
-
-
-  </footer>
-
-
-
-  <!-- ======================================================
+</div>
+</footer>
+<!-- ======================================================
        JAVASCRIPT
   ======================================================= -->
-
-  <script>
+<script>
 
 
     /* =====================================================
@@ -6013,9 +3891,6 @@
 
 
   </script>
-
-
-
 <script>
   /* =====================================================
      STATIC MULTI-LANGUAGE SYSTEM
@@ -6243,7 +4118,7 @@
     "es": "Oratoria"
   },
   "Technical Mentoring": {
-    "ar": "الإرشاد التقني",
+    "ar": "إرشاد تقني",
     "fr": "Mentorat technique",
     "es": "Mentoría técnica"
   },
@@ -7141,92 +5016,76 @@
     "ar": "© 2026 محمد إفراهيم سمير",
     "fr": "© 2026 Muhammad Ephraim Sameer",
     "es": "© 2026 Muhammad Ephraim Sameer"
-  }
-,
-  "Muhammad Ephraim": {
-    "ar": "محمد إفراهيم",
-    "fr": "Muhammad Ephraim",
-    "es": "Muhammad Ephraim"
   },
-  "Sameer.": {
-    "ar": "سمير.",
-    "fr": "Sameer.",
-    "es": "Sameer."
+  "Ephraim": {
+    "ar": "إفراهيم",
+    "fr": "Ephraim",
+    "es": "Ephraim"
   },
-  "17 October 2025 · Renewed until October 2027": {
+  "Sameer": {
+    "ar": "سمير",
+    "fr": "Sameer",
+    "es": "Sameer"
+  },
+  "Muhammad Ephraim Sameer": {
+    "ar": "محمد إفراهيم سمير",
+    "fr": "Muhammad Ephraim Sameer",
+    "es": "Muhammad Ephraim Sameer"
+  },
+  "17 OCT 2025 · RENEWED UNTIL OCT 2027": {
     "ar": "17 أكتوبر 2025 · مجددة حتى أكتوبر 2027",
-    "fr": "17 octobre 2025 · renouvelée jusqu’en octobre 2027",
-    "es": "17 de octubre de 2025 · renovada hasta octubre de 2027"
+    "fr": "17 octobre 2025 · Renouvelée jusqu’en octobre 2027",
+    "es": "17 de octubre de 2025 · Renovada hasta octubre de 2027"
   },
-  "14 May 2026": {
+  "14 MAY 2026": {
     "ar": "14 مايو 2026",
     "fr": "14 mai 2026",
     "es": "14 de mayo de 2026"
   },
-  "22 June 2026": {
+  "22 JUN 2026": {
     "ar": "22 يونيو 2026",
     "fr": "22 juin 2026",
     "es": "22 de junio de 2026"
   },
-  "13 August 2026": {
+  "13 AUG 2026": {
     "ar": "13 أغسطس 2026",
     "fr": "13 août 2026",
     "es": "13 de agosto de 2026"
   },
-  "22 June – 15 August 2026": {
-    "ar": "22 يونيو – 15 أغسطس 2026",
-    "fr": "22 juin – 15 août 2026",
-    "es": "22 de junio – 15 de agosto de 2026"
-  },
-  "Zee Outsourcing Uk Training Sessions": {
-    "ar": "جلسات تدريب Zee Outsourcing UK",
-    "fr": "Sessions de formation Zee Outsourcing UK",
-    "es": "Sesiones de formación de Zee Outsourcing UK"
+  "22 JUN — 15 AUG 2026": {
+    "ar": "22 يونيو — 15 أغسطس 2026",
+    "fr": "22 juin — 15 août 2026",
+    "es": "22 de junio — 15 de agosto de 2026"
   },
   "ZEE OUTSOURCING · TRAINING": {
     "ar": "ZEE OUTSOURCING · تدريب",
     "fr": "ZEE OUTSOURCING · FORMATION",
     "es": "ZEE OUTSOURCING · FORMACIÓN"
   },
-  "A collection of training and mentorship sessions delivered through my professional cloud engineering and mentorship role at Zee Outsourcing Solutions.": {
-    "ar": "مجموعة من جلسات التدريب والإرشاد التي قدمتها ضمن دوري المهني في هندسة السحابة والإرشاد لدى Zee Outsourcing Solutions.",
-    "fr": "Une collection de sessions de formation et de mentorat réalisées dans le cadre de mon rôle professionnel en ingénierie cloud et mentorat chez Zee Outsourcing Solutions.",
-    "es": "Una colección de sesiones de formación y mentoría realizadas como parte de mi función profesional de ingeniería cloud y mentoría en Zee Outsourcing Solutions."
+  "Zee Outsourcing UK Training Sessions": {
+    "ar": "جلسات التدريب في Zee Outsourcing UK",
+    "fr": "Sessions de formation Zee Outsourcing UK",
+    "es": "Sesiones de formación de Zee Outsourcing UK"
+  },
+  "A series of hands-on cloud training sessions focused on practical Azure learning, guided demonstrations, mentoring and real-world technical development.": {
+    "ar": "سلسلة من جلسات التدريب السحابية العملية التي تركز على تعلم Azure التطبيقي والعروض التوضيحية والإرشاد والتطوير التقني الواقعي.",
+    "fr": "Une série de sessions de formation cloud pratiques axées sur l’apprentissage d’Azure, les démonstrations guidées, le mentorat et le développement technique concret.",
+    "es": "Una serie de sesiones prácticas de formación cloud centradas en el aprendizaje de Azure, demostraciones guiadas, mentoría y desarrollo técnico del mundo real."
   },
   "Zee Outsourcing Solutions": {
     "ar": "Zee Outsourcing Solutions",
     "fr": "Zee Outsourcing Solutions",
     "es": "Zee Outsourcing Solutions"
   },
+  "UK Training Sessions": {
+    "ar": "جلسات تدريب المملكة المتحدة",
+    "fr": "Sessions de formation au Royaume-Uni",
+    "es": "Sesiones de formación en el Reino Unido"
+  },
   "Cloud Training": {
     "ar": "تدريب سحابي",
     "fr": "Formation Cloud",
     "es": "Formación Cloud"
-  },
-  "Azure Mentorship": {
-    "ar": "إرشاد Azure",
-    "fr": "Mentorat Azure",
-    "es": "Mentoría de Azure"
-  },
-  "Technical Sessions": {
-    "ar": "جلسات تقنية",
-    "fr": "Sessions techniques",
-    "es": "Sesiones técnicas"
-  },
-  "· Technical Learning": {
-    "ar": "· تعلم تقني",
-    "fr": "· Apprentissage technique",
-    "es": "· Aprendizaje técnico"
-  },
-  "· Career Skills": {
-    "ar": "· مهارات مهنية",
-    "fr": "· Compétences professionnelles",
-    "es": "· Habilidades profesionales"
-  },
-  "· Cloud Technology": {
-    "ar": "· تكنولوجيا السحابة",
-    "fr": "· Technologie Cloud",
-    "es": "· Tecnología Cloud"
   }
 };
 
@@ -7357,22 +5216,6 @@
     }
   }
 
-  function updateBrandNames(language) {
-    const brands = document.querySelectorAll(".brand");
-
-    brands.forEach((brand) => {
-      const names = {
-        en: ["Ephraim", "Sameer"],
-        ar: ["محمد إفراهيم", "سمير"],
-        fr: ["Muhammad Ephraim", "Sameer"],
-        es: ["Muhammad Ephraim", "Sameer"]
-      };
-
-      const pair = names[language] || names.en;
-      brand.innerHTML = `${pair[0]}<span>${pair[1]}</span>`;
-    });
-  }
-
   function applyLanguage(language) {
     if (!portfolioLanguageMeta[language]) {
       language = "en";
@@ -7406,7 +5249,6 @@
         ) || "en";
 
       updateMetadata(saved);
-      updateBrandNames(saved);
 
       if (selector) {
         selector.value = saved;
@@ -7427,7 +5269,5 @@
     }
   );
 </script>
-
 </body>
-
 </html>
