@@ -1581,20 +1581,6 @@
     border:0;
   }
 
-  /* Keep Google's generated widget hidden.
-     The custom selector above is the visible control. */
-  #google_translate_element,
-  .goog-te-banner-frame.skiptranslate,
-  .goog-te-gadget,
-  .goog-tooltip,
-  .goog-te-balloon-frame{
-    display:none!important;
-  }
-
-  body{
-    top:0!important;
-  }
-
   /* Arabic becomes RTL while other languages remain LTR. */
   html[dir="rtl"] body{
     direction:rtl;
@@ -1709,9 +1695,6 @@
 
 
 <body>
-
-  <div id="google_translate_element" aria-hidden="true"></div>
-
 
 
 
@@ -5780,109 +5763,1311 @@
 
 <script>
   /* =====================================================
-     MULTI-LANGUAGE SWITCHER
-     ENGLISH + ARABIC + FRENCH + SPANISH
+     STATIC MULTI-LANGUAGE SYSTEM
 
-     Uses Google's client-side translation engine while
-     keeping the custom premium selector in the navbar.
+     No Google Translate.
+     No runtime translation API.
+     All translations are stored locally in this file.
+
+     Languages:
+       EN = English
+       AR = Arabic
+       FR = French
+       ES = Spanish
   ====================================================== */
 
-  let googleTranslateReady = false;
+  const portfolioTranslations = {
+  "Language": {
+    "ar": "اللغة",
+    "fr": "Langue",
+    "es": "Idioma"
+  },
+  "EN · English": {
+    "ar": "EN · الإنجليزية",
+    "fr": "EN · Anglais",
+    "es": "EN · Inglés"
+  },
+  "AR · العربية": {
+    "ar": "AR · العربية",
+    "fr": "AR · Arabe",
+    "es": "AR · Árabe"
+  },
+  "FR · Français": {
+    "ar": "FR · الفرنسية",
+    "fr": "FR · Français",
+    "es": "FR · Francés"
+  },
+  "ES · Español": {
+    "ar": "ES · الإسبانية",
+    "fr": "ES · Espagnol",
+    "es": "ES · Español"
+  },
+  "Home": {
+    "ar": "الرئيسية",
+    "fr": "Accueil",
+    "es": "Inicio"
+  },
+  "About": {
+    "ar": "نبذة عني",
+    "fr": "À propos",
+    "es": "Sobre mí"
+  },
+  "Experience": {
+    "ar": "الخبرة",
+    "fr": "Expérience",
+    "es": "Experiencia"
+  },
+  "Skills": {
+    "ar": "المهارات",
+    "fr": "Compétences",
+    "es": "Habilidades"
+  },
+  "Work": {
+    "ar": "الأعمال",
+    "fr": "Projets",
+    "es": "Proyectos"
+  },
+  "Certifications": {
+    "ar": "الشهادات",
+    "fr": "Certifications",
+    "es": "Certificaciones"
+  },
+  "Badges": {
+    "ar": "الشارات",
+    "fr": "Badges",
+    "es": "Insignias"
+  },
+  "Resume": {
+    "ar": "السيرة الذاتية",
+    "fr": "CV",
+    "es": "Currículum"
+  },
+  "Contact": {
+    "ar": "تواصل",
+    "fr": "Contact",
+    "es": "Contacto"
+  },
+  "OPEN TO OPPORTUNITIES": {
+    "ar": "متاح للفرص المهنية",
+    "fr": "OUVERT AUX OPPORTUNITÉS",
+    "es": "ABIERTO A OPORTUNIDADES"
+  },
+  "CLOUD ENGINEER": {
+    "ar": "مهندس سحابة",
+    "fr": "INGÉNIEUR CLOUD",
+    "es": "INGENIERO CLOUD"
+  },
+  "PUBLIC SPEAKER": {
+    "ar": "متحدث عام",
+    "fr": "CONFÉRENCIER",
+    "es": "ORADOR PÚBLICO"
+  },
+  "Cloud Engineer": {
+    "ar": "مهندس سحابة",
+    "fr": "Ingénieur Cloud",
+    "es": "Ingeniero Cloud"
+  },
+  "Public Speaker": {
+    "ar": "متحدث عام",
+    "fr": "Conférencier",
+    "es": "Orador Público"
+  },
+  "Technology Community Builder": {
+    "ar": "بناء المجتمعات التقنية",
+    "fr": "Créateur de communautés technologiques",
+    "es": "Creador de comunidades tecnológicas"
+  },
+  "Cloud Engineer @ Zee Outsourcing Solutions": {
+    "ar": "مهندس سحابة @ Zee Outsourcing Solutions",
+    "fr": "Ingénieur Cloud @ Zee Outsourcing Solutions",
+    "es": "Ingeniero Cloud @ Zee Outsourcing Solutions"
+  },
+  "Explore Experience": {
+    "ar": "استكشف الخبرة",
+    "fr": "Découvrir l’expérience",
+    "es": "Explorar experiencia"
+  },
+  "Download Resume": {
+    "ar": "تحميل السيرة الذاتية",
+    "fr": "Télécharger le CV",
+    "es": "Descargar currículum"
+  },
+  "LinkedIn": {
+    "ar": "لينكدإن",
+    "fr": "LinkedIn",
+    "es": "LinkedIn"
+  },
+  "GitHub": {
+    "ar": "جيت هب",
+    "fr": "GitHub",
+    "es": "GitHub"
+  },
+  "Credly": {
+    "ar": "Credly",
+    "fr": "Credly",
+    "es": "Credly"
+  },
+  "Microsoft Credential": {
+    "ar": "اعتماد Microsoft",
+    "fr": "Identifiant Microsoft",
+    "es": "Credencial de Microsoft"
+  },
+  "TECHNOLOGY WITH PURPOSE": {
+    "ar": "تقنية بهدف",
+    "fr": "LA TECHNOLOGIE AVEC UN BUT",
+    "es": "TECNOLOGÍA CON PROPÓSITO"
+  },
+  "My work naturally aligns with selected UN Sustainable Development Goals.": {
+    "ar": "تنسجم أعمالي بشكل طبيعي مع عدد من أهداف الأمم المتحدة للتنمية المستدامة.",
+    "fr": "Mon travail s’aligne naturellement avec plusieurs Objectifs de développement durable des Nations Unies.",
+    "es": "Mi trabajo se alinea de forma natural con varios Objetivos de Desarrollo Sostenible de las Naciones Unidas."
+  },
+  "· Quality Education": {
+    "ar": "· التعليم الجيد",
+    "fr": "· Éducation de qualité",
+    "es": "· Educación de calidad"
+  },
+  "· Decent Work": {
+    "ar": "· العمل اللائق",
+    "fr": "· Travail décent",
+    "es": "· Trabajo decente"
+  },
+  "· Innovation": {
+    "ar": "· الابتكار",
+    "fr": "· Innovation",
+    "es": "· Innovación"
+  },
+  "· Partnerships": {
+    "ar": "· الشراكات",
+    "fr": "· Partenariats",
+    "es": "· Alianzas"
+  },
+  "Azure Administrator": {
+    "ar": "مسؤول Azure",
+    "fr": "Administrateur Azure",
+    "es": "Administrador de Azure"
+  },
+  "Cloud · Technology · Education": {
+    "ar": "السحابة · التقنية · التعليم",
+    "fr": "Cloud · Technologie · Éducation",
+    "es": "Nube · Tecnología · Educación"
+  },
+  "01 / ABOUT": {
+    "ar": "01 / نبذة عني",
+    "fr": "01 / À PROPOS",
+    "es": "01 / SOBRE MÍ"
+  },
+  "Cloud, community,": {
+    "ar": "السحابة، والمجتمع،",
+    "fr": "Cloud, communauté,",
+    "es": "Nube, comunidad,"
+  },
+  "and continuous growth.": {
+    "ar": "والتطور المستمر.",
+    "fr": "et développement continu.",
+    "es": "y crecimiento continuo."
+  },
+  "WHO I AM": {
+    "ar": "من أنا",
+    "fr": "QUI JE SUIS",
+    "es": "QUIÉN SOY"
+  },
+  "Microsoft Azure": {
+    "ar": "Microsoft Azure",
+    "fr": "Microsoft Azure",
+    "es": "Microsoft Azure"
+  },
+  "Cloud Infrastructure": {
+    "ar": "البنية التحتية السحابية",
+    "fr": "Infrastructure cloud",
+    "es": "Infraestructura cloud"
+  },
+  "Public Speaking": {
+    "ar": "التحدث أمام الجمهور",
+    "fr": "Prise de parole en public",
+    "es": "Oratoria"
+  },
+  "Technical Mentoring": {
+    "ar": "الإرشاد التقني",
+    "fr": "Mentorat technique",
+    "es": "Mentoría técnica"
+  },
+  "Community Leadership": {
+    "ar": "قيادة المجتمع",
+    "fr": "Leadership communautaire",
+    "es": "Liderazgo comunitario"
+  },
+  "ABOUT SDG ALIGNMENT": {
+    "ar": "توافق أهداف التنمية المستدامة",
+    "fr": "ALIGNEMENT ODD",
+    "es": "ALINEACIÓN ODS"
+  },
+  "· Learning & Skills": {
+    "ar": "· التعلم والمهارات",
+    "fr": "· Apprentissage et compétences",
+    "es": "· Aprendizaje y habilidades"
+  },
+  "· Employability & Growth": {
+    "ar": "· قابلية التوظيف والنمو",
+    "fr": "· Employabilité et croissance",
+    "es": "· Empleabilidad y crecimiento"
+  },
+  "· Technology & Innovation": {
+    "ar": "· التقنية والابتكار",
+    "fr": "· Technologie et innovation",
+    "es": "· Tecnología e innovación"
+  },
+  "· Collaboration": {
+    "ar": "· التعاون",
+    "fr": "· Collaboration",
+    "es": "· Colaboración"
+  },
+  "Microsoft Certified": {
+    "ar": "معتمد من Microsoft",
+    "fr": "Certifié Microsoft",
+    "es": "Certificado por Microsoft"
+  },
+  "Azure": {
+    "ar": "Azure",
+    "fr": "Azure",
+    "es": "Azure"
+  },
+  "Cloud Engineering": {
+    "ar": "هندسة السحابة",
+    "fr": "Ingénierie cloud",
+    "es": "Ingeniería cloud"
+  },
+  "PUBLIC": {
+    "ar": "عام",
+    "fr": "PUBLIC",
+    "es": "PÚBLICO"
+  },
+  "Speaker": {
+    "ar": "متحدث",
+    "fr": "Conférencier",
+    "es": "Orador"
+  },
+  "02 / EXPERIENCE": {
+    "ar": "02 / الخبرة",
+    "fr": "02 / EXPÉRIENCE",
+    "es": "02 / EXPERIENCIA"
+  },
+  "The journey so far.": {
+    "ar": "رحلتي حتى الآن.",
+    "fr": "Le parcours jusqu’à présent.",
+    "es": "El recorrido hasta ahora."
+  },
+  "Chronologically arranged by role start date while keeping concurrent responsibilities visible.": {
+    "ar": "مرتبة زمنياً حسب بداية كل دور مع إبقاء المسؤوليات المتزامنة واضحة.",
+    "fr": "Organisé chronologiquement selon la date de début de chaque rôle, tout en gardant visibles les responsabilités simultanées.",
+    "es": "Organizado cronológicamente según la fecha de inicio de cada puesto, manteniendo visibles las responsabilidades simultáneas."
+  },
+  "GDGoC BULC Co-Lead": {
+    "ar": "مشارك في قيادة GDGoC BULC",
+    "fr": "Co-Lead GDGoC BULC",
+    "es": "Co-Lead de GDGoC BULC"
+  },
+  "Google Developer Groups on Campus": {
+    "ar": "Google Developer Groups on Campus",
+    "fr": "Google Developer Groups on Campus",
+    "es": "Google Developer Groups on Campus"
+  },
+  "LEADERSHIP": {
+    "ar": "قيادة",
+    "fr": "LEADERSHIP",
+    "es": "LIDERAZGO"
+  },
+  "Stepping into chapter-level leadership after serving as Cloud Lead, helping guide the core team, broader operations, strategic direction and upcoming technical initiatives.": {
+    "ar": "الانتقال إلى قيادة الفصل بعد العمل كقائد للسحابة، والمساهمة في توجيه الفريق الأساسي والعمليات الأوسع والتوجه الاستراتيجي والمبادرات التقنية القادمة.",
+    "fr": "Accès à un rôle de leadership au niveau du chapitre après avoir été Cloud Lead, en contribuant à guider l’équipe centrale, les opérations, l’orientation stratégique et les prochaines initiatives techniques.",
+    "es": "Asumiendo un papel de liderazgo a nivel de capítulo después de servir como Cloud Lead, ayudando a orientar al equipo central, las operaciones, la dirección estratégica y las próximas iniciativas técnicas."
+  },
+  "· Youth Learning": {
+    "ar": "· تعلم الشباب",
+    "fr": "· Apprentissage des jeunes",
+    "es": "· Aprendizaje juvenil"
+  },
+  "Cloud Engineer Mentor × Content Manager": {
+    "ar": "مهندس سحابة ومرشد × مدير محتوى",
+    "fr": "Mentor Cloud × Responsable de contenu",
+    "es": "Mentor de Cloud × Responsable de contenido"
+  },
+  "Zee Outsourcing Solutions Pvt. Ltd.": {
+    "ar": "Zee Outsourcing Solutions Pvt. Ltd.",
+    "fr": "Zee Outsourcing Solutions Pvt. Ltd.",
+    "es": "Zee Outsourcing Solutions Pvt. Ltd."
+  },
+  "PROFESSIONAL": {
+    "ar": "مهني",
+    "fr": "PROFESSIONNEL",
+    "es": "PROFESIONAL"
+  },
+  "A dual-impact role combining technical cloud mentorship with digital brand and content strategy.": {
+    "ar": "دور يجمع بين الإرشاد التقني في السحابة واستراتيجية العلامة الرقمية والمحتوى.",
+    "fr": "Un rôle à double impact combinant mentorat technique cloud et stratégie de marque et de contenu numérique.",
+    "es": "Un rol de doble impacto que combina mentoría técnica cloud con estrategia de marca y contenido digital."
+  },
+  "Directed the Microsoft Azure mentorship track across AZ-900 and AZ-104.": {
+    "ar": "قدت مسار الإرشاد في Microsoft Azure عبر AZ-900 وAZ-104.",
+    "fr": "Pilotage du parcours de mentorat Microsoft Azure autour de AZ-900 et AZ-104.",
+    "es": "Dirigí la ruta de mentoría de Microsoft Azure en AZ-900 y AZ-104."
+  },
+  "Instructed internship cohorts on Azure infrastructure, compute, networking, identity governance and security.": {
+    "ar": "درّبت دفعات المتدربين على البنية التحتية في Azure والحوسبة والشبكات وحوكمة الهوية والأمن.",
+    "fr": "Formation des cohortes de stagiaires sur l’infrastructure Azure, le calcul, les réseaux, la gouvernance des identités et la sécurité.",
+    "es": "Formé a grupos de prácticas en infraestructura de Azure, cómputo, redes, gobierno de identidades y seguridad."
+  },
+  "Designed hands-on cloud computing roadmaps aligned with professional certification goals.": {
+    "ar": "صممت مسارات عملية في الحوسبة السحابية متوافقة مع أهداف الشهادات المهنية.",
+    "fr": "Conception de parcours pratiques de cloud computing alignés sur les objectifs de certification professionnelle.",
+    "es": "Diseñé rutas prácticas de cloud computing alineadas con objetivos de certificación profesional."
+  },
+  "Managed digital content, promotional graphics, corporate communication and professional announcements.": {
+    "ar": "أدرت المحتوى الرقمي والمواد الترويجية والاتصالات المؤسسية والإعلانات المهنية.",
+    "fr": "Gestion du contenu numérique, des supports promotionnels, de la communication d’entreprise et des annonces professionnelles.",
+    "es": "Gestioné contenido digital, gráficos promocionales, comunicación corporativa y anuncios profesionales."
+  },
+  "· Technical Skills": {
+    "ar": "· مهارات تقنية",
+    "fr": "· Compétences techniques",
+    "es": "· Habilidades técnicas"
+  },
+  "· Career Development": {
+    "ar": "· التطور المهني",
+    "fr": "· Développement professionnel",
+    "es": "· Desarrollo profesional"
+  },
+  "· Cloud Technology": {
+    "ar": "· تقنية السحابة",
+    "fr": "· Technologie cloud",
+    "es": "· Tecnología cloud"
+  },
+  "IEEE Member": {
+    "ar": "عضو IEEE",
+    "fr": "Membre IEEE",
+    "es": "Miembro de IEEE"
+  },
+  "IEEE Computer Society": {
+    "ar": "IEEE Computer Society",
+    "fr": "IEEE Computer Society",
+    "es": "IEEE Computer Society"
+  },
+  "Active membership reflecting continued involvement in the professional technology community.": {
+    "ar": "عضوية فاعلة تعكس الاستمرار في المشاركة ضمن المجتمع التقني المهني.",
+    "fr": "Une adhésion active reflétant une implication continue dans la communauté technologique professionnelle.",
+    "es": "Una membresía activa que refleja una participación continua en la comunidad tecnológica profesional."
+  },
+  "· Professional Partnerships": {
+    "ar": "· شراكات مهنية",
+    "fr": "· Partenariats professionnels",
+    "es": "· Alianzas profesionales"
+  },
+  "IEEE Documentation Vice Head": {
+    "ar": "نائب رئيس التوثيق في IEEE",
+    "fr": "Vice-responsable de la documentation IEEE",
+    "es": "Vicejefe de Documentación de IEEE"
+  },
+  "IEEE BULC Student Chapter": {
+    "ar": "فرع IEEE الطلابي في BULC",
+    "fr": "Chapitre étudiant IEEE BULC",
+    "es": "Capítulo Estudiantil IEEE BULC"
+  },
+  "Driving the administrative documentation framework, corporate communication and strategic record-keeping for the student branch and flagship events.": {
+    "ar": "قيادة إطار التوثيق الإداري والاتصال المؤسسي وحفظ السجلات الاستراتيجي للفرع الطلابي والفعاليات الرئيسية.",
+    "fr": "Pilotage du cadre documentaire administratif, de la communication institutionnelle et de l’archivage stratégique du chapitre étudiant et de ses événements phares.",
+    "es": "Liderazgo del marco de documentación administrativa, la comunicación corporativa y el archivo estratégico del capítulo estudiantil y sus eventos principales."
+  },
+  "· Institutional Collaboration": {
+    "ar": "· تعاون مؤسسي",
+    "fr": "· Collaboration institutionnelle",
+    "es": "· Colaboración institucional"
+  },
+  "GDGoC BULC Cloud Lead": {
+    "ar": "قائد السحابة في GDGoC BULC",
+    "fr": "Cloud Lead GDGoC BULC",
+    "es": "Cloud Lead de GDGoC BULC"
+  },
+  "CLOUD LEAD": {
+    "ar": "قائد السحابة",
+    "fr": "CLOUD LEAD",
+    "es": "CLOUD LEAD"
+  },
+  "Spearheaded the Cloud Computing track for the IEEE Codex 2.0 × GDGoC competition, overseeing the end-to-end design, execution and technical evaluation of cloud challenges.": {
+    "ar": "قدت مسار الحوسبة السحابية في مسابقة IEEE Codex 2.0 × GDGoC، وأشرفت على تصميم وتنفيذ وتقييم التحديات السحابية من البداية إلى النهاية.",
+    "fr": "Pilotage du parcours Cloud Computing de la compétition IEEE Codex 2.0 × GDGoC, avec supervision de la conception, de l’exécution et de l’évaluation technique des défis cloud de bout en bout.",
+    "es": "Lideré la línea de Cloud Computing de la competición IEEE Codex 2.0 × GDGoC, supervisando de principio a fin el diseño, la ejecución y la evaluación técnica de los retos cloud."
+  },
+  "Architected a comprehensive 120-minute practical sandbox challenge simulating real-world AWS deployment scenarios.": {
+    "ar": "صممت تحدياً عملياً لمدة 120 دقيقة يحاكي سيناريوهات نشر AWS واقعية.",
+    "fr": "Conception d’un défi pratique complet de 120 minutes simulant des scénarios réels de déploiement AWS.",
+    "es": "Diseñé un desafío práctico de 120 minutos que simulaba escenarios reales de despliegue en AWS."
+  },
+  "Designed scenarios involving custom VPCs, Auto Scaling Groups and Application Load Balancers.": {
+    "ar": "صممت سيناريوهات تتضمن VPCs مخصصة ومجموعات Auto Scaling وموازِنات تحميل للتطبيقات.",
+    "fr": "Conception de scénarios impliquant des VPC personnalisés, des Auto Scaling Groups et des Application Load Balancers.",
+    "es": "Diseñé escenarios con VPC personalizadas, Auto Scaling Groups y Application Load Balancers."
+  },
+  "Developed and automated a 55-question rapid-fire theoretical assessment with objective grading.": {
+    "ar": "طورت وأتمت اختباراً نظرياً سريعاً من 55 سؤالاً مع تصحيح موضوعي.",
+    "fr": "Développement et automatisation d’une évaluation théorique de 55 questions à correction objective.",
+    "es": "Desarrollé y automaticé una evaluación teórica rápida de 55 preguntas con corrección objetiva."
+  },
+  "Authored evaluation rubrics and collaborated with faculty and external industry experts.": {
+    "ar": "أعددت معايير التقييم وتعاونت مع أعضاء هيئة التدريس وخبراء من الصناعة.",
+    "fr": "Élaboration des grilles d’évaluation et collaboration avec les enseignants et des experts externes de l’industrie.",
+    "es": "Elaboré rúbricas de evaluación y colaboré con docentes y expertos externos de la industria."
+  },
+  "Hosted the GDGoC orientation session to introduce participants to the community, cloud track and upcoming technical activities.": {
+    "ar": "قدت جلسة تعريف GDGoC للتعريف بالمجتمع ومسار السحابة والأنشطة التقنية القادمة.",
+    "fr": "Animation de la session d’orientation GDGoC pour présenter la communauté, le parcours cloud et les prochaines activités techniques.",
+    "es": "Organicé la sesión de orientación de GDGoC para presentar la comunidad, la ruta cloud y las próximas actividades técnicas."
+  },
+  "Hosted the award ceremony session, presenting competition outcomes and recognizing participant achievements.": {
+    "ar": "قدت جلسة حفل التكريم لعرض نتائج المسابقة وتكريم إنجازات المشاركين.",
+    "fr": "Animation de la cérémonie de remise des prix, présentation des résultats de la compétition et reconnaissance des réussites des participants.",
+    "es": "Organicé la ceremonia de premios, presentando los resultados de la competición y reconociendo los logros de los participantes."
+  },
+  "Served as a public-facing speaker across technical sessions and community activities.": {
+    "ar": "عملت كمتحدث أمام الجمهور في الجلسات التقنية والأنشطة المجتمعية.",
+    "fr": "Intervention comme conférencier public lors de sessions techniques et d’activités communautaires.",
+    "es": "Participé como orador público en sesiones técnicas y actividades comunitarias."
+  },
+  "PRECEDED BY": {
+    "ar": "سبق ذلك",
+    "fr": "PRÉCÉDÉ PAR",
+    "es": "PRECEDIDO POR"
+  },
+  "· Technical Education": {
+    "ar": "· التعليم التقني",
+    "fr": "· Éducation technique",
+    "es": "· Educación técnica"
+  },
+  "· Career Skills": {
+    "ar": "· مهارات مهنية",
+    "fr": "· Compétences professionnelles",
+    "es": "· Habilidades profesionales"
+  },
+  "· Cloud Innovation": {
+    "ar": "· ابتكار سحابي",
+    "fr": "· Innovation cloud",
+    "es": "· Innovación cloud"
+  },
+  "· Community Partnerships": {
+    "ar": "· شراكات مجتمعية",
+    "fr": "· Partenariats communautaires",
+    "es": "· Alianzas comunitarias"
+  },
+  "Teaching Assistant": {
+    "ar": "مساعد تدريس",
+    "fr": "Assistant pédagogique",
+    "es": "Asistente de enseñanza"
+  },
+  "Bahria University": {
+    "ar": "جامعة بحرية",
+    "fr": "Bahria University",
+    "es": "Bahria University"
+  },
+  "EDUCATION": {
+    "ar": "تعليم",
+    "fr": "ÉDUCATION",
+    "es": "EDUCACIÓN"
+  },
+  "Supported students during networking laboratories, academic projects and practical coursework.": {
+    "ar": "دعمت الطلاب خلال مختبرات الشبكات والمشاريع الأكاديمية والتطبيقات العملية.",
+    "fr": "Accompagnement des étudiants lors des laboratoires réseau, des projets académiques et des travaux pratiques.",
+    "es": "Apoyé a estudiantes durante laboratorios de redes, proyectos académicos y trabajo práctico."
+  },
+  "COMMUNITY": {
+    "ar": "مجتمع",
+    "fr": "COMMUNAUTÉ",
+    "es": "COMUNIDAD"
+  },
+  "Started my GDGoC journey through event management and cybersecurity activities, building the community and technical experience that later led into the Cloud Lead role.": {
+    "ar": "بدأت رحلتي في GDGoC من خلال إدارة الفعاليات وأنشطة الأمن السيبراني، وبنيت الخبرة المجتمعية والتقنية التي قادت لاحقاً إلى دور قائد السحابة.",
+    "fr": "J’ai commencé mon parcours GDGoC par la gestion d’événements et des activités de cybersécurité, développant l’expérience communautaire et technique qui m’a ensuite conduit au rôle de Cloud Lead.",
+    "es": "Comencé mi trayectoria en GDGoC mediante la gestión de eventos y actividades de ciberseguridad, desarrollando la experiencia comunitaria y técnica que más tarde me llevó al puesto de Cloud Lead."
+  },
+  "· Community Learning": {
+    "ar": "· تعلم مجتمعي",
+    "fr": "· Apprentissage communautaire",
+    "es": "· Aprendizaje comunitario"
+  },
+  "03 / SKILLS": {
+    "ar": "03 / المهارات",
+    "fr": "03 / COMPÉTENCES",
+    "es": "03 / HABILIDADES"
+  },
+  "Technologies I work with.": {
+    "ar": "التقنيات التي أعمل بها.",
+    "fr": "Les technologies avec lesquelles je travaille.",
+    "es": "Tecnologías con las que trabajo."
+  },
+  "Cloud Platforms": {
+    "ar": "منصات السحابة",
+    "fr": "Plateformes cloud",
+    "es": "Plataformas cloud"
+  },
+  "Infrastructure": {
+    "ar": "البنية التحتية",
+    "fr": "Infrastructure",
+    "es": "Infraestructura"
+  },
+  "Compute": {
+    "ar": "الحوسبة",
+    "fr": "Calcul",
+    "es": "Cómputo"
+  },
+  "Storage": {
+    "ar": "التخزين",
+    "fr": "Stockage",
+    "es": "Almacenamiento"
+  },
+  "Identity": {
+    "ar": "الهوية",
+    "fr": "Identité",
+    "es": "Identidad"
+  },
+  "Virtual Machines": {
+    "ar": "الأجهزة الافتراضية",
+    "fr": "Machines virtuelles",
+    "es": "Máquinas virtuales"
+  },
+  "Networking": {
+    "ar": "الشبكات",
+    "fr": "Réseaux",
+    "es": "Redes"
+  },
+  "Tools & Systems": {
+    "ar": "الأدوات والأنظمة",
+    "fr": "Outils et systèmes",
+    "es": "Herramientas y sistemas"
+  },
+  "04 / FEATURED WORK": {
+    "ar": "04 / أبرز الأعمال",
+    "fr": "04 / PROJETS PHARES",
+    "es": "04 / TRABAJOS DESTACADOS"
+  },
+  "Experiences, not photo dumps.": {
+    "ar": "تجارب، وليست مجرد صور.",
+    "fr": "Des expériences, pas de simples albums photo.",
+    "es": "Experiencias, no simples álbumes de fotos."
+  },
+  "Each event is treated as one complete portfolio experience. Posters are shown once at their natural proportions, followed by supporting event media.": {
+    "ar": "يُعرض كل حدث كتجربة متكاملة في المحفظة. تظهر الملصقات مرة واحدة بأبعادها الطبيعية، ثم الوسائط الداعمة للحدث.",
+    "fr": "Chaque événement est présenté comme une expérience complète du portfolio. Les affiches apparaissent une seule fois dans leurs proportions naturelles, suivies des médias associés.",
+    "es": "Cada evento se presenta como una experiencia completa del portafolio. Los carteles aparecen una sola vez con sus proporciones naturales, seguidos de los medios de apoyo."
+  },
+  "CERTIFICATION": {
+    "ar": "شهادة",
+    "fr": "CERTIFICATION",
+    "es": "CERTIFICACIÓN"
+  },
+  "Microsoft Azure Administrator": {
+    "ar": "مسؤول Microsoft Azure",
+    "fr": "Administrateur Microsoft Azure",
+    "es": "Administrador de Microsoft Azure"
+  },
+  "Microsoft Certified: Azure Administrator Associate (AZ-104), forming the core of my Azure administration and cloud infrastructure profile.": {
+    "ar": "شهادة Microsoft Certified: Azure Administrator Associate (AZ-104)، وتشكل أساس ملفي في إدارة Azure والبنية التحتية السحابية.",
+    "fr": "Microsoft Certified: Azure Administrator Associate (AZ-104), au cœur de mon profil d’administration Azure et d’infrastructure cloud.",
+    "es": "Microsoft Certified: Azure Administrator Associate (AZ-104), base de mi perfil de administración de Azure e infraestructura cloud."
+  },
+  "MICROSOFT": {
+    "ar": "MICROSOFT",
+    "fr": "MICROSOFT",
+    "es": "MICROSOFT"
+  },
+  "Microsoft Certified Azure Administrator Associate covering core Azure administration, infrastructure and platform management.": {
+    "ar": "مسؤول Azure معتمد من Microsoft، يغطي إدارة Azure الأساسية والبنية التحتية وإدارة المنصة.",
+    "fr": "Administrateur Azure certifié Microsoft couvrant l’administration Azure, l’infrastructure et la gestion de plateforme.",
+    "es": "Administrador de Azure certificado por Microsoft, cubriendo administración de Azure, infraestructura y gestión de plataforma."
+  },
+  "Verify Microsoft credential →": {
+    "ar": "تحقق من اعتماد Microsoft ←",
+    "fr": "Vérifier l’identifiant Microsoft →",
+    "es": "Verificar credencial de Microsoft →"
+  },
+  "· Infrastructure": {
+    "ar": "· البنية التحتية",
+    "fr": "· Infrastructure",
+    "es": "· Infraestructura"
+  },
+  "· Professional Skills": {
+    "ar": "· مهارات مهنية",
+    "fr": "· Compétences professionnelles",
+    "es": "· Habilidades profesionales"
+  },
+  "IEEE BULC × CODEX 2.0": {
+    "ar": "IEEE BULC × CODEX 2.0",
+    "fr": "IEEE BULC × CODEX 2.0",
+    "es": "IEEE BULC × CODEX 2.0"
+  },
+  "IEEE Codex 2.0 Cloud Competition": {
+    "ar": "مسابقة السحابة IEEE Codex 2.0",
+    "fr": "Compétition Cloud IEEE Codex 2.0",
+    "es": "Competición Cloud IEEE Codex 2.0"
+  },
+  "A flagship IEEE BULC event centered around cloud computing, practical technical skills and the \"Master the Cloud\" competition experience.": {
+    "ar": "فعالية رئيسية لـ IEEE BULC تتمحور حول الحوسبة السحابية والمهارات التقنية العملية وتجربة مسابقة \"Master the Cloud\".",
+    "fr": "Un événement phare d’IEEE BULC centré sur le cloud computing, les compétences techniques pratiques et l’expérience de compétition « Master the Cloud ».",
+    "es": "Un evento destacado de IEEE BULC centrado en cloud computing, habilidades técnicas prácticas y la experiencia de competición \"Master the Cloud\"."
+  },
+  "CodeX Version 2.0": {
+    "ar": "CodeX الإصدار 2.0",
+    "fr": "CodeX Version 2.0",
+    "es": "CodeX Versión 2.0"
+  },
+  "Cloud Competition": {
+    "ar": "مسابقة سحابية",
+    "fr": "Compétition Cloud",
+    "es": "Competición Cloud"
+  },
+  "Cloud Computing": {
+    "ar": "الحوسبة السحابية",
+    "fr": "Cloud Computing",
+    "es": "Cloud Computing"
+  },
+  "· Technical Learning": {
+    "ar": "· تعلم تقني",
+    "fr": "· Apprentissage technique",
+    "es": "· Aprendizaje técnico"
+  },
+  "· Employability Skills": {
+    "ar": "· مهارات قابلية التوظيف",
+    "fr": "· Compétences d’employabilité",
+    "es": "· Habilidades de empleabilidad"
+  },
+  "· IEEE × GDGoC Collaboration": {
+    "ar": "· تعاون IEEE × GDGoC",
+    "fr": "· Collaboration IEEE × GDGoC",
+    "es": "· Colaboración IEEE × GDGoC"
+  },
+  "UMT · CLOUDVERSE": {
+    "ar": "UMT · CLOUDVERSE",
+    "fr": "UMT · CLOUDVERSE",
+    "es": "UMT · CLOUDVERSE"
+  },
+  "UMT CloudVerse": {
+    "ar": "CloudVerse في UMT",
+    "fr": "UMT CloudVerse",
+    "es": "UMT CloudVerse"
+  },
+  "Guest speaking and cloud-focused technical engagement at UMT's CloudVerse event.": {
+    "ar": "مشاركة كمتحدث ضيف وتفاعل تقني يركز على السحابة في فعالية CloudVerse بجامعة UMT.",
+    "fr": "Intervention en tant que conférencier invité et participation technique axée sur le cloud lors de l’événement UMT CloudVerse.",
+    "es": "Participación como orador invitado y compromiso técnico centrado en cloud en el evento UMT CloudVerse."
+  },
+  "Guest Speaker": {
+    "ar": "متحدث ضيف",
+    "fr": "Conférencier invité",
+    "es": "Orador invitado"
+  },
+  "Technical Session": {
+    "ar": "جلسة تقنية",
+    "fr": "Session technique",
+    "es": "Sesión técnica"
+  },
+  "· Knowledge Sharing": {
+    "ar": "· مشاركة المعرفة",
+    "fr": "· Partage des connaissances",
+    "es": "· Compartir conocimiento"
+  },
+  "· Tech Careers": {
+    "ar": "· المسارات المهنية التقنية",
+    "fr": "· Carrières technologiques",
+    "es": "· Carreras tecnológicas"
+  },
+  "IEEE · CLOUD X": {
+    "ar": "IEEE · CLOUD X",
+    "fr": "IEEE · CLOUD X",
+    "es": "IEEE · CLOUD X"
+  },
+  "IEEE DLP Cloud X: For the Digital Future": {
+    "ar": "IEEE DLP Cloud X: من أجل المستقبل الرقمي",
+    "fr": "IEEE DLP Cloud X : pour le futur numérique",
+    "es": "IEEE DLP Cloud X: para el futuro digital"
+  },
+  "Distinguished Lecture Program focused on cloud technologies and the digital future, featuring my participation as a resource person.": {
+    "ar": "برنامج محاضرة متميزة يركز على تقنيات السحابة والمستقبل الرقمي، مع مشاركتي كمتحدث ومصدر معرفة.",
+    "fr": "Programme de conférence distingué consacré aux technologies cloud et au futur numérique, avec ma participation en tant que personne-ressource.",
+    "es": "Programa de conferencia distinguido centrado en tecnologías cloud y el futuro digital, con mi participación como persona de referencia."
+  },
+  "Distinguished Lecture Program": {
+    "ar": "برنامج محاضرة متميزة",
+    "fr": "Programme de conférence distingué",
+    "es": "Programa de conferencia distinguido"
+  },
+  "Resource Person": {
+    "ar": "متحدث ومصدر معرفة",
+    "fr": "Personne-ressource",
+    "es": "Persona de referencia"
+  },
+  "· Innovation & Infrastructure": {
+    "ar": "· الابتكار والبنية التحتية",
+    "fr": "· Innovation et infrastructure",
+    "es": "· Innovación e infraestructura"
+  },
+  "· Cross-Organization Collaboration": {
+    "ar": "· تعاون بين المؤسسات",
+    "fr": "· Collaboration interorganisationnelle",
+    "es": "· Colaboración entre organizaciones"
+  },
+  "05 / CERTIFICATIONS": {
+    "ar": "05 / الشهادات",
+    "fr": "05 / CERTIFICATIONS",
+    "es": "05 / CERTIFICACIONES"
+  },
+  "The credentials behind the profile.": {
+    "ar": "الاعتمادات التي تدعم هذا الملف.",
+    "fr": "Les certifications derrière le profil.",
+    "es": "Las credenciales detrás del perfil."
+  },
+  "Microsoft Certified: Azure Administrator Associate": {
+    "ar": "Microsoft Certified: Azure Administrator Associate",
+    "fr": "Microsoft Certified : Azure Administrator Associate",
+    "es": "Microsoft Certified: Azure Administrator Associate"
+  },
+  "My primary cloud certification covering Azure administration and the core infrastructure capabilities expected of an Azure Administrator.": {
+    "ar": "شهادتي الأساسية في السحابة، وتغطي إدارة Azure وقدرات البنية التحتية الأساسية المتوقعة من مسؤول Azure.",
+    "fr": "Ma certification cloud principale couvrant l’administration Azure et les capacités d’infrastructure essentielles attendues d’un administrateur Azure.",
+    "es": "Mi certificación cloud principal, que cubre la administración de Azure y las capacidades de infraestructura esenciales de un administrador de Azure."
+  },
+  "Verify Microsoft Credential": {
+    "ar": "تحقق من اعتماد Microsoft",
+    "fr": "Vérifier l’identifiant Microsoft",
+    "es": "Verificar credencial de Microsoft"
+  },
+  "06 / CREDLY BADGES": {
+    "ar": "06 / شارات CREDLY",
+    "fr": "06 / BADGES CREDLY",
+    "es": "06 / INSIGNIAS CREDLY"
+  },
+  "Continuous learning, made visible.": {
+    "ar": "التعلم المستمر، بشكل ملموس.",
+    "fr": "L’apprentissage continu, rendu visible.",
+    "es": "Aprendizaje continuo, hecho visible."
+  },
+  "A curated display of my digital credentials spanning networking, cybersecurity, AI, cloud and digital skills.": {
+    "ar": "عرض مختار لاعتماداتي الرقمية في الشبكات والأمن السيبراني والذكاء الاصطناعي والسحابة والمهارات الرقمية.",
+    "fr": "Une sélection de mes badges numériques couvrant les réseaux, la cybersécurité, l’IA, le cloud et les compétences numériques.",
+    "es": "Una selección de mis credenciales digitales en redes, ciberseguridad, IA, cloud y habilidades digitales."
+  },
+  "Introduction to IoT": {
+    "ar": "مقدمة في إنترنت الأشياء",
+    "fr": "Introduction à l’IoT",
+    "es": "Introducción al IoT"
+  },
+  "Issued 5 October 2024": {
+    "ar": "صادرة في 5 أكتوبر 2024",
+    "fr": "Délivrée le 5 octobre 2024",
+    "es": "Emitida el 5 de octubre de 2024"
+  },
+  "Introduction to Cybersecurity": {
+    "ar": "مقدمة في الأمن السيبراني",
+    "fr": "Introduction à la cybersécurité",
+    "es": "Introducción a la ciberseguridad"
+  },
+  "Issued 6 October 2024": {
+    "ar": "صادرة في 6 أكتوبر 2024",
+    "fr": "Délivrée le 6 octobre 2024",
+    "es": "Emitida el 6 de octubre de 2024"
+  },
+  "Critical Infrastructure Protection": {
+    "ar": "حماية البنية التحتية الحيوية",
+    "fr": "Protection des infrastructures critiques",
+    "es": "Protección de infraestructuras críticas"
+  },
+  "Issued 10 October 2024": {
+    "ar": "صادرة في 10 أكتوبر 2024",
+    "fr": "Délivrée le 10 octobre 2024",
+    "es": "Emitida el 10 de octubre de 2024"
+  },
+  "Computer Hardware Basics": {
+    "ar": "أساسيات عتاد الحاسوب",
+    "fr": "Bases du matériel informatique",
+    "es": "Fundamentos del hardware informático"
+  },
+  "Issued 12 October 2024": {
+    "ar": "صادرة في 12 أكتوبر 2024",
+    "fr": "Délivrée le 12 octobre 2024",
+    "es": "Emitida el 12 de octubre de 2024"
+  },
+  "Operating Systems Basics": {
+    "ar": "أساسيات أنظمة التشغيل",
+    "fr": "Bases des systèmes d’exploitation",
+    "es": "Fundamentos de sistemas operativos"
+  },
+  "Issued 25 October 2024": {
+    "ar": "صادرة في 25 أكتوبر 2024",
+    "fr": "Délivrée le 25 octobre 2024",
+    "es": "Emitida el 25 de octubre de 2024"
+  },
+  "Cyber Threat Management": {
+    "ar": "إدارة التهديدات السيبرانية",
+    "fr": "Gestion des cybermenaces",
+    "es": "Gestión de amenazas cibernéticas"
+  },
+  "Issued 16 January 2025": {
+    "ar": "صادرة في 16 يناير 2025",
+    "fr": "Délivrée le 16 janvier 2025",
+    "es": "Emitida el 16 de enero de 2025"
+  },
+  "Introduction to Data Science": {
+    "ar": "مقدمة في علم البيانات",
+    "fr": "Introduction à la science des données",
+    "es": "Introducción a la ciencia de datos"
+  },
+  "Introduction to Modern AI": {
+    "ar": "مقدمة في الذكاء الاصطناعي الحديث",
+    "fr": "Introduction à l’IA moderne",
+    "es": "Introducción a la IA moderna"
+  },
+  "Issued 19 January 2025": {
+    "ar": "صادرة في 19 يناير 2025",
+    "fr": "Délivrée le 19 janvier 2025",
+    "es": "Emitida el 19 de enero de 2025"
+  },
+  "Digital Awareness": {
+    "ar": "الوعي الرقمي",
+    "fr": "Culture numérique",
+    "es": "Conciencia digital"
+  },
+  "Issued 20 January 2025": {
+    "ar": "صادرة في 20 يناير 2025",
+    "fr": "Délivrée le 20 janvier 2025",
+    "es": "Emitida el 20 de enero de 2025"
+  },
+  "Using Computer and Mobile Devices": {
+    "ar": "استخدام الحاسوب والأجهزة المحمولة",
+    "fr": "Utilisation des ordinateurs et appareils mobiles",
+    "es": "Uso de ordenadores y dispositivos móviles"
+  },
+  "Issued 22 January 2025": {
+    "ar": "صادرة في 22 يناير 2025",
+    "fr": "Délivrée le 22 janvier 2025",
+    "es": "Emitida el 22 de enero de 2025"
+  },
+  "Network Support and Security": {
+    "ar": "دعم الشبكات وأمنها",
+    "fr": "Support réseau et sécurité",
+    "es": "Soporte de redes y seguridad"
+  },
+  "Issued 23 January 2025": {
+    "ar": "صادرة في 23 يناير 2025",
+    "fr": "Délivrée le 23 janvier 2025",
+    "es": "Emitida el 23 de enero de 2025"
+  },
+  "Project Management Fundamentals": {
+    "ar": "أساسيات إدارة المشاريع",
+    "fr": "Fondamentaux de la gestion de projet",
+    "es": "Fundamentos de gestión de proyectos"
+  },
+  "Issued 26 January 2025": {
+    "ar": "صادرة في 26 يناير 2025",
+    "fr": "Délivrée le 26 janvier 2025",
+    "es": "Emitida el 26 de enero de 2025"
+  },
+  "Create Digital Content": {
+    "ar": "إنشاء المحتوى الرقمي",
+    "fr": "Créer du contenu numérique",
+    "es": "Crear contenido digital"
+  },
+  "Issued 29 January 2025": {
+    "ar": "صادرة في 29 يناير 2025",
+    "fr": "Délivrée le 29 janvier 2025",
+    "es": "Emitida el 29 de enero de 2025"
+  },
+  "Network Addressing & Troubleshooting": {
+    "ar": "عنونة الشبكات واستكشاف الأخطاء",
+    "fr": "Adressage réseau et dépannage",
+    "es": "Direccionamiento de redes y resolución de problemas"
+  },
+  "Issued 1 February 2025": {
+    "ar": "صادرة في 1 فبراير 2025",
+    "fr": "Délivrée le 1 février 2025",
+    "es": "Emitida el 1 de febrero de 2025"
+  },
+  "Artificial Intelligence Fundamentals": {
+    "ar": "أساسيات الذكاء الاصطناعي",
+    "fr": "Fondamentaux de l’intelligence artificielle",
+    "es": "Fundamentos de inteligencia artificial"
+  },
+  "Issued 2 February 2025": {
+    "ar": "صادرة في 2 فبراير 2025",
+    "fr": "Délivrée le 2 février 2025",
+    "es": "Emitida el 2 de febrero de 2025"
+  },
+  "AI Fundamentals with IBM SkillsBuild": {
+    "ar": "أساسيات الذكاء الاصطناعي مع IBM SkillsBuild",
+    "fr": "Fondamentaux de l’IA avec IBM SkillsBuild",
+    "es": "Fundamentos de IA con IBM SkillsBuild"
+  },
+  "Introduction to Generative AI": {
+    "ar": "مقدمة في الذكاء الاصطناعي التوليدي",
+    "fr": "Introduction à l’IA générative",
+    "es": "Introducción a la IA generativa"
+  },
+  "Issued 5 March 2025": {
+    "ar": "صادرة في 5 مارس 2025",
+    "fr": "Délivrée le 5 mars 2025",
+    "es": "Emitida el 5 de marzo de 2025"
+  },
+  "AI Skills Fest 2026": {
+    "ar": "AI Skills Fest 2026",
+    "fr": "AI Skills Fest 2026",
+    "es": "AI Skills Fest 2026"
+  },
+  "Issued 16 July 2026": {
+    "ar": "صادرة في 16 يوليو 2026",
+    "fr": "Délivrée le 16 juillet 2026",
+    "es": "Emitida el 16 de julio de 2026"
+  },
+  "View Full Credly Profile →": {
+    "ar": "عرض ملف Credly الكامل ←",
+    "fr": "Voir le profil Credly complet →",
+    "es": "Ver perfil completo de Credly →"
+  },
+  "07 / EDUCATION": {
+    "ar": "07 / التعليم",
+    "fr": "07 / ÉDUCATION",
+    "es": "07 / EDUCACIÓN"
+  },
+  "Academic foundation.": {
+    "ar": "الأساس الأكاديمي.",
+    "fr": "Fondations académiques.",
+    "es": "Base académica."
+  },
+  "BSCS · Computer Science": {
+    "ar": "بكالوريوس علوم الحاسوب · علوم الحاسوب",
+    "fr": "BSCS · Informatique",
+    "es": "BSCS · Ciencias de la Computación"
+  },
+  "CURRENT": {
+    "ar": "حالي",
+    "fr": "EN COURS",
+    "es": "ACTUAL"
+  },
+  "Cisco Certified Network Associate (CCNA) R&S Training": {
+    "ar": "تدريب Cisco Certified Network Associate (CCNA) R&S",
+    "fr": "Formation Cisco Certified Network Associate (CCNA) R&S",
+    "es": "Formación Cisco Certified Network Associate (CCNA) R&S"
+  },
+  "TRAINING": {
+    "ar": "تدريب",
+    "fr": "FORMATION",
+    "es": "FORMACIÓN"
+  },
+  "Azure Administrator (AZ-104) Training": {
+    "ar": "تدريب مسؤول Azure (AZ-104)",
+    "fr": "Formation Administrateur Azure (AZ-104)",
+    "es": "Formación de Administrador de Azure (AZ-104)"
+  },
+  "International School of Pakistan, Kuwait": {
+    "ar": "المدرسة الدولية الباكستانية، الكويت",
+    "fr": "International School of Pakistan, Koweït",
+    "es": "International School of Pakistan, Kuwait"
+  },
+  "High School Diploma · Computer Science": {
+    "ar": "شهادة الثانوية العامة · علوم الحاسوب",
+    "fr": "Diplôme d’études secondaires · Informatique",
+    "es": "Diploma de secundaria · Ciencias de la Computación"
+  },
+  "COMPLETED": {
+    "ar": "مكتمل",
+    "fr": "TERMINÉ",
+    "es": "COMPLETADO"
+  },
+  "08 / SDG IMPACT": {
+    "ar": "08 / أثر أهداف التنمية المستدامة",
+    "fr": "08 / IMPACT ODD",
+    "es": "08 / IMPACTO ODS"
+  },
+  "Technology with purpose.": {
+    "ar": "التقنية بهدف.",
+    "fr": "La technologie avec un objectif.",
+    "es": "Tecnología con propósito."
+  },
+  "My activities connect most naturally with four Sustainable Development Goals through education, career development, technological innovation and cross-community collaboration.": {
+    "ar": "ترتبط أنشطتي بشكل طبيعي بأربعة أهداف للتنمية المستدامة من خلال التعليم والتطوير المهني والابتكار التقني والتعاون بين المجتمعات.",
+    "fr": "Mes activités sont naturellement liées à quatre Objectifs de développement durable par l’éducation, le développement professionnel, l’innovation technologique et la collaboration intercommunautaire.",
+    "es": "Mis actividades se relacionan de forma natural con cuatro Objetivos de Desarrollo Sostenible mediante educación, desarrollo profesional, innovación tecnológica y colaboración entre comunidades."
+  },
+  "Four goals that reflect the work I actually do.": {
+    "ar": "أربعة أهداف تعكس العمل الذي أقوم به فعلياً.",
+    "fr": "Quatre objectifs qui reflètent le travail que je réalise réellement.",
+    "es": "Cuatro objetivos que reflejan el trabajo que realmente realizo."
+  },
+  "These are presented as areas of alignment rather than a claim of formal UN affiliation or certification.": {
+    "ar": "تُعرض هذه الأهداف كمجالات توافق وليست ادعاءً بوجود ارتباط أو اعتماد رسمي من الأمم المتحدة.",
+    "fr": "Ils sont présentés comme des domaines d’alignement et non comme une affiliation ou certification officielle de l’ONU.",
+    "es": "Se presentan como áreas de alineación, no como una afirmación de afiliación o certificación oficial de la ONU."
+  },
+  "Quality Education": {
+    "ar": "التعليم الجيد",
+    "fr": "Éducation de qualité",
+    "es": "Educación de calidad"
+  },
+  "Teaching assistant work, Azure mentorship, public speaking, technical sessions, orientation sessions and knowledge sharing.": {
+    "ar": "مساعد تدريس، وإرشاد في Azure، والتحدث أمام الجمهور، والجلسات التقنية، والجلسات التعريفية، ومشاركة المعرفة.",
+    "fr": "Assistant pédagogique, mentorat Azure, prise de parole en public, sessions techniques, sessions d’orientation et partage des connaissances.",
+    "es": "Asistencia docente, mentoría de Azure, oratoria, sesiones técnicas, sesiones de orientación y difusión del conocimiento."
+  },
+  "Decent Work & Economic Growth": {
+    "ar": "العمل اللائق والنمو الاقتصادي",
+    "fr": "Travail décent et croissance économique",
+    "es": "Trabajo decente y crecimiento económico"
+  },
+  "Career-focused cloud mentorship, employability skills, professional development and exposure to real-world technology.": {
+    "ar": "إرشاد سحابي يركز على المسار المهني، ومهارات قابلية التوظيف، والتطوير المهني، والتعرض للتقنيات الواقعية.",
+    "fr": "Mentorat cloud orienté carrière, compétences d’employabilité, développement professionnel et exposition aux technologies du monde réel.",
+    "es": "Mentoría cloud orientada a la carrera, habilidades de empleabilidad, desarrollo profesional y exposición a tecnología del mundo real."
+  },
+  "Industry, Innovation & Infrastructure": {
+    "ar": "الصناعة والابتكار والبنية التحتية",
+    "fr": "Industrie, innovation et infrastructure",
+    "es": "Industria, innovación e infraestructura"
+  },
+  "Cloud architecture, Azure and AWS infrastructure, practical competitions and technology-focused technical sessions.": {
+    "ar": "هندسة السحابة، والبنية التحتية في Azure وAWS، والمسابقات العملية، والجلسات التقنية المتخصصة.",
+    "fr": "Architecture cloud, infrastructures Azure et AWS, compétitions pratiques et sessions techniques axées sur la technologie.",
+    "es": "Arquitectura cloud, infraestructura de Azure y AWS, competiciones prácticas y sesiones técnicas centradas en tecnología."
+  },
+  "Partnerships for the Goals": {
+    "ar": "الشراكات لتحقيق الأهداف",
+    "fr": "Partenariats pour les objectifs",
+    "es": "Alianzas para lograr los objetivos"
+  },
+  "Collaboration across GDGoC, IEEE, universities, industry mentors, technical communities and event organizers.": {
+    "ar": "التعاون بين GDGoC وIEEE والجامعات ومرشدي الصناعة والمجتمعات التقنية ومنظمي الفعاليات.",
+    "fr": "Collaboration entre GDGoC, IEEE, les universités, les mentors de l’industrie, les communautés techniques et les organisateurs d’événements.",
+    "es": "Colaboración entre GDGoC, IEEE, universidades, mentores de la industria, comunidades técnicas y organizadores de eventos."
+  },
+  "09 / RESUME": {
+    "ar": "09 / السيرة الذاتية",
+    "fr": "09 / CV",
+    "es": "09 / CURRÍCULUM"
+  },
+  "Want the full picture?": {
+    "ar": "هل تريد الصورة الكاملة؟",
+    "fr": "Envie d’avoir une vue d’ensemble ?",
+    "es": "¿Quieres ver el panorama completo?"
+  },
+  "My resume contains the complete overview of my professional experience, education, cloud skills, certifications and technical involvement.": {
+    "ar": "تتضمن سيرتي الذاتية نظرة كاملة على خبرتي المهنية وتعليمي ومهارات السحابة وشهاداتي ومشاركتي التقنية.",
+    "fr": "Mon CV présente une vue complète de mon expérience professionnelle, de ma formation, de mes compétences cloud, de mes certifications et de mon implication technique.",
+    "es": "Mi currículum contiene una visión completa de mi experiencia profesional, educación, habilidades cloud, certificaciones y participación técnica."
+  },
+  "10 / CONTACT": {
+    "ar": "10 / تواصل",
+    "fr": "10 / CONTACT",
+    "es": "10 / CONTACTO"
+  },
+  "Let's build something.": {
+    "ar": "لنبنِ شيئاً معاً.",
+    "fr": "Construisons quelque chose.",
+    "es": "Construyamos algo."
+  },
+  "Open to cloud opportunities, speaking engagements, collaborations and interesting technology conversations.": {
+    "ar": "منفتح على فرص السحابة، والمشاركات كمتحدث، والتعاون، والحوارات التقنية المثيرة للاهتمام.",
+    "fr": "Ouvert aux opportunités cloud, interventions, collaborations et échanges technologiques intéressants.",
+    "es": "Abierto a oportunidades cloud, conferencias, colaboraciones y conversaciones tecnológicas interesantes."
+  },
+  "Cloud Engineer · Public Speaker · Azure · Technology": {
+    "ar": "مهندس سحابة · متحدث عام · Azure · تقنية",
+    "fr": "Ingénieur Cloud · Conférencier · Azure · Technologie",
+    "es": "Ingeniero Cloud · Orador Público · Azure · Tecnología"
+  },
+  "Back to top ↑": {
+    "ar": "العودة إلى الأعلى ↑",
+    "fr": "Retour en haut ↑",
+    "es": "Volver arriba ↑"
+  },
+  "© 2026 Muhammad Ephraim Sameer": {
+    "ar": "© 2026 محمد إفرايم سمير",
+    "fr": "© 2026 Muhammad Ephraim Sameer",
+    "es": "© 2026 Muhammad Ephraim Sameer"
+  }
+};
 
-  function googleTranslateElementInit(){
-    new google.translate.TranslateElement({
-      pageLanguage: "en",
-      includedLanguages: "ar,fr,es",
-      autoDisplay: false
-    }, "google_translate_element");
+  const portfolioLanguageMeta = {
+    en: {
+      title: "Muhammad Ephraim Sameer | Cloud Engineer & Public Speaker",
+      description: "Muhammad Ephraim Sameer — Cloud Engineer, Microsoft Certified Azure Administrator, Public Speaker, GDGoC BULC Cloud Lead and technology community contributor.",
+      direction: "ltr"
+    },
+    ar: {
+      title: "محمد إفرايم سمير | مهندس سحابة ومتحدث عام",
+      description: "محمد إفرايم سمير — مهندس سحابة، مسؤول Azure معتمد من Microsoft، متحدث عام وقائد سحابة في GDGoC BULC.",
+      direction: "rtl"
+    },
+    fr: {
+      title: "Muhammad Ephraim Sameer | Ingénieur Cloud & Conférencier",
+      description: "Muhammad Ephraim Sameer — Ingénieur Cloud, Administrateur Azure certifié Microsoft, conférencier et Cloud Lead GDGoC BULC.",
+      direction: "ltr"
+    },
+    es: {
+      title: "Muhammad Ephraim Sameer | Ingeniero Cloud y Orador Público",
+      description: "Muhammad Ephraim Sameer — Ingeniero Cloud, Administrador de Azure certificado por Microsoft, orador público y Cloud Lead de GDGoC BULC.",
+      direction: "ltr"
+    }
+  };
 
-    googleTranslateReady = true;
+  function normalizeText(value) {
+    return value.replace(/\s+/g, " ").trim();
   }
 
-  function setDocumentLanguage(lang){
-    document.documentElement.lang = lang;
-    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+  function translateTextNodes(language) {
+    const root = document.body;
 
-    const titles = {
-      en: "Muhammad Ephraim Sameer | Cloud Engineer & Public Speaker",
-      ar: "محمد إفرايم سمير | مهندس سحابة ومتحدث عام",
-      fr: "Muhammad Ephraim Sameer | Ingénieur Cloud & Conférencier",
-      es: "Muhammad Ephraim Sameer | Ingeniero Cloud y Orador Público"
-    };
+    const walker = document.createTreeWalker(
+      root,
+      NodeFilter.SHOW_TEXT,
+      {
+        acceptNode(node) {
+          const parent = node.parentElement;
+          if (!parent) return NodeFilter.FILTER_REJECT;
 
-    const descriptions = {
-      en: "Muhammad Ephraim Sameer — Cloud Engineer, Microsoft Certified Azure Administrator, Public Speaker, GDGoC BULC Cloud Lead and technology community contributor.",
-      ar: "محمد إفرايم سمير — مهندس سحابة، مسؤول Azure معتمد من Microsoft، متحدث عام وقائد سحابة في GDGoC BULC.",
-      fr: "Muhammad Ephraim Sameer — Ingénieur Cloud, Administrateur Azure certifié Microsoft, conférencier et Cloud Lead GDGoC BULC.",
-      es: "Muhammad Ephraim Sameer — Ingeniero Cloud, Administrador de Azure certificado por Microsoft, orador público y Cloud Lead de GDGoC BULC."
-    };
+          const tag = parent.tagName.toLowerCase();
 
-    document.title = titles[lang] || titles.en;
+          if (
+            tag === "script" ||
+            tag === "style" ||
+            tag === "noscript"
+          ) {
+            return NodeFilter.FILTER_REJECT;
+          }
 
-    const meta = document.querySelector('meta[name="description"]');
-    if(meta){
-      meta.setAttribute(
+          return NodeFilter.FILTER_ACCEPT;
+        }
+      }
+    );
+
+    const nodes = [];
+    let node;
+
+    while (node = walker.nextNode()) {
+      nodes.push(node);
+    }
+
+    nodes.forEach((textNode) => {
+      const original = normalizeText(textNode.nodeValue);
+
+      if (!original) return;
+
+      const translation =
+        portfolioTranslations[original] &&
+        portfolioTranslations[original][language];
+
+      if (!translation) return;
+
+      const raw = textNode.nodeValue;
+
+      const leading =
+        raw.match(/^\s*/)?.[0] || "";
+
+      const trailing =
+        raw.match(/\s*$/)?.[0] || "";
+
+      textNode.nodeValue =
+        leading +
+        translation +
+        trailing;
+    });
+  }
+
+  function updateMetadata(language) {
+    const meta = portfolioLanguageMeta[language];
+
+    if (!meta) return;
+
+    document.documentElement.lang = language;
+    document.documentElement.dir = meta.direction;
+
+    document.title = meta.title;
+
+    const description =
+      document.querySelector(
+        'meta[name="description"]'
+      );
+
+    if (description) {
+      description.setAttribute(
         "content",
-        descriptions[lang] || descriptions.en
+        meta.description
       );
     }
 
-    localStorage.setItem("portfolioLanguage", lang);
-  }
-
-  function triggerGoogleLanguage(lang){
-
-    setDocumentLanguage(lang);
-
-    if(lang === "en"){
-      // Reset Google Translate to the original English.
-      const reset = document.querySelector(".goog-te-gadget-simple a");
-      if(reset) reset.click();
-
-      const frame = document.querySelector(".goog-te-banner-frame");
-      if(frame) frame.remove();
-
-      return;
-    }
-
-    const tryTranslate = () => {
-      const combo = document.querySelector(".goog-te-combo");
-
-      if(!combo){
-        setTimeout(tryTranslate, 200);
-        return;
-      }
-
-      combo.value = lang;
-      combo.dispatchEvent(new Event("change"));
-    };
-
-    tryTranslate();
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-
-    const languageSelect =
+    const selector =
       document.getElementById("siteLanguage");
 
-    const savedLanguage =
-      localStorage.getItem("portfolioLanguage") || "en";
+    if (selector) {
+      selector.value = language;
 
-    if(languageSelect){
-      languageSelect.value = savedLanguage;
+      selector.setAttribute(
+        "aria-label",
+        language === "ar"
+          ? "اختيار اللغة"
+          : language === "fr"
+            ? "Sélecteur de langue"
+            : language === "es"
+              ? "Selector de idioma"
+              : "Language"
+      );
+    }
+  }
 
-      languageSelect.addEventListener("change", () => {
-        triggerGoogleLanguage(languageSelect.value);
-      });
+  function applyLanguage(language) {
+    if (!portfolioLanguageMeta[language]) {
+      language = "en";
     }
 
-    setDocumentLanguage(savedLanguage);
-  });
-</script>
+    /*
+      Always reload from the original English source.
+      This makes switching AR → FR → ES completely reliable
+      because translations are never applied on top of another
+      translation.
+    */
+    localStorage.setItem(
+      "portfolioLanguage",
+      language
+    );
 
-<script
-  src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-  defer>
+    window.location.reload();
+  }
+
+  document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+      const selector =
+        document.getElementById(
+          "siteLanguage"
+        );
+
+      const saved =
+        localStorage.getItem(
+          "portfolioLanguage"
+        ) || "en";
+
+      updateMetadata(saved);
+
+      if (selector) {
+        selector.value = saved;
+
+        selector.addEventListener(
+          "change",
+          (event) => {
+            applyLanguage(
+              event.target.value
+            );
+          }
+        );
+      }
+
+      if (saved !== "en") {
+        translateTextNodes(saved);
+      }
+    }
+  );
 </script>
 
 </body>
